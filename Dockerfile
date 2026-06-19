@@ -8,17 +8,16 @@ FROM alpine:3.21 AS builder
 
 ARG HUGO_VERSION=0.147.2
 
-# Descargar Hugo extended
 RUN apk add --no-cache wget tar && \
-    wget -q https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz -O /tmp/hugo.tar.gz && \
-    tar xzf /tmp/hugo.tar.gz -C /usr/local/bin/ hugo && \
-    rm /tmp/hugo.tar.gz && \
-    chmod +x /usr/local/bin/hugo
+    wget -qO /tmp/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz && \
+    cd /tmp && tar xzf hugo.tar.gz && \
+    mv hugo /usr/local/bin/hugo && \
+    rm hugo.tar.gz LICENSE README.md 2>/dev/null; \
+    hugo version
 
 WORKDIR /src
 COPY . .
 
-# Construir sitio estático
 RUN hugo --minify
 
 # ─── Stage 2: Serve con Nginx ────────────────────────────────
@@ -39,9 +38,7 @@ server {
     gzip on;
     gzip_types text/plain text/css application/javascript application/json image/svg+xml;
     gzip_min_length 256;
-    location / {
-        try_files $uri $uri/ =404;
-    }
+    location / { try_files $uri $uri/ =404; }
     location ~* \.(css|js|svg|png|jpg|jpeg|gif|ico|woff2?)$ {
         expires 1y;
         add_header Cache-Control "public, immutable";
