@@ -9,20 +9,19 @@ FROM alpine:3.21 AS builder
 ARG HUGO_VERSION=0.163.3
 
 RUN apk add --no-cache curl tar && \
-    echo "Downloading Hugo v${HUGO_VERSION}..." && \
     curl -fL -o /tmp/hugo.tar.gz \
       https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz && \
-    echo "Extracting..." && \
-    cd /tmp && tar xzf hugo.tar.gz && \
-    mv hugo /usr/local/bin/hugo && \
-    rm -f hugo.tar.gz LICENSE README.md && \
-    echo "Hugo binary installed:" && \
-    hugo version
+    tar -xzf /tmp/hugo.tar.gz -C /tmp/ && \
+    ls -la /tmp/hugo && \
+    cp /tmp/hugo /usr/local/bin/hugo && \
+    chmod +x /usr/local/bin/hugo && \
+    rm -f /tmp/hugo.tar.gz /tmp/LICENSE /tmp/README.md && \
+    /usr/local/bin/hugo version
 
 WORKDIR /src
 COPY . .
 
-RUN hugo --minify && echo "Build complete"
+RUN /usr/local/bin/hugo --minify
 
 # ─── Stage 2: Serve ──────────────────────────────────────────
 FROM nginx:1.27-alpine
