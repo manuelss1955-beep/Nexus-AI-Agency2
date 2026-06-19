@@ -1,30 +1,18 @@
 # ============================================================
 # Dockerfile — Nexus AI Agency (Hugo)
-# Multi-stage: Alpine + Hugo binary → nginx
+# Multi-stage: Alpine + Hugo → nginx
 # ============================================================
 
 # ─── Stage 1: Build ──────────────────────────────────────────
 FROM alpine:3.21 AS builder
 
-ARG HUGO_VERSION=0.163.3
-
-RUN apk add --no-cache curl tar && \
-    curl -fL -o /tmp/hugo.tar.gz \
-      https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz && \
-    echo "OK: downloaded $(du -h /tmp/hugo.tar.gz | cut -f1)" && \
-    tar -xzf /tmp/hugo.tar.gz -C /tmp/ && \
-    echo "OK: extracted, binary size $(stat -c%s /tmp/hugo) bytes" && \
-    ls -la /usr/local/bin/ && \
-    mv /tmp/hugo /usr/local/bin/hugo && \
-    echo "OK: moved" && \
-    ls -la /usr/local/bin/hugo && \
-    rm -f /tmp/hugo.tar.gz /tmp/LICENSE /tmp/README.md && \
-    /usr/local/bin/hugo version
+# Hugo desde repositorio oficial de Alpine (v0.160.x)
+RUN apk add --no-cache hugo && hugo version
 
 WORKDIR /src
 COPY . .
 
-RUN /usr/local/bin/hugo --minify
+RUN hugo --minify
 
 # ─── Stage 2: Serve ──────────────────────────────────────────
 FROM nginx:1.27-alpine
