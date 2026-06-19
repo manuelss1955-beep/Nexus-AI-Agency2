@@ -1,39 +1,50 @@
-<link rel="stylesheet" href="{{ "css/blog.css" | relURL }}">
 {{ define "main" }}
-<article>
+<article itemscope itemtype="https://schema.org/Article">
+<meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02" }}">
+<meta itemprop="author" content="{{ .Params.author | default "Nexus AI" }}">
 <section class="post-hero">
   <div class="container">
     {{ partial "breadcrumbs.html" . }}
     {{- with .Params.tags -}}{{- range first 1 . -}}<span class="post-hero__cat">{{ . }}</span>{{- end -}}{{- end -}}
-    <h1 class="post-hero__title">{{ .Title }}</h1>
+    <h1 class="post-hero__title" itemprop="headline">{{ .Title }}</h1>
     <div class="post-hero__meta">
-      <span>👤 {{ .Params.author | default "Nexus AI" }}</span>
-      <span>📅 {{ .Date.Format "2 January, 2006" }}</span>
-      <span>📄 {{ .ReadingTime }} min de lectura</span>
+      <span>👤 <span itemprop="author">{{ .Params.author | default "Nexus AI" }}</span></span>
+      <span>📅 <time datetime="{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">{{ .Date.Format "2 January, 2006" }}</time></span>
+      <span>📄 <span itemprop="timeRequired">{{ .ReadingTime }} min de lectura</span></span>
     </div>
   </div>
 </section>
-<section class="section">
+<section class="post-layout section">
   <div class="container">
-    <div class="post-content">
-      {{ .Content }}
-      {{- with .Params.tags -}}
-      <div class="post-tags">
-        {{- range . -}}
-        <a href="{{ "blog/" | relURL }}?tag={{ . | urlize }}" class="post-tags__tag">#{{ . }}</a>
-        {{- end -}}
-      </div>
+    <div class="post-layout__grid">
+      {{- if .WordCount | gt 200 -}}
+      <aside class="post-toc">
+        <div class="post-toc__inner">
+          <div class="post-toc__header">📑 Tabla de contenidos</div>
+          {{ .TableOfContents }}
+        </div>
+      </aside>
       {{- end -}}
-      <div class="post-share">
-        <span style="font-size:var(--fs-sm);color:var(--text-muted);font-weight:600">Compartir:</span>
-        <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share__btn">𝕏 Twitter</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share__btn">🔗 LinkedIn</a>
-        <a href="mailto:?subject={{ .Title }}&body={{ .Permalink }}" class="post-share__btn">✉️ Email</a>
+      <div class="post-content" itemprop="articleBody">
+        {{ .Content }}
+        {{- with .Params.tags -}}
+        <div class="post-tags" itemprop="keywords">
+          {{- range . -}}
+          <a href="{{ "blog/tags/" | relURL }}{{ . | urlize }}/" class="post-tags__tag">#{{ . }}</a>
+          {{- end -}}
+        </div>
+        {{- end -}}
+        <div class="post-share">
+          <span style="font-size:var(--fs-sm);color:var(--text-muted);font-weight:600">Compartir:</span>
+          <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share__btn">𝕏 Twitter</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share__btn">🔗 LinkedIn</a>
+          <a href="mailto:?subject={{ .Title }}&body={{ .Permalink }}" class="post-share__btn">✉️ Email</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
-{{- $related := where (where .Site.RegularPages "Section" "blog") "Permalink" "ne" .Permalink | first 3 -}}
+{{- $related := where (where .Site.RegularPages "Section" "blog") "Permalink" "ne" .Permalink | shuffle | first 3 -}}
 {{- if $related -}}
 <section class="post-related">
   <div class="container">
