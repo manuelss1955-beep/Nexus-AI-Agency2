@@ -1,27 +1,23 @@
-{{/* breadcrumbs.html — Migas de pan dinámicas con soporte para front matter */}}
-{{- $breadcrumbs := .Params.breadcrumbs | default slice -}}
+{{/* breadcrumbs.html — Migas de pan automáticas */}}
+{{- $parts := split (strings.TrimPrefix "/" .RelPermalink) "/" -}}
+{{- $crumbs := slice -}}
+{{- range $parts -}}{{- if ne . "" -}}{{- $crumbs = $crumbs | append . -}}{{- end -}}{{- end -}}
+{{- $last := sub (len $crumbs) 1 -}}
 <div class="page-hero__breadcrumb">
   <a href="{{ "" | relURL }}">Inicio</a>
-  {{- if $breadcrumbs -}}
-    {{- range $breadcrumbs -}}
-    / <a href="{{ .url | relURL }}">{{ .name }}</a>
-    {{- end -}}
-  {{- else -}}
-    {{- $sections := split (strings.TrimPrefix "/" .RelPermalink) "/" -}}
-    {{- $cumulative := "" -}}
-    {{- $lastIndex := sub (len $sections) 1 -}}
-    {{- range $i, $section := $sections -}}
-      {{- if and (ne $section "") (lt $i $lastIndex) -}}
-        {{- $cumulative = printf "%s%s/" $cumulative $section -}}
-        {{- $label := $section | humanize | title -}}
-        {{- if eq $section "blog" }}{{ $label = "Blog" }}{{ end -}}
-        {{- if eq $section "services" }}{{ $label = "Servicios" }}{{ end -}}
-        {{- if eq $section "portfolio" }}{{ $label = "Casos de Éxito" }}{{ end -}}
-        {{- if eq $section "legal" }}{{ $label = "Legal" }}{{ end -}}
-        {{- if eq $section "about" }}{{ $label = "Sobre Nosotros" }}{{ end -}}
-        {{- if eq $section "contact" }}{{ $label = "Contacto" }}{{ end -}}
-        / <a href="{{ $cumulative | relURL }}">{{ $label }}</a>
-      {{- end -}}
+  {{- $path := "" -}}
+  {{- range $i, $part := $crumbs -}}
+    {{- if lt $i $last -}}
+      {{- $path = printf "%s%s/" $path $part -}}
+      {{- $label := $part | humanize | title -}}
+      {{- if eq $part "blog" }}{{ $label = "Blog" }}{{ end -}}
+      {{- if eq $part "services" }}{{ $label = "Servicios" }}{{ end -}}
+      {{- if eq $part "portfolio" }}{{ $label = "Casos de Éxito" }}{{ end -}}
+      {{- if eq $part "legal" }}{{ $label = "Legal" }}{{ end -}}
+      {{- if eq $part "tags" }}{{ $label = "Tags" }}{{ end -}}
+      {{- if eq $part "about" }}{{ $label = "Sobre Nosotros" }}{{ end -}}
+      {{- if eq $part "contact" }}{{ $label = "Contacto" }}{{ end -}}
+      / <a href="{{ $path | relURL }}">{{ $label }}</a>
     {{- end -}}
   {{- end -}}
   / <span>{{ .Title }}</span>
