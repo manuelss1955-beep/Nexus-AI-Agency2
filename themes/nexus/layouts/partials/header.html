@@ -1,5 +1,5 @@
 {{- $page := . -}}
-{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
 {{- $root := "" -}}
 {{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
 <header class="nav" role="banner"><div class="nav__inner">
@@ -16,7 +16,7 @@
         </div>
       </div>
       {{- else }}
-      <a href="{{ $root }}{{ .URL }}" class="nav__link{{ if $page.IsMenuCurrent "main" . }} nav__link--active{{ end }}">{{ .Name }}</a>
+      <a href="{{ $root }}{{ strings.TrimPrefix "/" .URL }}" class="nav__link{{ if $page.IsMenuCurrent "main" . }} nav__link--active{{ end }}">{{ .Name }}</a>
       {{- end }}
     {{- end }}
   </nav>
@@ -33,7 +33,7 @@
       {{- end }}
     </div>
     {{- else }}
-    <a href="{{ $root }}{{ .URL }}" class="nav__mobile-link">{{ .Name }}</a>
+    <a href="{{ $root }}{{ strings.TrimPrefix "/" .URL }}" class="nav__mobile-link">{{ .Name }}</a>
     {{- end }}
   {{- end }}
   <a href="{{ $root }}contact/" class="btn btn--primary" style="margin-top:1.5rem;text-align:center;justify-content:center;">Consultoría Gratuita</a>
