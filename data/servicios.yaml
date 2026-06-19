@@ -1,0 +1,27 @@
+digitalizacion:
+  excerpt: "Transformamos procesos analógicos en digitales con IA: documentación inteligente, flujos automatizados, ERPs y dashboards en tiempo real."
+  desc: "Digitalización de empresas con IA. Transformamos procesos analógicos en digitales: documentación, flujos de trabajo, ERP y más."
+agentes-ia:
+  excerpt: "Agentes inteligentes que ejecutan flujos de trabajo 24/7. Atención al cliente, análisis de datos y procesamiento documental sin intervención humana."
+  desc: "Agentes IA autónomos para empresas. Automatiza flujos de trabajo completos con agentes inteligentes 24/7."
+atencion-presencial:
+  excerpt: "Asistentes virtuales con IA para tiendas, hoteles, museos y ferias. Avatares que ven, oyen y conversan de forma natural."
+  desc: "Agentes de atención presencial con IA para retail, hostelería y eventos. Kioskos inteligentes, asistentes virtuales en tienda."
+agentes-telefonicos:
+  excerpt: "Automatiza llamadas con agentes de voz IA hiperrealistas. Atención 24/7, reservas, ventas y soporte sin esperas."
+  desc: "Agentes IA telefónicos para empresas. Automatiza llamadas entrantes y salientes con voz inteligente. Soporte 24/7."
+chatbots:
+  excerpt: "Asistentes virtuales con RAG, memoria contextual y comprensión multimodal. Atención que realmente entiende a tus clientes."
+  desc: "Desarrollo de chatbots con IA. Chatbots conversacionales con RAG, memoria contextual y comprensión multimodal."
+programacion-apps:
+  excerpt: "Aplicaciones web y móviles a medida con IA integrada. MVPs en semanas, SaaS escalables y software empresarial con tecnología de punta."
+  desc: "Programación de apps con IA integrada. Aplicaciones web y móviles a medida con inteligencia artificial."
+automatizacion:
+  excerpt: "Rediseñamos procesos end-to-end con IA. Elimina tareas repetitivas en RRHH, finanzas, logística y más."
+  desc: "Automatización empresarial con IA. Rediseñamos procesos end-to-end eliminando tareas repetitivas."
+integraciones-mcp:
+  excerpt: "Conecta tus sistemas con el Model Context Protocol. Agentes IA que acceden a herramientas, APIs y bases de datos en tiempo real."
+  desc: "Integraciones MCP (Model Context Protocol). Conecta tus sistemas y agentes IA a herramientas y APIs."
+consultoria:
+  excerpt: "Diagnóstico estratégico y roadmap de adopción de IA. Te guiamos desde la idea hasta la implementación con resultados medibles."
+  desc: "Consultoría IA para empresas. Diagnóstico estratégico, roadmap de adopción y acompañamiento en transformación digital."
