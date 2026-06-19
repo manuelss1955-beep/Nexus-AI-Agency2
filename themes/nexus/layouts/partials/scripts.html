@@ -1,2 +1,5 @@
-<script src="{{ "js/main.js" | absURL }}"></script>
-{{ if eq .Section "services" }}<script src="{{ "js/services.js" | absURL }}"></script>{{ end }}
+{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $root := "" -}}
+{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
+<script src="{{ $root }}js/main.js"></script>
+{{ if eq .Section "services" }}<script src="{{ $root }}js/services.js"></script>{{ end }}

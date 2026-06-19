@@ -1,10 +1,16 @@
 {{ define "head-extra" }}
-<link rel="stylesheet" href="{{ "css/blog.css" | absURL }}">
+{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $root := "" -}}
+{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
+<link rel="stylesheet" href="{{ $root }}css/blog.css">
 {{ end }}
 
 {{ define "main" }}
+{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $root := "" -}}
+{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
 <section class="page-hero"><div class="container">
-<div class="page-hero__breadcrumb"><a href="{{ "" | absURL }}">Inicio</a> / <a href="{{ "blog/" | absURL }}">Blog</a> / <a href="{{ "blog/tags/" | absURL }}">Tags</a> / <span>{{ .Title }}</span></div>
+<div class="page-hero__breadcrumb"><a href="{{ $root }}">Inicio</a> / <a href="{{ $root }}blog/">Blog</a> / <a href="{{ $root }}blog/tags/">Tags</a> / <span>{{ .Title }}</span></div>
 <h1 class="page-hero__title">Artículos etiquetados: <span class="accent">#{{ .Title }}</span></h1>
 <p class="page-hero__text">{{ len .Pages }} artículo{{ if ne (len .Pages) 1 }}s{{ end }} con esta etiqueta</p>
 </div></section>
@@ -17,8 +23,8 @@
 </div>
 
 <div class="text-center" style="margin-top:3rem">
-<a href="{{ "blog/" | absURL }}" class="btn btn--secondary">← Volver al Blog</a>
-<a href="{{ "blog/tags/" | absURL }}" class="btn btn--secondary">🏷️ Todos los Tags</a>
+<a href="{{ $root }}blog/" class="btn btn--secondary">← Volver al Blog</a>
+<a href="{{ $root }}blog/tags/" class="btn btn--secondary">🏷️ Todos los Tags</a>
 </div>
 </div></section>
 {{ end }}

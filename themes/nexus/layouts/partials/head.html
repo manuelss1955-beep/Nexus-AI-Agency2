@@ -4,10 +4,13 @@
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/blog.css" | absURL }}">
-<link rel="icon" type="image/svg+xml" href="{{ "assets/icons/favicon.svg" | absURL }}">
-<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ "index.xml" | absURL }}">
+{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $root := "" -}}
+{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
+<link rel="stylesheet" href="{{ $root }}css/main.css">
+<link rel="stylesheet" href="{{ $root }}css/blog.css">
+<link rel="icon" type="image/svg+xml" href="{{ $root }}assets/icons/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ $root }}index.xml">
 
 {{- /* OpenGraph */ -}}
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">

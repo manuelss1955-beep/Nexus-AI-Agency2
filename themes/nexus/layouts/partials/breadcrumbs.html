@@ -1,13 +1,16 @@
 {{- if not .IsHome }}
+{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $root := "" -}}
+{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
+{{- $url := replace .Permalink (printf "%s" .Site.BaseURL) "" }}
+{{- $langUrl := strings.TrimPrefix "/" $url }}
+{{- $path := "" }}
 <div class="page-hero__breadcrumb">
-  {{- $url := replace .Permalink (printf "%s" .Site.BaseURL) "" }}
-  {{- $langUrl := strings.TrimPrefix "/" $url }}
-  {{- $path := "" }}
-  <a href="{{ "" | absURL }}">Inicio</a>
+  <a href="{{ $root }}">Inicio</a>
   {{- range $index, $element := split $langUrl "/" }}
     {{- if and (ne $element "") (ne $element (print $.Site.LanguagePrefix "/")) (ne $element $.Slug) }}
       {{- $path = printf "%s%s/" $path $element }}
-      / <a href="{{ $path | absURL }}">{{ humanize $element }}</a>
+      / <a href="{{ $root }}{{ $path }}">{{ humanize $element }}</a>
     {{- else if eq $element $.Slug }}
       / <span>{{ $.Title }}</span>
     {{- end }}

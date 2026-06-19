@@ -1,8 +1,14 @@
 {{ define "head-extra" }}
-<link rel="stylesheet" href="{{ "css/blog.css" | absURL }}">
+{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $root := "" -}}
+{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
+<link rel="stylesheet" href="{{ $root }}css/blog.css">
 {{ end }}
 
 {{ define "main" }}
+{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $root := "" -}}
+{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
 <section class="page-hero"><div class="container"><div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div><h1 class="page-hero__title">Blog</h1><p class="page-hero__text">Artículos sobre inteligencia artificial, automatización, chatbots, agentes autónomos y cómo la IA está transformando las empresas.</p></div></section>
 
 <section class="section"><div class="container">
@@ -10,22 +16,22 @@
 {{- $paginator := .Paginate $pages 9 }}
 <div class="grid grid--3">
 {{- range $paginator.Pages }}
-<article class="post-card"><div class="post-card__body"><span class="post-card__date">{{ .Date.Format "2 Jan 2006" }}</span><span class="post-card__reading">⏱️ {{ .ReadingTime }} min</span><h3 class="post-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p class="post-card__text">{{ .Summary | plainify | truncate 120 }}</p><div class="post-card__footer"><span class="post-card__author">👤 {{ .Params.author | default $.Site.Params.author }}</span>{{- with .Params.tags }}<div class="post-card__tags">{{- range . }}<a href="{{ "blog/tags/" | absURL }}{{ . | urlize }}/" class="post-card__tag">#{{ . }}</a>{{- end }}</div>{{- end }}</div></div></article>
+<article class="post-card"><div class="post-card__body"><span class="post-card__date">{{ .Date.Format "2 Jan 2006" }}</span><span class="post-card__reading">⏱️ {{ .ReadingTime }} min</span><h3 class="post-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p class="post-card__text">{{ .Summary | plainify | truncate 120 }}</p><div class="post-card__footer"><span class="post-card__author">👤 {{ .Params.author | default $.Site.Params.author }}</span>{{- with .Params.tags }}<div class="post-card__tags">{{- range . }}<a href="{{ $root }}blog/tags/{{ . | urlize }}/" class="post-card__tag">#{{ . }}</a>{{- end }}</div>{{- end }}</div></div></article>
 {{- end }}
 </div>
 
 {{- if gt $paginator.TotalPages 1 }}
 <div class="pagination">
-{{- if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL | absURL }}" class="btn btn--sm btn--secondary">← Anterior</a>{{ end }}
+{{- if $paginator.HasPrev }}<a href="{{ $root }}{{ $paginator.Prev.URL }}" class="btn btn--sm btn--secondary">← Anterior</a>{{ end }}
 {{- range $paginator.Pagers }}
-<a href="{{ .URL | absURL }}" class="btn btn--sm {{ if eq . $paginator }}btn--primary{{ else }}btn--secondary{{ end }}">{{ .PageNumber }}</a>
+<a href="{{ $root }}{{ .URL }}" class="btn btn--sm {{ if eq . $paginator }}btn--primary{{ else }}btn--secondary{{ end }}">{{ .PageNumber }}</a>
 {{- end }}
-{{- if $paginator.HasNext }}<a href="{{ $paginator.Next.URL | absURL }}" class="btn btn--sm btn--secondary">Siguiente →</a>{{ end }}
+{{- if $paginator.HasNext }}<a href="{{ $root }}{{ $paginator.Next.URL }}" class="btn btn--sm btn--secondary">Siguiente →</a>{{ end }}
 </div>
 {{- end }}
 
 <div class="text-center" style="margin-top:3rem">
-<a href="{{ "blog/" | absURL }}" class="btn btn--secondary">Ver todos los artículos →</a>
+<a href="{{ $root }}blog/" class="btn btn--secondary">Ver todos los artículos →</a>
 </div>
 </div></section>
 {{ end }}

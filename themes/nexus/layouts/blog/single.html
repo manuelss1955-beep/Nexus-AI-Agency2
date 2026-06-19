@@ -1,11 +1,14 @@
 {{ define "main" }}
+{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $root := "" -}}
+{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
 <section class="page-hero post-hero"><div class="container"><div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div><h1 class="page-hero__title">{{ .Title }}</h1><div class="post-meta"><span>📅 {{ .Date.Format "2 January 2006" }}</span><span>👤 {{ .Params.author | default .Site.Params.author }}</span><span>⏱️ {{ .ReadingTime }} min lectura</span></div></div></section>
 
 <section class="section"><div class="container"><div class="post-grid"><article class="post-content">{{ .Content }}</article>
 {{- if .Params.tags }}
 <div class="post-tags">
 {{- range .Params.tags }}
-<a href="{{ "blog/tags/" | absURL }}{{ . | urlize }}/" class="post-tags__tag">#{{ . }}</a>
+<a href="{{ $root }}blog/tags/{{ . | urlize }}/" class="post-tags__tag">#{{ . }}</a>
 {{- end }}
 </div>
 {{- end }}
@@ -26,6 +29,6 @@
 {{- end }}
 
 <div class="post-nav">
-<a href="{{ "blog/" | absURL }}" class="btn btn--secondary">← Volver al Blog</a>
+<a href="{{ $root }}blog/" class="btn btn--secondary">← Volver al Blog</a>
 </div></div></div></section>
 {{ end }}
