@@ -9,15 +9,16 @@ FROM alpine:3.21 AS builder
 ARG HUGO_VERSION=0.163.3
 
 RUN apk add --no-cache curl tar && \
-    echo "Download Hugo v${HUGO_VERSION}..." && \
     curl -fL -o /tmp/hugo.tar.gz \
       https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz && \
-    echo "Extract..." && \
+    echo "OK: downloaded $(du -h /tmp/hugo.tar.gz | cut -f1)" && \
     tar -xzf /tmp/hugo.tar.gz -C /tmp/ && \
-    echo "Binary: $(ls -la /tmp/hugo)" && \
-    install -m 755 /tmp/hugo /usr/local/bin/hugo && \
+    echo "OK: extracted, binary size $(stat -c%s /tmp/hugo) bytes" && \
+    ls -la /usr/local/bin/ && \
+    mv /tmp/hugo /usr/local/bin/hugo && \
+    echo "OK: moved" && \
+    ls -la /usr/local/bin/hugo && \
     rm -f /tmp/hugo.tar.gz /tmp/LICENSE /tmp/README.md && \
-    echo "Hugo installed:" && \
     /usr/local/bin/hugo version
 
 WORKDIR /src
