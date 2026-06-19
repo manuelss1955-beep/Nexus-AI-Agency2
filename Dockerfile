@@ -1,6 +1,6 @@
 # ============================================================
 # Dockerfile — Nexus AI Agency (Hugo)
-# Multi-stage: Alpine + Hugo binary build → nginx
+# Multi-stage: Alpine + Hugo binary → nginx
 # ============================================================
 
 # ─── Stage 1: Build ──────────────────────────────────────────
@@ -8,19 +8,23 @@ FROM alpine:3.21 AS builder
 
 ARG HUGO_VERSION=0.147.2
 
-RUN apk add --no-cache wget tar && \
-    wget -qO /tmp/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz && \
+RUN apk add --no-cache curl tar && \
+    echo "Downloading Hugo v${HUGO_VERSION}..." && \
+    curl -fL -o /tmp/hugo.tar.gz \
+      https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz && \
+    echo "Extracting..." && \
     cd /tmp && tar xzf hugo.tar.gz && \
     mv hugo /usr/local/bin/hugo && \
-    rm hugo.tar.gz LICENSE README.md 2>/dev/null; \
+    rm -f hugo.tar.gz LICENSE README.md && \
+    echo "Hugo binary installed:" && \
     hugo version
 
 WORKDIR /src
 COPY . .
 
-RUN hugo --minify
+RUN hugo --minify && echo "Build complete"
 
-# ─── Stage 2: Serve con Nginx ────────────────────────────────
+# ─── Stage 2: Serve ──────────────────────────────────────────
 FROM nginx:1.27-alpine
 
 LABEL maintainer="Nexus AI Agency <hola@nexus-ai.agency>"
