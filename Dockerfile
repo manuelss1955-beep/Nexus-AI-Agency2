@@ -1,10 +1,19 @@
 # ============================================================
 # Dockerfile — Nexus AI Agency (Hugo)
-# Multi-stage: build → nginx
+# Multi-stage: Alpine + Hugo binary build → nginx
 # ============================================================
 
 # ─── Stage 1: Build ──────────────────────────────────────────
-FROM klakegg/hugo:0.147.2-alpine AS builder
+FROM alpine:3.21 AS builder
+
+ARG HUGO_VERSION=0.147.2
+
+# Descargar Hugo extended
+RUN apk add --no-cache wget tar && \
+    wget -q https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz -O /tmp/hugo.tar.gz && \
+    tar xzf /tmp/hugo.tar.gz -C /usr/local/bin/ hugo && \
+    rm /tmp/hugo.tar.gz && \
+    chmod +x /usr/local/bin/hugo
 
 WORKDIR /src
 COPY . .
@@ -12,51 +21,38 @@ COPY . .
 # Construir sitio estático
 RUN hugo --minify
 
-# ─── Stage 2: Serve ──────────────────────────────────────────
+# ─── Stage 2: Serve con Nginx ────────────────────────────────
 FROM nginx:1.27-alpine
 
-# Etiquetas
 LABEL maintainer="Nexus AI Agency <hola@nexus-ai.agency>"
 LABEL description="Nexus AI Agency — Sitio web corporativo generado con Hugo"
 
-# Copiar el sitio generado
 COPY --from=builder /src/public /usr/share/nginx/html
 
-# Configuración de Nginx personalizada para SPA-friendly
 RUN rm /etc/nginx/conf.d/default.conf
-COPY <<EOF /etc/nginx/conf.d/default.conf
+COPY <<'NGINX_EOF' /etc/nginx/conf.d/default.conf
 server {
     listen 80;
     server_name _;
     root /usr/share/nginx/html;
     index index.html;
-
-    # Gzip
     gzip on;
     gzip_types text/plain text/css application/javascript application/json image/svg+xml;
     gzip_min_length 256;
-
-    # Clean URLs (Hugo genera /about/index.html → /about/)
     location / {
-        try_files \$uri \$uri/ =404;
+        try_files $uri $uri/ =404;
     }
-
-    # Cache de assets estáticos
     location ~* \.(css|js|svg|png|jpg|jpeg|gif|ico|woff2?)$ {
         expires 1y;
         add_header Cache-Control "public, immutable";
     }
-
-    # Seguridad
     add_header X-Frame-Options "SAMEORIGIN" always;
     add_header X-Content-Type-Options "nosniff" always;
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
 }
-EOF
+NGINX_EOF
 
-# Puerto
 EXPOSE 80
 
-# Healthcheck
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
     CMD wget -qO- http://localhost/ || exit 1
