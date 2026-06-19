@@ -3,16 +3,58 @@ languageCode = "es-ES"
 title = "Nexus AI — Soluciones de Inteligencia Artificial"
 theme = "nexus"
 defaultContentLanguage = "es"
-summaryLength = 20
+summaryLength = 25
 enableGitInfo = false
 disableHugoGeneratorInject = false
 enableRobotsTXT = true
 ignoreLogs = ['warning-goldmark-raw-html']
 
+# Taxonomías — Blog
+[taxonomies]
+  tag = "tags"
+
+# Tiempo de lectura — ya usado en templates con .ReadingTime
+# Sitemap XML
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# RSS
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = "application/rss"
+    baseName = "index"
+    isHTML = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.extensions]
+      typographer = true
+      strikethrough = true
+      linkify = true
+      table = true
+
+  # Código resaltado (Chroma)
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = false
+    style = "monokai"
+
+  # TOC
+  [markup.tableOfContents]
+    endLevel = 4
+    startLevel = 2
 
 [params]
   description = "Nexus AI — Agencia líder en inteligencia artificial. Agentes autónomos, integraciones MCP, automatización, chatbots y consultoría IA."
@@ -26,6 +68,8 @@ ignoreLogs = ['warning-goldmark-raw-html']
   countries = 8
   accuracy = 98
   support = "24/7"
+  locale = "es_ES"
+  siteName = "Nexus AI Agency"
 
 [menu]
   [[menu.main]]
