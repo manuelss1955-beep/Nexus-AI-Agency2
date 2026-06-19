@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="page-hero"><div class="container">
-  <div class="page-hero__breadcrumb"><a href="{{ "" | relURL }}">Inicio</a> / <span>Servicios</span></div>
+  {{ partial "breadcrumbs.html" . }}
   <h1 class="page-hero__title">{{ .Params.hero_title | safeHTML | default "Soluciones de <span>inteligencia artificial</span> para cada necesidad" }}</h1>
   <p class="page-hero__text">{{ .Params.hero_text | default "Nueve áreas de especialización cubren todo el espectro de la IA empresarial." }}</p>
 </div></section>
