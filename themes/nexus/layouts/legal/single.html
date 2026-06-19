@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="page-hero"><div class="container">
-  <div class="page-hero__breadcrumb"><a href="{{ "" | relURL }}">Inicio</a> / <span>{{ .Title }}</span></div>
+  {{ partial "breadcrumbs.html" . }}
   <h1 class="page-hero__title">{{ .Title }}</h1>
 </div></section>
 <section class="section"><div class="container"><div class="legal">
