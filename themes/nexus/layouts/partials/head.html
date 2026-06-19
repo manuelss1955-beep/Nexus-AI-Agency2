@@ -4,13 +4,20 @@
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
 {{- $root := "" -}}
 {{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
 <link rel="stylesheet" href="{{ $root }}css/main.css">
 <link rel="stylesheet" href="{{ $root }}css/blog.css">
 <link rel="icon" type="image/svg+xml" href="{{ $root }}assets/icons/favicon.svg">
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ $root }}index.xml">
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+	createChat({
+		webhookUrl: "https://n8n-production-adf2.up.railway.app/webhook/59acd426-5115-4d1b-9757-80ef5c21deb5/chat"
+	});
+</script>
 
 {{- /* OpenGraph */ -}}
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
