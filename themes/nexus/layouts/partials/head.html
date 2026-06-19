@@ -8,7 +8,6 @@
 {{- $root := "" -}}
 {{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
 <link rel="stylesheet" href="{{ $root }}css/main.css">
-<link rel="stylesheet" href="{{ $root }}css/blog.css">
 <link rel="icon" type="image/svg+xml" href="{{ $root }}assets/icons/favicon.svg">
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ $root }}index.xml">
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
@@ -67,5 +66,4 @@
   {{- end }}
 }
 </script>
-
 {{ block "head-extra" . }}{{ end }}
