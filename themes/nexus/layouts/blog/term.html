@@ -1,0 +1,36 @@
+{{ define "main" }}
+<link rel="stylesheet" href="{{ "css/blog.css" | relURL }}">
+{{- $posts := .Pages.ByDate.Reverse -}}
+<section class="blog-hero" style="padding-bottom:var(--space-xl)">
+  <div class="container">
+    <div class="page-hero__breadcrumb"><a href="{{ "" | relURL }}">Inicio</a> / <a href="{{ "blog/" | relURL }}">Blog</a> / <a href="{{ "blog/tags/" | relURL }}">Tags</a> / <span>{{ .Title }}</span></div>
+    <h1 class="blog-hero__title" style="font-size:var(--fs-4xl)">🏷️ <span>{{ .Title }}</span></h1>
+    <p class="blog-hero__text">{{ len $posts }} artículo{{ if ne (len $posts) 1 }}s{{ end }} con este tag</p>
+  </div>
+</section>
+<section class="blog-section"><div class="container">
+  <div class="blog-grid">
+    {{- range $posts -}}
+    <article class="blog-card">
+      <div class="blog-card__media">{{ .Params.emoji | default "📄" }}</div>
+      <div class="blog-card__body">
+        <div class="blog-card__meta">
+          <span class="blog-card__tag">{{ .Title }}</span>
+          <span class="blog-card__date">{{ .Date.Format "2 Jan 2006" }}</span>
+        </div>
+        <h3 class="blog-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="blog-card__excerpt">{{ .Params.excerpt | default .Summary }}</p>
+        <div class="blog-card__footer">
+          <span class="blog-card__author">👤 {{ .Params.author | default "Nexus AI" }}</span>
+          <span class="blog-card__read">{{ .ReadingTime }} min</span>
+        </div>
+      </div>
+    </article>
+    {{- end -}}
+  </div>
+  <div style="text-align:center;margin-top:var(--space-2xl)">
+    <a href="{{ "blog/" | relURL }}" class="btn btn--secondary">← Volver al Blog</a>
+    <a href="{{ "blog/tags/" | relURL }}" class="btn btn--secondary">🏷️ Todos los Tags</a>
+  </div>
+</div></section>
+{{ end }}
