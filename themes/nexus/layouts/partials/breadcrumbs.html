@@ -1,19 +1,27 @@
-{{- if not .IsHome }}
-{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- if not .IsHome -}}
+{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
 {{- $root := "" -}}
 {{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
-{{- $url := replace .Permalink (printf "%s" .Site.BaseURL) "" }}
-{{- $langUrl := strings.TrimPrefix "/" $url }}
-{{- $path := "" }}
-<div class="page-hero__breadcrumb">
+{{- $url := replace .Permalink (printf "%s" .Site.BaseURL) "" -}}
+{{- $langUrl := strings.TrimPrefix "/" $url -}}
+{{- $allSegments := split $langUrl "/" -}}
+{{- $path := "" -}}
+{{- $totalNonEmpty := 0 -}}
+{{- range $allSegments -}}{{ if ne . "" }}{{ $totalNonEmpty = add $totalNonEmpty 1 }}{{ end }}{{ end -}}
+{{- $labels := dict "about" "Sobre Nosotros" "services" "Servicios" "portfolio" "Casos de Éxito" "blog" "Blog" "contact" "Contacto" "legal" "Legal" "tags" "Tags" "digitalizacion" "Digitalización" "agentes-ia" "Agentes IA" "automatizacion" "Automatización" "chatbots" "Chatbots" "consultoria" "Consultoría" "atencion-presencial" "Atención Presencial" "programacion-apps" "Programación de Apps" "integraciones-mcp" "Integraciones MCP" "agentes-telefonicos" "Agentes Telefónicos" "aviso-legal" "Aviso Legal" "privacidad" "Privacidad" "terminos" "Términos" -}}
+{{- $idx := 0 -}}
   <a href="{{ $root }}">Inicio</a>
-  {{- range $index, $element := split $langUrl "/" }}
-    {{- if and (ne $element "") (ne $element (print $.Site.LanguagePrefix "/")) (ne $element $.Slug) }}
-      {{- $path = printf "%s%s/" $path $element }}
-      / <a href="{{ $root }}{{ $path }}">{{ humanize $element }}</a>
-    {{- else if eq $element $.Slug }}
-      / <span>{{ $.Title }}</span>
-    {{- end }}
-  {{- end }}
-</div>
-{{- end }}
+  {{- range $i, $seg := $allSegments -}}
+    {{- if ne $seg "" -}}
+      {{- $path = printf "%s%s/" $path $seg -}}
+      {{- $idx = add $idx 1 -}}
+      {{- $label := $seg | humanize -}}
+      {{- with index $labels $seg -}}{{- $label = . -}}{{- end -}}
+      {{- if eq $idx $totalNonEmpty -}}
+        / <span>{{ $.Title }}</span>
+      {{- else -}}
+        / <a href="{{ $root }}{{ $path }}">{{ $label }}</a>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
