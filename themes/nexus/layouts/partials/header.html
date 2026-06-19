@@ -1,0 +1,38 @@
+<header class="nav" role="banner"><div class="nav__inner">
+  <a href="{{ "" | relURL }}" class="nav__logo"><span class="nav__logo-icon">◆</span> Nexus AI</a>
+  <nav class="nav__links">
+    {{- $page := . -}}
+    {{- range .Site.Menus.main }}
+      {{- if eq .Identifier "services" }}
+      <div class="nav__dropdown">
+        <span class="nav__link{{ if $page.HasMenuCurrent "main" . }} nav__link--active{{ end }} nav__dropdown-toggle">Servicios <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <div class="nav__dropdown-menu">
+          {{- range $page.Site.Params.services }}
+          <a href="{{ "services/" | relURL }}{{ .slug }}/" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">{{ .icon }}</span>{{ .title }}</a>
+          {{- end }}
+        </div>
+      </div>
+      {{- else }}
+      <a href="{{ .URL | relURL }}" class="nav__link{{ if $page.IsMenuCurrent "main" . }} nav__link--active{{ end }}">{{ .Name }}</a>
+      {{- end }}
+    {{- end }}
+  </nav>
+  <a href="{{ "contact/" | relURL }}" class="btn btn--primary btn--sm nav__cta">Consultoría Gratuita</a>
+  <button class="nav__hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+</div></header>
+<div class="nav__mobile">
+  {{- $page := . -}}
+  {{- range .Site.Menus.main }}
+    {{- if eq .Identifier "services" }}
+    <span class="nav__mobile-dropdown-toggle">Servicios <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></span>
+    <div class="nav__mobile-sub">
+      {{- range $page.Site.Params.services }}
+      <a href="{{ "services/" | relURL }}{{ .slug }}/">{{ .icon }} {{ .title }}</a>
+      {{- end }}
+    </div>
+    {{- else }}
+    <a href="{{ .URL | relURL }}" class="nav__mobile-link">{{ .Name }}</a>
+    {{- end }}
+  {{- end }}
+  <a href="{{ "contact/" | relURL }}" class="btn btn--primary" style="margin-top:1.5rem;text-align:center;justify-content:center;">Consultoría Gratuita</a>
+</div>

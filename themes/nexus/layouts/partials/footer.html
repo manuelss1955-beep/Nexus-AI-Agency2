@@ -1,0 +1,30 @@
+<footer class="footer"><div class="container"><div class="footer__grid">
+  <div class="footer__brand">
+    <a href="{{ "" | relURL }}" class="nav__logo"><span class="nav__logo-icon">◆</span> Nexus AI</a>
+    <p>Orquestamos inteligencia artificial para transformar la manera en que las empresas operan, compiten y crecen.</p>
+  </div>
+  <div class="footer__col"><h4>Servicios</h4>
+    {{- range .Site.Params.services | first 5 }}
+    <a href="{{ "services/" | relURL }}{{ .slug }}/">{{ .title }}</a>
+    {{- end }}
+  </div>
+  <div class="footer__col"><h4>Más Servicios</h4>
+    {{- range .Site.Params.services | last 4 }}
+    <a href="{{ "services/" | relURL }}{{ .slug }}/">{{ .title }}</a>
+    {{- end }}
+  </div>
+  <div class="footer__col"><h4>Enlaces</h4>
+    <a href="{{ "about/" | relURL }}">Sobre Nosotros</a>
+    <a href="{{ "portfolio/" | relURL }}">Casos de Éxito</a>
+    <a href="{{ "blog/" | relURL }}">Blog</a>
+    <a href="{{ "contact/" | relURL }}">Contacto</a>
+    <a href="{{ "legal/aviso-legal/" | relURL }}">Aviso Legal</a>
+    <a href="{{ "legal/privacidad/" | relURL }}">Privacidad</a>
+    <a href="{{ "legal/terminos/" | relURL }}">Términos</a>
+  </div>
+</div>
+<div class="footer__bottom">
+  © <span data-year></span> Nexus AI Agency, S.L. — Todos los derechos reservados.
+  &nbsp;|&nbsp; <a href="{{ "legal/privacidad/" | relURL }}">Política de Privacidad</a>
+</div></div></footer>
+<div class="cookie-banner" id="cookie-banner"><p>Utilizamos cookies propias y de terceros para mejorar tu experiencia.</p><div class="cookie-banner__actions"><button class="btn btn--sm btn--primary" data-cookie-action="accept">Aceptar todas</button><button class="btn btn--sm btn--secondary" data-cookie-action="essential">Solo esenciales</button></div></div>
