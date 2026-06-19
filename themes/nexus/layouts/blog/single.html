@@ -3,14 +3,8 @@
 <article>
 <section class="post-hero">
   <div class="container">
-    <div class="post-hero__breadcrumb">
-      <a href="{{ "" | relURL }}">Inicio</a> / <a href="{{ "blog/" | relURL }}">Blog</a> / <span>{{ .Title }}</span>
-    </div>
-    {{- with .Params.tags -}}
-    {{- range first 1 . -}}
-    <span class="post-hero__cat">{{ . }}</span>
-    {{- end -}}
-    {{- end -}}
+    {{ partial "breadcrumbs.html" . }}
+    {{- with .Params.tags -}}{{- range first 1 . -}}<span class="post-hero__cat">{{ . }}</span>{{- end -}}{{- end -}}
     <h1 class="post-hero__title">{{ .Title }}</h1>
     <div class="post-hero__meta">
       <span>👤 {{ .Params.author | default "Nexus AI" }}</span>
@@ -19,12 +13,10 @@
     </div>
   </div>
 </section>
-
 <section class="section">
   <div class="container">
     <div class="post-content">
       {{ .Content }}
-
       {{- with .Params.tags -}}
       <div class="post-tags">
         {{- range . -}}
@@ -32,7 +24,6 @@
         {{- end -}}
       </div>
       {{- end -}}
-
       <div class="post-share">
         <span style="font-size:var(--fs-sm);color:var(--text-muted);font-weight:600">Compartir:</span>
         <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share__btn">𝕏 Twitter</a>
@@ -42,7 +33,6 @@
     </div>
   </div>
 </section>
-
 {{- $related := where (where .Site.RegularPages "Section" "blog") "Permalink" "ne" .Permalink | first 3 -}}
 {{- if $related -}}
 <section class="post-related">
@@ -53,10 +43,7 @@
       <article class="blog-card">
         <div class="blog-card__media">{{ .Params.emoji | default "📄" }}</div>
         <div class="blog-card__body">
-          <div class="blog-card__meta">
-            {{- with .Params.tags -}}{{- range first 1 . -}}<span class="blog-card__tag">{{ . }}</span>{{- end -}}{{- end -}}
-            <span class="blog-card__date">{{ .Date.Format "2 Jan 2006" }}</span>
-          </div>
+          <div class="blog-card__meta">{{- with .Params.tags -}}{{- range first 1 . -}}<span class="blog-card__tag">{{ . }}</span>{{- end -}}{{- end -}}<span class="blog-card__date">{{ .Date.Format "2 Jan 2006" }}</span></div>
           <h3 class="blog-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           <p class="blog-card__excerpt">{{ .Params.excerpt | default .Summary }}</p>
           <div class="blog-card__footer">
