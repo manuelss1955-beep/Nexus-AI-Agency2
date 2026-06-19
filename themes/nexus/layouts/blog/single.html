@@ -14,10 +14,11 @@
     </div>
   </div>
 </section>
-<section class="post-layout section">
+<section class="section">
   <div class="container">
-    <div class="post-layout__grid">
-      {{- if .WordCount | gt 200 -}}
+    {{- $hasToc := gt .WordCount 200 -}}
+    <div class="post-layout{{ if $hasToc }} post-layout--with-toc{{ end }}">
+      {{- if $hasToc -}}
       <aside class="post-toc">
         <div class="post-toc__inner">
           <div class="post-toc__header">📑 Tabla de contenidos</div>
