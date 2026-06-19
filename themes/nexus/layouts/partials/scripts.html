@@ -1,2 +1,2 @@
-<script src="{{ "js/main.js" | relURL }}"></script>
-{{ if eq .Section "services" }}<script src="{{ "js/services.js" | relURL }}"></script>{{ end }}
+<script src="{{ "js/main.js" | absURL }}"></script>
+{{ if eq .Section "services" }}<script src="{{ "js/services.js" | absURL }}"></script>{{ end }}

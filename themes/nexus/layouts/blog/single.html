@@ -1,76 +1,31 @@
 {{ define "main" }}
-<article itemscope itemtype="https://schema.org/Article">
-<meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02" }}">
-<meta itemprop="author" content="{{ .Params.author | default "Nexus AI" }}">
-<section class="post-hero">
-  <div class="container">
-    {{ partial "breadcrumbs.html" . }}
-    {{- with .Params.tags -}}{{- range first 1 . -}}<span class="post-hero__cat">{{ . }}</span>{{- end -}}{{- end -}}
-    <h1 class="post-hero__title" itemprop="headline">{{ .Title }}</h1>
-    <div class="post-hero__meta">
-      <span>👤 <span itemprop="author">{{ .Params.author | default "Nexus AI" }}</span></span>
-      <span>📅 <time datetime="{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">{{ .Date.Format "2 January, 2006" }}</time></span>
-      <span>📄 <span itemprop="timeRequired">{{ .ReadingTime }} min de lectura</span></span>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-    {{- $hasToc := gt .WordCount 200 -}}
-    <div class="post-layout{{ if $hasToc }} post-layout--with-toc{{ end }}">
-      {{- if $hasToc -}}
-      <aside class="post-toc">
-        <div class="post-toc__inner">
-          <div class="post-toc__header">📑 Tabla de contenidos</div>
-          {{ .TableOfContents }}
-        </div>
-      </aside>
-      {{- end -}}
-      <div class="post-content" itemprop="articleBody">
-        {{ .Content }}
-        {{- with .Params.tags -}}
-        <div class="post-tags" itemprop="keywords">
-          {{- range . -}}
-          <a href="{{ "blog/tags/" | relURL }}{{ . | urlize }}/" class="post-tags__tag">#{{ . }}</a>
-          {{- end -}}
-        </div>
-        {{- end -}}
-        <div class="post-share">
-          <span style="font-size:var(--fs-sm);color:var(--text-muted);font-weight:600">Compartir:</span>
-          <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share__btn">𝕏 Twitter</a>
-          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share__btn">🔗 LinkedIn</a>
-          <a href="mailto:?subject={{ .Title }}&body={{ .Permalink }}" class="post-share__btn">✉️ Email</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="page-hero post-hero"><div class="container"><div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div><h1 class="page-hero__title">{{ .Title }}</h1><div class="post-meta"><span>📅 {{ .Date.Format "2 January 2006" }}</span><span>👤 {{ .Params.author | default .Site.Params.author }}</span><span>⏱️ {{ .ReadingTime }} min lectura</span></div></div></section>
+
+<section class="section"><div class="container"><div class="post-grid"><article class="post-content">{{ .Content }}</article>
+{{- if .Params.tags }}
+<div class="post-tags">
+{{- range .Params.tags }}
+<a href="{{ "blog/tags/" | absURL }}{{ . | urlize }}/" class="post-tags__tag">#{{ . }}</a>
+{{- end }}
+</div>
+{{- end }}
+
+<div class="post-share">
+<h3>Compartir este artículo</h3>
+<a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share__btn">𝕏 Twitter</a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share__btn">🔗 LinkedIn</a>
+<a href="mailto:?subject={{ .Title }}&body={{ .Permalink }}" class="post-share__btn">✉️ Email</a>
+</div>
+
 {{- $related := where (where .Site.RegularPages "Section" "blog") "Permalink" "ne" .Permalink | shuffle | first 3 -}}
-{{- if $related -}}
-<section class="post-related">
-  <div class="container">
-    <h2 class="post-related__title">📰 Artículos <span>Relacionados</span></h2>
-    <div class="blog-grid">
-      {{- range $related -}}
-      <article class="blog-card">
-        <div class="blog-card__media">{{ .Params.emoji | default "📄" }}</div>
-        <div class="blog-card__body">
-          <div class="blog-card__meta">{{- with .Params.tags -}}{{- range first 1 . -}}<span class="blog-card__tag">{{ . }}</span>{{- end -}}{{- end -}}<span class="blog-card__date">{{ .Date.Format "2 Jan 2006" }}</span></div>
-          <h3 class="blog-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <p class="blog-card__excerpt">{{ .Params.excerpt | default .Summary }}</p>
-          <div class="blog-card__footer">
-            <span class="blog-card__author">👤 {{ .Params.author | default "Nexus AI" }}</span>
-            <span class="blog-card__read">{{ .ReadingTime }} min</span>
-          </div>
-        </div>
-      </article>
-      {{- end -}}
-    </div>
-    <div style="text-align:center;margin-top:var(--space-2xl)">
-      <a href="{{ "blog/" | relURL }}" class="btn btn--secondary">← Volver al Blog</a>
-    </div>
-  </div>
-</section>
-{{- end -}}
-</article>
+{{- if $related }}
+<div class="post-related"><h3>Artículos relacionados</h3><div class="grid grid--3">
+{{- range $related }}
+<article class="post-card"><div class="post-card__body"><span class="post-card__date">{{ .Date.Format "2 Jan 2006" }}</span><h3 class="post-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p class="post-card__text">{{ .Summary | plainify | truncate 100 }}</p></div></article>
+{{- end }}</div></div>
+{{- end }}
+
+<div class="post-nav">
+<a href="{{ "blog/" | absURL }}" class="btn btn--secondary">← Volver al Blog</a>
+</div></div></div></section>
 {{ end }}

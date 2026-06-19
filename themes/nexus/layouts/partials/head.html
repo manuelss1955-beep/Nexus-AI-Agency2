@@ -4,10 +4,10 @@
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-<link rel="stylesheet" href="{{ "css/blog.css" | relURL }}">
-<link rel="icon" type="image/svg+xml" href="{{ "assets/icons/favicon.svg" | relURL }}">
-<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ "index.xml" | relURL }}">
+<link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
+<link rel="stylesheet" href="{{ "css/blog.css" | absURL }}">
+<link rel="icon" type="image/svg+xml" href="{{ "assets/icons/favicon.svg" | absURL }}">
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ "index.xml" | absURL }}">
 
 {{- /* OpenGraph */ -}}
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">

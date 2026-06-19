@@ -1,23 +1,12 @@
 {{ define "main" }}
-{{ $svc := . }}
-<section class="page-hero"><div class="container">
-  {{ partial "breadcrumbs.html" . }}
-  <h1 class="page-hero__title">{{ .Params.hero_title | safeHTML }}</h1>
-  <p class="page-hero__text">{{ .Params.hero_text | default .Description }}</p>
-  <a href="{{ "contact/" | relURL }}" class="btn btn--primary btn--lg">{{ .Params.cta_text | default "Solicitar información →" }}</a>
+<section class="page-hero"><div class="container"><div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
+<h1 class="page-hero__title">{{ .Params.hero_title | default .Title | safeHTML }}</h1>
+<p class="page-hero__text">{{ .Params.hero_text | default .Description }}</p>
+<a href="{{ "contact/" | absURL }}" class="btn btn--primary btn--lg">{{ .Params.cta_text | default "Solicitar información →" }}</a>
 </div></section>
 
-<section class="service-detail"><div class="container"><div class="service-detail__grid">
-  <aside class="service-detail__sidebar"><nav>
-    <a href="#overview" class="service-detail__nav-item service-detail__nav-item--active"><span class="service-detail__nav-item__num">1</span>Visión general</a>
-    <a href="#benefits" class="service-detail__nav-item"><span class="service-detail__nav-item__num">2</span>Beneficios</a>
-    <a href="#features" class="service-detail__nav-item"><span class="service-detail__nav-item__num">3</span>{{ index .Params "features_title" | default "Características" }}</a>
-    <a href="#usecases" class="service-detail__nav-item"><span class="service-detail__nav-item__num">4</span>Casos de uso</a>
-    <a href="#faq" class="service-detail__nav-item"><span class="service-detail__nav-item__num">5</span>FAQ</a>
-  </nav></aside>
-  <div class="service-detail__content">
-    {{ .Content }}
-    <div class="service-detail__cta"><div><h4>{{ .Params.cta_title | default "¿Listo para empezar?" }}</h4><p>{{ .Params.cta_subtitle | default "Agenda una consultoría gratuita y descubre cómo podemos ayudarte." }}</p></div><a href="{{ "contact/" | relURL }}" class="btn btn--primary">Hablar con un experto →</a></div>
-  </div>
+<section class="section"><div class="container"><div class="service-detail">
+{{ .Content }}
+<div class="service-detail__cta"><div><h4>{{ .Params.cta_title | default "¿Listo para empezar?" }}</h4><p>{{ .Params.cta_subtitle | default "Agenda una consultoría gratuita y descubre cómo podemos ayudarte." }}</p></div><a href="{{ "contact/" | absURL }}" class="btn btn--primary">Hablar con un experto →</a></div>
 </div></div></section>
 {{ end }}

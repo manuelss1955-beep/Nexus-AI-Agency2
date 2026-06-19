@@ -1,24 +1,16 @@
-{{/* breadcrumbs.html — Migas de pan automáticas */}}
-{{- $parts := split (strings.TrimPrefix "/" .RelPermalink) "/" -}}
-{{- $crumbs := slice -}}
-{{- range $parts -}}{{- if ne . "" -}}{{- $crumbs = $crumbs | append . -}}{{- end -}}{{- end -}}
-{{- $last := sub (len $crumbs) 1 -}}
+{{- if not .IsHome }}
 <div class="page-hero__breadcrumb">
-  <a href="{{ "" | relURL }}">Inicio</a>
-  {{- $path := "" -}}
-  {{- range $i, $part := $crumbs -}}
-    {{- if lt $i $last -}}
-      {{- $path = printf "%s%s/" $path $part -}}
-      {{- $label := $part | humanize | title -}}
-      {{- if eq $part "blog" }}{{ $label = "Blog" }}{{ end -}}
-      {{- if eq $part "services" }}{{ $label = "Servicios" }}{{ end -}}
-      {{- if eq $part "portfolio" }}{{ $label = "Casos de Éxito" }}{{ end -}}
-      {{- if eq $part "legal" }}{{ $label = "Legal" }}{{ end -}}
-      {{- if eq $part "tags" }}{{ $label = "Tags" }}{{ end -}}
-      {{- if eq $part "about" }}{{ $label = "Sobre Nosotros" }}{{ end -}}
-      {{- if eq $part "contact" }}{{ $label = "Contacto" }}{{ end -}}
-      / <a href="{{ $path | relURL }}">{{ $label }}</a>
-    {{- end -}}
-  {{- end -}}
-  / <span>{{ .Title }}</span>
+  {{- $url := replace .Permalink (printf "%s" .Site.BaseURL) "" }}
+  {{- $langUrl := strings.TrimPrefix "/" $url }}
+  {{- $path := "" }}
+  <a href="{{ "" | absURL }}">Inicio</a>
+  {{- range $index, $element := split $langUrl "/" }}
+    {{- if and (ne $element "") (ne $element (print $.Site.LanguagePrefix "/")) (ne $element $.Slug) }}
+      {{- $path = printf "%s%s/" $path $element }}
+      / <a href="{{ $path | absURL }}">{{ humanize $element }}</a>
+    {{- else if eq $element $.Slug }}
+      / <span>{{ $.Title }}</span>
+    {{- end }}
+  {{- end }}
 </div>
+{{- end }}
