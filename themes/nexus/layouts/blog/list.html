@@ -1,0 +1,176 @@
+<link rel="stylesheet" href="{{ "css/blog.css" | relURL }}">
+{{- $posts := where .Site.RegularPages "Section" "blog" -}}
+{{- $featured := first 1 (where $posts ".Params.featured" true) -}}
+{{- $regular := $posts | complement $featured -}}
+
+<section class="blog-hero">
+  <div class="container">
+    <div class="page-hero__breadcrumb"><a href="{{ "" | relURL }}">Inicio</a> / <span>Blog</span></div>
+    <h1 class="blog-hero__title">{{ .Params.hero_title | default .Title | safeHTML }}</h1>
+    <p class="blog-hero__text">{{ .Params.hero_text }}</p>
+    <div class="blog-hero__meta">
+      <span>📝 {{ len $posts }} artículos</span>
+      <span>🏷️ {{ len (slice $posts.Permalinks) }} categorías</span>
+      <span>📅 Actualizado {{ now.Format "Jan 2006" }}</span>
+    </div>
+    <div class="blog-search">
+      <span class="blog-search__icon">🔍</span>
+      <input type="text" id="blogSearch" placeholder="Buscar artículos..." autocomplete="off">
+    </div>
+  </div>
+</section>
+
+<section class="blog-section" id="blog-section">
+  <div class="container">
+    <div id="blogTags" class="blog-tags">
+      <span class="blog-tags__tag blog-tags__tag--active" data-tag="all">Todos</span>
+      {{- $tags := slice -}}
+      {{- range $posts -}}
+        {{- range .Params.tags -}}
+          {{- $tags = $tags | append . -}}
+        {{- end -}}
+      {{- end -}}
+      {{- range ($tags | uniq | sort) -}}
+      <span class="blog-tags__tag" data-tag="{{ . | urlize }}">{{ . }}</span>
+      {{- end -}}
+    </div>
+
+    {{- with $featured -}}
+    {{- $f := index . 0 -}}
+    <div class="blog-featured">
+      <article class="blog-featured__card">
+        <div class="blog-featured__media">{{ $f.Params.emoji | default "⭐" }}</div>
+        <div class="blog-featured__body">
+          <span class="blog-featured__tag">🌟 Destacado</span>
+          <h2 class="blog-featured__title"><a href="{{ $f.RelPermalink }}">{{ $f.Title }}</a></h2>
+          <p class="blog-featured__excerpt">{{ $f.Params.excerpt | default $f.Summary }}</p>
+          <div class="blog-featured__meta">
+            <span>👤 {{ $f.Params.author | default "Nexus AI" }}</span>
+            <span>📄 {{ $f.ReadingTime }} min lectura</span>
+            <span>📅 {{ $f.Date.Format "2 Jan 2006" }}</span>
+          </div>
+          <a href="{{ $f.RelPermalink }}" class="btn btn--primary btn--sm" style="margin-top:var(--space-lg);align-self:flex-start">Leer artículo →</a>
+        </div>
+      </article>
+    </div>
+    {{- end -}}
+
+    <div class="blog-grid" id="blogGrid">
+      {{- range $regular.ByDate.Reverse -}}
+      <article class="blog-card" data-tags="{{ range .Params.tags }}{{ . | urlize }} {{ end }}">
+        <div class="blog-card__media">{{ .Params.emoji | default "📄" }}</div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            {{- with .Params.tags -}}
+            {{- range first 2 . -}}
+            <span class="blog-card__tag">{{ . }}</span>
+            {{- end -}}
+            {{- end -}}
+            <span class="blog-card__date">{{ .Date.Format "2 Jan 2006" }}</span>
+          </div>
+          <h3 class="blog-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="blog-card__excerpt">{{ .Params.excerpt | default .Summary }}</p>
+          <div class="blog-card__footer">
+            <span class="blog-card__author">👤 {{ .Params.author | default "Nexus AI" }}</span>
+            <span class="blog-card__read">{{ .ReadingTime }} min</span>
+          </div>
+        </div>
+      </article>
+      {{- end -}}
+    </div>
+
+    <div class="blog-empty" id="blogEmpty" style="display:none">
+      <div class="blog-empty__icon">🔍</div>
+      <p class="blog-empty__text">No se encontraron artículos</p>
+      <p class="blog-empty__sub">Prueba con otros términos o categorías</p>
+    </div>
+
+    {{- if gt (len $regular) 9 -}}
+    <div class="blog-pagination" id="blogPagination">
+      <button class="blog-pagination__btn" data-page="prev">← Anterior</button>
+      <span id="blogPageInfo">Página 1</span>
+      <button class="blog-pagination__btn" data-page="next">Siguiente →</button>
+    </div>
+    {{- end -}}
+  </div>
+</section>
+
+{{- $latest := first 3 $regular.ByDate.Reverse -}}
+{{- if $latest -}}
+<section class="blog-section--alt" style="padding:var(--space-4xl) 0">
+  <div class="container">
+    <div class="blog-section__header" style="text-align:center">
+      <h2 class="blog-section__title">📰 Últimos <span>Artículos</span></h2>
+      <p class="blog-section__subtitle">No te pierdas nuestras novedades sobre inteligencia artificial</p>
+    </div>
+    <div class="blog-grid">
+      {{- range $latest -}}
+      <article class="blog-card">
+        <div class="blog-card__media">{{ .Params.emoji | default "📄" }}</div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            {{- with .Params.tags -}}
+            {{- range first 2 . -}}
+            <span class="blog-card__tag">{{ . }}</span>
+            {{- end -}}
+            {{- end -}}
+            <span class="blog-card__date">{{ .Date.Format "2 Jan 2006" }}</span>
+          </div>
+          <h3 class="blog-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="blog-card__excerpt">{{ .Params.excerpt | default .Summary }}</p>
+          <div class="blog-card__footer">
+            <span class="blog-card__author">👤 {{ .Params.author | default "Nexus AI" }}</span>
+            <span class="blog-card__read">{{ .ReadingTime }} min</span>
+          </div>
+        </div>
+      </article>
+      {{- end -}}
+    </div>
+    <div style="text-align:center;margin-top:var(--space-2xl)">
+      <a href="{{ "blog/" | relURL }}" class="btn btn--secondary">Ver todos los artículos →</a>
+    </div>
+  </div>
+</section>
+{{- end -}}
+
+<script>
+(function(){
+  const searchInput = document.getElementById('blogSearch');
+  const tags = document.querySelectorAll('.blog-tags__tag');
+  const cards = document.querySelectorAll('.blog-card');
+  const empty = document.getElementById('blogEmpty');
+  const grid = document.getElementById('blogGrid');
+  let activeTag = 'all';
+  let searchQuery = '';
+
+  function filterPosts(){
+    let visible = 0;
+    cards.forEach(card => {
+      const cardTags = (card.dataset.tags || '').trim();
+      const title = card.querySelector('.blog-card__title')?.textContent?.toLowerCase() || '';
+      const excerpt = card.querySelector('.blog-card__excerpt')?.textContent?.toLowerCase() || '';
+      const matchesTag = activeTag === 'all' || cardTags.includes(activeTag);
+      const matchesSearch = !searchQuery || title.includes(searchQuery) || excerpt.includes(searchQuery);
+      const show = matchesTag && matchesSearch;
+      card.style.display = show ? '' : 'none';
+      if(show) visible++;
+    });
+    empty.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  searchInput.addEventListener('input', function(){
+    searchQuery = this.value.toLowerCase().trim();
+    filterPosts();
+  });
+
+  tags.forEach(tag => {
+    tag.addEventListener('click', function(){
+      tags.forEach(t => t.classList.remove('blog-tags__tag--active'));
+      this.classList.add('blog-tags__tag--active');
+      activeTag = this.dataset.tag;
+      filterPosts();
+    });
+  });
+})();
+</script>
+{{ end }}
