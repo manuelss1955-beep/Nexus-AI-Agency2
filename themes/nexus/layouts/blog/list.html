@@ -5,12 +5,11 @@
 {{- $regular := $posts | complement $featured -}}
 <section class="blog-hero">
   <div class="container">
-    <div class="page-hero__breadcrumb"><a href="{{ "" | relURL }}">Inicio</a> / <span>Blog</span></div>
+    {{ partial "breadcrumbs.html" . }}
     <h1 class="blog-hero__title">{{ .Params.hero_title | default .Title | safeHTML }}</h1>
     <p class="blog-hero__text">{{ .Params.hero_text }}</p>
     <div class="blog-hero__meta">
       <span>📝 {{ len $posts }} artículos</span>
-      <span>🏷️ {{ len (uniq (apply (apply $posts "Params.tags" ".") "urlize" ".")) }} categorías</span>
       <span>📅 Actualizado {{ now.Format "Jan 2006" }}</span>
     </div>
     <div class="blog-search">
