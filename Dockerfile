@@ -6,7 +6,7 @@
 # ─── Stage 1: Build ──────────────────────────────────────────
 FROM alpine:3.21 AS builder
 
-ARG HUGO_VERSION=0.147.2
+ARG HUGO_VERSION=0.163.3
 
 RUN apk add --no-cache curl tar && \
     echo "Downloading Hugo v${HUGO_VERSION}..." && \
