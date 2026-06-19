@@ -1,0 +1,28 @@
+{{/* breadcrumbs.html — Migas de pan dinámicas con soporte para front matter */}}
+{{- $breadcrumbs := .Params.breadcrumbs | default slice -}}
+<div class="page-hero__breadcrumb">
+  <a href="{{ "" | relURL }}">Inicio</a>
+  {{- if $breadcrumbs -}}
+    {{- range $breadcrumbs -}}
+    / <a href="{{ .url | relURL }}">{{ .name }}</a>
+    {{- end -}}
+  {{- else -}}
+    {{- $sections := split (strings.TrimPrefix "/" .RelPermalink) "/" -}}
+    {{- $cumulative := "" -}}
+    {{- $lastIndex := sub (len $sections) 1 -}}
+    {{- range $i, $section := $sections -}}
+      {{- if and (ne $section "") (lt $i $lastIndex) -}}
+        {{- $cumulative = printf "%s%s/" $cumulative $section -}}
+        {{- $label := $section | humanize | title -}}
+        {{- if eq $section "blog" }}{{ $label = "Blog" }}{{ end -}}
+        {{- if eq $section "services" }}{{ $label = "Servicios" }}{{ end -}}
+        {{- if eq $section "portfolio" }}{{ $label = "Casos de Éxito" }}{{ end -}}
+        {{- if eq $section "legal" }}{{ $label = "Legal" }}{{ end -}}
+        {{- if eq $section "about" }}{{ $label = "Sobre Nosotros" }}{{ end -}}
+        {{- if eq $section "contact" }}{{ $label = "Contacto" }}{{ end -}}
+        / <a href="{{ $cumulative | relURL }}">{{ $label }}</a>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  / <span>{{ .Title }}</span>
+</div>
