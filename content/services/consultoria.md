@@ -12,5 +12,3 @@ sidebar:
   - {id: services, label: "Servicios de consultoría"}
   - {id: faq, label: "FAQ"}
 ---
-
-<h2 id="overview">Visión general</h2>

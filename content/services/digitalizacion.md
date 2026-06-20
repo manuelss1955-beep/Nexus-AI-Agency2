@@ -16,5 +16,3 @@ sidebar:
   - {id: usecases, label: "Casos de uso"}
   - {id: faq, label: "FAQ"}
 ---
-
-<h2 id="overview">Visión general</h2>
