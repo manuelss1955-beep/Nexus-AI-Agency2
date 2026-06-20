@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{- $root := partial "rootpath.html" . -}}
+<section class="page-hero"><div class="container">
+<div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
+<h1 class="page-hero__title">{{ .Params.hero_title | default .Title | safeHTML }}</h1>
+<p class="page-hero__text">{{ .Params.hero_text | default .Description }}</p>
+<a href="{{ $root }}contact/index.html" class="btn btn--primary btn--lg">{{ .Params.cta_text | default "Solicitar información →" }}</a>
+</div></section>
+
+<section class="section"><div class="container"><div class="service-detail__grid">
+  <div class="service-detail__content">
+{{ .Content }}
+<div class="service-detail__cta"><div><h4>{{ .Params.cta_title | default "¿Listo para transformar tu sector?" }}</h4><p>{{ .Params.cta_subtitle | default "Agenda una consultoría gratuita y descubre cómo la IA puede impulsar tu industria." }}</p></div><a href="{{ $root }}contact/index.html" class="btn btn--primary">Hablar con un experto →</a></div>
+</div>
+<aside class="service-detail__sidebar"><nav>
+{{- range $i, $item := .Params.sidebar }}
+{{- if eq $item.id "cta" }}
+<a href="{{ $root }}contact/index.html" class="service-detail__nav-item{{ if eq $i 0 }} service-detail__nav-item--active{{ end }}"><span class="service-detail__nav-item__num">{{ add $i 1 }}</span>{{ $item.label }}</a>
+{{- else }}
+<a href="#{{ $item.id }}" class="service-detail__nav-item{{ if eq $i 0 }} service-detail__nav-item--active{{ end }}"><span class="service-detail__nav-item__num">{{ add $i 1 }}</span>{{ $item.label }}</a>
+{{- end }}
+{{- end }}
+</nav></aside>
+</div></div></section>
+{{ end }}
