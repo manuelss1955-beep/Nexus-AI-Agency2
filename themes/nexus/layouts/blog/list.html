@@ -1,12 +1,12 @@
 {{ define "head-extra" }}
-{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
 {{- $root := "" -}}
 {{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
 <link rel="stylesheet" href="{{ $root }}css/blog.css">
 {{ end }}
 
 {{ define "main" }}
-{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
 {{- $root := "" -}}
 {{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
 <section class="page-hero"><div class="container"><div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div><h1 class="page-hero__title">Blog</h1><p class="page-hero__text">Artículos sobre inteligencia artificial, automatización, chatbots, agentes autónomos y cómo la IA está transformando las empresas.</p></div></section>
@@ -22,11 +22,11 @@
 
 {{- if gt $paginator.TotalPages 1 }}
 <div class="pagination">
-{{- if $paginator.HasPrev }}<a href="{{ $root }}{{ $paginator.Prev.URL }}" class="btn btn--sm btn--secondary">← Anterior</a>{{ end }}
+{{- if $paginator.HasPrev }}<a href="{{ $root }}{{ strings.TrimPrefix "/" $paginator.Prev.URL }}" class="btn btn--sm btn--secondary">← Anterior</a>{{ end }}
 {{- range $paginator.Pagers }}
-<a href="{{ $root }}{{ .URL }}" class="btn btn--sm {{ if eq . $paginator }}btn--primary{{ else }}btn--secondary{{ end }}">{{ .PageNumber }}</a>
+<a href="{{ $root }}{{ strings.TrimPrefix "/" .URL }}" class="btn btn--sm {{ if eq . $paginator }}btn--primary{{ else }}btn--secondary{{ end }}">{{ .PageNumber }}</a>
 {{- end }}
-{{- if $paginator.HasNext }}<a href="{{ $root }}{{ $paginator.Next.URL }}" class="btn btn--sm btn--secondary">Siguiente →</a>{{ end }}
+{{- if $paginator.HasNext }}<a href="{{ $root }}{{ strings.TrimPrefix "/" $paginator.Next.URL }}" class="btn btn--sm btn--secondary">Siguiente →</a>{{ end }}
 </div>
 {{- end }}
 

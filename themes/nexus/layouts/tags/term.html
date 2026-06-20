@@ -9,8 +9,7 @@
 {{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
 {{- $root := "" -}}
 {{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
-<section class="page-hero"><div class="container">
-<div class="page-hero__breadcrumb"><a href="{{ $root }}">Inicio</a> / <a href="{{ $root }}tags/">Tags</a> / <span>{{ .Title }}</span></div>
+<section class="page-hero"><div class="container"><div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
 <h1 class="page-hero__title">Artículos: <span class="accent">{{ .Title }}</span></h1>
 <p class="page-hero__text">{{ len .Pages }} artículo{{ if ne (len .Pages) 1 }}s{{ end }}</p>
 </div></section>
