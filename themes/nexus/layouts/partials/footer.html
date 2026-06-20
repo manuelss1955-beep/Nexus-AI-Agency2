@@ -1,4 +1,7 @@
-{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
+{{- $root := "" -}}
+{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
+{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
 {{- $root := "" -}}
 {{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
 <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="{{ $root }}" class="nav__logo"><span class="nav__logo-icon">◆</span> Nexus AI</a><p>Orquestamos inteligencia artificial para transformar la manera en que las empresas operan, compiten y crecen.</p></div><div class="footer__col"><h4>Servicios</h4>
