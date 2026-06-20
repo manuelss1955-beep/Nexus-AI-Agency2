@@ -1,0 +1,7 @@
+name = "Nexus AI Agency Theme"
+license = "MIT"
+min_version = "0.112.0"
+description = "Tema corporativo para Nexus AI Agency con diseño moderno y soporte multi-sección."
+
+[author]
+name = "Nexus AI Agency"

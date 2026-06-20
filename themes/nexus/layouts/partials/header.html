@@ -1,0 +1,93 @@
+{{- $page := . -}}{{- $root := partial "rootpath.html" . -}}{{- $currentURL := $page.RelPermalink -}}
+<header class="nav"><div class="nav__inner">
+  <a href="{{ $root }}" class="nav__logo"><span class="nav__logo-icon">◆</span> Nexus AI</a>
+  <nav class="nav__links">
+    {{- range .Site.Menus.main }}
+      {{- if eq .Identifier "services" }}
+      {{- $servicesActive := or ($page.HasMenuCurrent "main" .) (hasPrefix $currentURL "/services/") (hasPrefix $currentURL "/formacion/") (hasPrefix $currentURL "/sectores/") -}}
+      <div class="nav__dropdown">
+        <span class="nav__link nav__dropdown-toggle{{ if $servicesActive }} nav__link--active{{ end }}">Servicios y Soluciones <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <div class="nav__dropdown-menu">
+          <div class="nav__dropdown-grid">
+            <div class="nav__dropdown-column">
+              <div class="nav__dropdown-column-header">🚀 Servicios</div>
+            {{- range $page.Site.Params.services }}
+              <a href="{{ $root }}services/{{ .slug }}" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">{{ .icon }}</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">{{ .title }}</span>
+                </span>
+              </a>
+            {{- end }}
+            </div>
+            <div class="nav__dropdown-column">
+              <div class="nav__dropdown-column-header">💡 Soluciones</div>
+            </div>
+            <div class="nav__dropdown-column">
+              <div class="nav__dropdown-column-header">🏢 Sectores</div>
+              <a href="{{ $root }}sectores/retail" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🛍️</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Retail</span><span class="nav__dropdown-item__desc">Tiendas, ecommerce, retail físico</span></span></a>
+              <a href="{{ $root }}sectores/salud" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏥</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Salud</span><span class="nav__dropdown-item__desc">Clínicas, hospitales, salud digital</span></span></a>
+              <a href="{{ $root }}sectores/banca" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏦</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Banca y Fintech</span><span class="nav__dropdown-item__desc">Finanzas, seguros, fintech</span></span></a>
+              <a href="{{ $root }}sectores/logistica" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📦</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Logística</span><span class="nav__dropdown-item__desc">Transporte, cadena de suministro</span></span></a>
+              <a href="{{ $root }}sectores/industria" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏭</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Industria</span><span class="nav__dropdown-item__desc">Manufactura, producción</span></span></a>
+              <a href="{{ $root }}sectores/hosteleria" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🍽️</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Hostelería</span><span class="nav__dropdown-item__desc">Hoteles, restaurantes, turismo</span></span></a>
+            </div>
+            <div class="nav__dropdown-column">
+              <div class="nav__dropdown-column-header">📚 Formación</div>
+              <a href="{{ $root }}formacion/curso-ia-empresas" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🎓</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de IA para Empresas</span><span class="nav__dropdown-item__desc">Fundamentos y aplicación práctica</span></span></a>
+              <a href="{{ $root }}formacion/introduccion-ia" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🧠</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de Introducción a la IA</span><span class="nav__dropdown-item__desc">Conceptos fundamentales</span></span></a>
+              <a href="{{ $root }}formacion/ia-agentica" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🤖</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de IA Agéntica</span><span class="nav__dropdown-item__desc">Agentes autónomos avanzados</span></span></a>
+              <a href="{{ $root }}formacion/automatizacion-ia" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">⚡</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de Automatización con IA</span><span class="nav__dropdown-item__desc">n8n, MCP, workflows</span></span></a>
+              <a href="{{ $root }}formacion/desarrollo-ia" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">💻</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de Desarrollo con IA</span><span class="nav__dropdown-item__desc">Apps potenciadas por IA</span></span></a>
+              <a href="{{ $root }}formacion/formacion-incompany" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">👥</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Formación In‑Company</span><span class="nav__dropdown-item__desc">A medida para tu equipo</span></span></a>
+              <a href="{{ $root }}formacion/webinars-workshops" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📹</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Webinars y Workshops</span><span class="nav__dropdown-item__desc">Eventos en vivo y grabados</span></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{- else }}
+      {{- $menuActive := or ($page.IsMenuCurrent "main" .) (eq $currentURL .URL) (and (ne .URL "/") (hasPrefix $currentURL .URL)) -}}
+      {{- $linkUrl := strings.TrimPrefix "/" .URL -}}
+      <a href="{{ $root }}{{ if eq .URL "/" }}{{ else }}{{ $linkUrl }}{{ end }}" class="nav__link{{ if $menuActive }} nav__link--active{{ end }}">{{ .Name }}</a>
+      {{- end }}
+    {{- end }}
+  </nav>
+  <a href="{{ $root }}contact" class="btn btn--primary btn--sm nav__cta"><span>Consultoría Gratuita</span></a>
+  <button class="nav__hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+</div></header>
+<div class="nav__mobile">
+  <button class="nav__mobile-close-btn" aria-label="Cerrar menú">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  {{- range .Site.Menus.main }}
+    {{- if eq .Identifier "services" }}
+    <span class="nav__mobile-dropdown-toggle">Servicios y Soluciones <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></span>
+    <div class="nav__mobile-sub">
+      <div class="nav__mobile-sub-header">🚀 Servicios</div>
+      {{- range $page.Site.Params.services }}
+      <a href="{{ $root }}services/{{ .slug }}"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">{{ .icon }}</span> {{ .title }}</a>
+      {{- end }}
+      <div class="nav__mobile-sub-header">💡 Soluciones</div>
+      <div class="nav__mobile-sub-header">🏢 Sectores</div>
+      <a href="{{ $root }}sectores/retail"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🛍️</span> Retail</a>
+      <a href="{{ $root }}sectores/salud"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏥</span> Salud</a>
+      <a href="{{ $root }}sectores/banca"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏦</span> Banca y Fintech</a>
+      <a href="{{ $root }}sectores/logistica"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📦</span> Logística</a>
+      <a href="{{ $root }}sectores/industria"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏭</span> Industria</a>
+      <a href="{{ $root }}sectores/hosteleria"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🍽️</span> Hostelería</a>
+      <div class="nav__mobile-sub-header">📚 Formación</div>
+      <a href="{{ $root }}formacion/curso-ia-empresas"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🎓</span> Curso de IA para Empresas</a>
+      <a href="{{ $root }}formacion/introduccion-ia"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🧠</span> Curso de Introducción a la IA</a>
+      <a href="{{ $root }}formacion/ia-agentica"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🤖</span> Curso de IA Agéntica</a>
+      <a href="{{ $root }}formacion/automatizacion-ia"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">⚡</span> Curso de Automatización con IA</a>
+      <a href="{{ $root }}formacion/desarrollo-ia"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">💻</span> Curso de Desarrollo con IA</a>
+      <a href="{{ $root }}formacion/formacion-incompany"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">👥</span> Formación In‑Company</a>
+      <a href="{{ $root }}formacion/webinars-workshops"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📹</span> Webinars y Workshops</a>
+    </div>
+    {{- else }}
+    {{- $mobileLinkUrl := strings.TrimPrefix "/" .URL -}}
+    <a href="{{ $root }}{{ if eq .URL "/" }}{{ else }}{{ $mobileLinkUrl }}{{ end }}" class="nav__mobile-link{{ if eq $currentURL .URL }} nav__mobile-link--active{{ end }}">{{ .Name }}</a>
+    {{- end }}
+  {{- end }}
+  <a href="{{ $root }}contact" class="btn btn--primary" style="margin-top:1.5rem;text-align:center;justify-content:center;">Consultoría Gratuita →</a>
+</div>
