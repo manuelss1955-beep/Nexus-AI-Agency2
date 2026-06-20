@@ -70,6 +70,8 @@ ignoreLogs = ['warning-goldmark-raw-html']
   support = "24/7"
   locale = "es_ES"
   siteName = "Nexus AI Agency"
+  # Google Analytics 4 — Descomentar y añadir Measurement ID
+  # googleAnalytics = "G-XXXXXXXXXX"
 
 [menu]
   [[menu.main]]
