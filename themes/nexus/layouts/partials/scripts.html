@@ -1,0 +1,3 @@
+{{- $root := partial "rootpath.html" . -}}
+<script src="{{ $root }}js/main.js"></script>
+{{ if eq .Section "services" }}<script src="{{ $root }}js/services.js"></script>{{ end }}
