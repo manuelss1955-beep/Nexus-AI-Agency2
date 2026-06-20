@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- $depth := sub (strings.Count .RelPermalink "/") 1 -}}
+{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
 {{- $root := "" -}}
 {{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
 <section class="page-hero"><div class="container"><div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>

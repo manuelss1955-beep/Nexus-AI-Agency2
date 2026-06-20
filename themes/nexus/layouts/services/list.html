@@ -1,15 +1,10 @@
 {{ define "main" }}
 <section class="page-hero"><div class="container">
-  {{ partial "breadcrumbs.html" . }}
-  <h1 class="page-hero__title">{{ .Params.hero_title | safeHTML | default "Soluciones de <span>inteligencia artificial</span> para cada necesidad" }}</h1>
-  <p class="page-hero__text">{{ .Params.hero_text | default "Nueve áreas de especialización cubren todo el espectro de la IA empresarial." }}</p>
+  <div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
+  <h1 class="page-hero__title">{{ .Title }}</h1>
+  {{ with .Params.hero_text }}<p class="page-hero__text">{{ . }}</p>{{ end }}
 </div></section>
 <section class="section"><div class="container">
-  <div class="grid grid--2" style="max-width:1000px;margin:0 auto;">
-  {{ $page := . }}
-  {{ range .Site.Params.services }}
-    <a href="{{ .slug }}/" class="card"><div class="card__icon">{{ .icon }}</div><h3 class="card__title">{{ .title }}</h3><p class="card__text">{{ index $page.Site.Data.servicios .slug "excerpt" }}</p><span class="card__link">Descubrir más →</span></a>
-  {{ end }}
-  </div>
+  {{ .Content }}
 </div></section>
 {{ end }}

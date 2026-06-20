@@ -1,22 +1,10 @@
 {{ define "main" }}
 <section class="page-hero"><div class="container">
-  {{ partial "breadcrumbs.html" . }}
-  <h1 class="page-hero__title">🏷️ <span>Tags del Blog</span></h1>
-  <p class="page-hero__text">Explora nuestros artículos por categoría. {{ len .Pages }} tags disponibles.</p>
+  <div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
+  {{ with .Title }}<h1 class="page-hero__title">{{ . }}</h1>{{ end }}
+  {{ with .Params.hero_text }}<p class="page-hero__text">{{ . }}</p>{{ end }}
 </div></section>
-<section class="tags-page"><div class="container">
-  <div class="tags-page__grid">
-    {{- range .Pages.ByTitle -}}
-    {{- $count := len .Pages -}}
-    <a href="{{ .RelPermalink }}" class="tags-page__card">
-      <span class="tags-page__icon">🏷️</span>
-      <div class="tags-page__info">
-        <h3>{{ .Title }}</h3>
-        <span>{{ $count }} artículo{{ if ne $count 1 }}s{{ end }}</span>
-      </div>
-      <span class="tags-page__count">{{ $count }}</span>
-    </a>
-    {{- end -}}
-  </div>
+<section class="section"><div class="container">
+  {{ .Content }}
 </div></section>
 {{ end }}
