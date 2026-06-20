@@ -4,7 +4,7 @@
   {{- $pages = $pages | first $rssLimit -}}
 {{- end -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Blog | Nexus AI — Inteligencia Artificial para Empresas</title>
     <link>{{ .Permalink }}</link>
@@ -34,9 +34,6 @@
         {{- end }}
       {{- end }}
       <description>{{ .Summary | plainify | html }}</description>
-      {{- if .Truncated }}
-      <content:encoded>{{ printf "<![CDATA[%s]]>" .Content | safeHTML }}</content:encoded>
-      {{- end }}
     </item>
     {{- end }}
   </channel>
