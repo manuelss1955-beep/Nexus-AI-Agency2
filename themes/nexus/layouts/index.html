@@ -1,7 +1,5 @@
 {{ define "main" }}
-{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
-{{- $root := "" -}}
-{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
+{{- $root := partial "rootpath.html" . -}}
 <section class="hero"><div class="container hero__inner"><div>
 <span class="hero__tag"><span class="hero__tag-dot"></span>Tu partner de IA sin complicaciones</span>
 <h1 class="hero__title">Soluciones de IA que tu empresa necesita, <span class="accent">sin complicaciones.</span></h1>
