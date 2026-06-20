@@ -1,0 +1,1 @@
+{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}{{- $root := "" -}}{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}{{ $root -}}
