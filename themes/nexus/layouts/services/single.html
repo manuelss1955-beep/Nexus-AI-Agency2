@@ -1,7 +1,5 @@
 {{ define "main" }}
-{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
-{{- $root := "" -}}
-{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
+{{- $root := partial "rootpath.html" . -}}
 <section class="page-hero"><div class="container"><div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
 <h1 class="page-hero__title">{{ .Params.hero_title | default .Title | safeHTML }}</h1>
 <p class="page-hero__text">{{ .Params.hero_text | default .Description }}</p>
