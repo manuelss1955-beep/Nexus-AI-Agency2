@@ -3,10 +3,6 @@
 {{- range .Site.Params.services }}
 <a href="{{ $root }}services/{{ .slug }}/index.html">{{ .title }}</a>
 {{- end }}
-</div><div class="footer__col"><h4>Más Servicios</h4>
-{{- range .Site.Params.services }}
-<a href="{{ $root }}services/{{ .slug }}/index.html">{{ .title }}</a>
-{{- end }}
 </div><div class="footer__col"><h4>Enlaces</h4>
 <a href="{{ $root }}about/index.html">Sobre Nosotros</a>
 <a href="{{ $root }}portfolio/index.html">Casos de Éxito</a>
