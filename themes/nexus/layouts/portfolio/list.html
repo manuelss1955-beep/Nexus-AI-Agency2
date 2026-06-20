@@ -1,0 +1,10 @@
+{{ define "main" }}
+<section class="page-hero"><div class="container">
+  <div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
+  <h1 class="page-hero__title">{{ .Params.hero_title | safeHTML }}</h1>
+  <p class="page-hero__text">{{ .Params.hero_text }}</p>
+</div></section>
+<section class="section"><div class="container">
+  {{ .Content }}
+</div></section>
+{{ end }}
