@@ -1,12 +1,14 @@
 {{- $page := . -}}
 {{- $root := partial "rootpath.html" . -}}
+{{- $currentURL := $page.RelPermalink -}}
 <header class="nav"><div class="nav__inner">
   <a href="{{ $root }}index.html" class="nav__logo"><span class="nav__logo-icon">◆</span> Nexus AI</a>
   <nav class="nav__links">
     {{- range .Site.Menus.main }}
       {{- if eq .Identifier "services" }}
+      {{- $servicesActive := or ($page.HasMenuCurrent "main" .) (hasPrefix $currentURL "/services/") -}}
       <div class="nav__dropdown">
-        <span class="nav__link nav__dropdown-toggle{{ if $page.HasMenuCurrent "main" . }} nav__link--active{{ end }}">Servicios y Soluciones <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="nav__link nav__dropdown-toggle{{ if $servicesActive }} nav__link--active{{ end }}">Servicios y Soluciones <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"/></svg></span>
         <div class="nav__dropdown-menu">
           <div class="nav__dropdown-grid">
             {{- /* Columna 1: Servicios */}}
@@ -163,7 +165,8 @@
         </div>
       </div>
       {{- else }}
-      <a href="{{ $root }}{{ strings.TrimPrefix "/" .URL }}index.html" class="nav__link{{ if $page.IsMenuCurrent "main" . }} nav__link--active{{ end }}">{{ .Name }}</a>
+      {{- $menuActive := or ($page.IsMenuCurrent "main" .) (eq $currentURL .URL) (and (ne .URL "/") (hasPrefix $currentURL .URL)) -}}
+      <a href="{{ $root }}{{ strings.TrimPrefix "/" .URL }}index.html" class="nav__link{{ if $menuActive }} nav__link--active{{ end }}">{{ .Name }}</a>
       {{- end }}
     {{- end }}
   </nav>
@@ -205,7 +208,7 @@
       <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📹</span> Webinars y Workshops</a>
     </div>
     {{- else }}
-    <a href="{{ $root }}{{ strings.TrimPrefix "/" .URL }}index.html" class="nav__mobile-link">{{ .Name }}</a>
+    <a href="{{ $root }}{{ strings.TrimPrefix "/" .URL }}index.html" class="nav__mobile-link{{ if eq $currentURL .URL }} nav__mobile-link--active{{ end }}">{{ .Name }}</a>
     {{- end }}
   {{- end }}
   <a href="{{ $root }}contact/index.html" class="btn btn--primary" style="margin-top:1.5rem;text-align:center;justify-content:center;">Consultoría Gratuita →</a>
