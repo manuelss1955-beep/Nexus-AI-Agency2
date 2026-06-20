@@ -1,0 +1,29 @@
+{{ define "head-extra" }}
+{{- $root := partial "rootpath.html" . -}}
+<link rel="stylesheet" href="{{ $root }}css/blog.css">
+{{ end }}
+
+{{ define "main" }}
+{{- $root := partial "rootpath.html" . -}}
+<section class="page-hero"><div class="container"><h1 class="page-hero__title">Blog</h1><p class="page-hero__text">Artículos sobre inteligencia artificial, automatización, chatbots, agentes autónomos y cómo la IA está transformando las empresas.</p></div></section>
+
+<section class="section"><div class="container">
+{{- $pages := where .Site.RegularPages "Section" "blog" }}
+{{- $paginator := .Paginate $pages 9 }}
+<div class="grid grid--3">
+{{- range $paginator.Pages }}
+<article class="post-card"><div class="post-card__body"><span class="post-card__date">{{ .Date.Format "2 Jan 2006" }}</span><span class="post-card__reading">⏱️ {{ .ReadingTime }} min</span><h3 class="post-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p class="post-card__text">{{ .Summary | plainify | truncate 120 }}</p><div class="post-card__footer"><span class="post-card__author">👤 {{ .Params.author | default $.Site.Params.author }}</span>{{- with .Params.tags }}<div class="post-card__tags">{{- range . }}<a href="{{ $root }}blog/tags/{{ . | urlize }}" class="post-card__tag">#{{ . }}</a>{{- end }}</div>{{- end }}</div></div></article>
+{{- end }}
+</div>
+
+{{- if gt $paginator.TotalPages 1 }}
+<div class="pagination">
+{{- if $paginator.HasPrev }}<a href="{{ $root }}{{ strings.TrimPrefix "/" $paginator.Prev.URL }}" class="btn btn--sm btn--secondary">← Anterior</a>{{ end }}
+{{- range $paginator.Pagers }}
+<a href="{{ $root }}{{ strings.TrimPrefix "/" .URL }}" class="btn btn--sm {{ if eq . $paginator }}btn--primary{{ else }}btn--secondary{{ end }}">{{ .PageNumber }}</a>
+{{- end }}
+{{- if $paginator.HasNext }}<a href="{{ $root }}{{ strings.TrimPrefix "/" $paginator.Next.URL }}" class="btn btn--sm btn--secondary">Siguiente →</a>{{ end }}
+</div>
+{{- end }}
+</div></section>
+{{ end }}

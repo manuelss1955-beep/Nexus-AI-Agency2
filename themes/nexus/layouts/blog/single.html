@@ -1,0 +1,57 @@
+{{ define "head-extra" }}
+{{- $root := partial "rootpath.html" . -}}
+<link rel="stylesheet" href="{{ $root }}css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "{{ .Permalink }}#article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ .Summary | plainify | truncate 160 | jsonify }},
+  "url": "{{ .Permalink }}",
+  "mainEntityOfPage": {"@type":"WebPage","@id":"{{ .Permalink }}"},
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z" }}",
+  "dateModified": "{{ if .Lastmod }}{{ .Lastmod.Format "2006-01-02T15:04:05Z" }}{{ else }}{{ .Date.Format "2006-01-02T15:04:05Z" }}{{ end }}",
+  "wordCount": {{ .WordCount }},
+  "timeRequired": "PT{{ .ReadingTime }}M",
+  "author": {"@type":"Organization","name":"{{ .Params.author | default .Site.Params.author }}","url":"{{ .Site.BaseURL }}about/"},
+  "publisher": {"@type":"Organization","@id":"{{ .Site.BaseURL }}#organization","name":"Nexus AI Agency","logo":{"@type":"ImageObject","url":"{{ .Site.BaseURL }}assets/icons/favicon.svg"}}
+  {{- if .Params.tags }},"keywords": {{ delimit .Params.tags ", " | jsonify }}{{ end }}
+}
+</script>
+{{ end }}
+
+{{ define "main" }}
+{{- $root := partial "rootpath.html" . -}}
+<section class="page-hero post-hero"><div class="container">
+<div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
+<h1 class="page-hero__title">{{ .Title }}</h1><div class="post-meta"><span>📅 {{ .Date.Format "2 January 2006" }}</span><span>👤 {{ .Params.author | default .Site.Params.author }}</span><span>⏱️ {{ .ReadingTime }} min lectura</span></div></div></section>
+
+<section class="section"><div class="container"><div class="post-grid"><article class="post-content">{{ .Content }}</article>
+{{- if .Params.tags }}
+<div class="post-tags">
+{{- range .Params.tags }}
+<a href="{{ $root }}blog/tags/{{ . | urlize }}" class="post-tags__tag">#{{ . }}</a>
+{{- end }}
+</div>
+{{- end }}
+
+<div class="post-share">
+<h3>Compartir este artículo</h3>
+<a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share__btn">𝕏 Twitter</a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener" class="post-share__btn">🔗 LinkedIn</a>
+<a href="mailto:?subject={{ .Title }}&body={{ .Permalink }}" class="post-share__btn">✉️ Email</a>
+</div>
+
+{{- $related := where (where .Site.RegularPages "Section" "blog") "Permalink" "ne" .Permalink | shuffle | first 3 -}}
+{{- if $related }}
+<div class="post-related"><h3>Artículos relacionados</h3><div class="grid grid--3">
+{{- range $related }}
+<article class="post-card"><div class="post-card__body"><span class="post-card__date">{{ .Date.Format "2 Jan 2006" }}</span><h3 class="post-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p class="post-card__text">{{ .Summary | plainify | truncate 100 }}</p></div></article>
+{{- end }}</div></div>
+{{- end }}
+
+<div class="post-nav">
+<a href="{{ $root }}blog" class="btn btn--secondary">← Volver al Blog</a>
+</div></div></div></section>
+{{ end }}
