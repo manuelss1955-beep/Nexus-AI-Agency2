@@ -15,6 +15,7 @@ sidebar:
   - {id: features, label: "Áreas clave de digitalización"}
   - {id: usecases, label: "Casos de uso"}
   - {id: faq, label: "FAQ"}
+  - {id: cta, label: Contacto}
 ---
 
 

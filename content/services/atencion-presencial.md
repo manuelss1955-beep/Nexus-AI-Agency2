@@ -15,6 +15,7 @@ sidebar:
   - {id: features, label: "Modalidades de despliegue"}
   - {id: usecases, label: "Casos de uso"}
   - {id: faq, label: "FAQ"}
+  - {id: cta, label: Contacto}
 ---
 
 

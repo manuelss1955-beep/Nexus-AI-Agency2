@@ -11,6 +11,7 @@ sidebar:
   - {id: benefits, label: "Beneficios"}
   - {id: services, label: "Servicios de consultoría"}
   - {id: faq, label: "FAQ"}
+  - {id: cta, label: Contacto}
 ---
 
 

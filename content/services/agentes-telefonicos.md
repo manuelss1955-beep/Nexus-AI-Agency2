@@ -12,6 +12,7 @@ sidebar:
   - {id: features, label: "Características"}
   - {id: usecases, label: "Casos de uso"}
   - {id: faq, label: "FAQ"}
+  - {id: cta, label: Contacto}
 ---
 
 

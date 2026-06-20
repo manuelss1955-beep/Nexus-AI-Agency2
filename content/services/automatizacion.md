@@ -12,6 +12,7 @@ sidebar:
   - {id: features, label: "Áreas de automatización"}
   - {id: usecases, label: "Casos de uso"}
   - {id: faq, label: "FAQ"}
+  - {id: cta, label: Contacto}
 ---
 
 
