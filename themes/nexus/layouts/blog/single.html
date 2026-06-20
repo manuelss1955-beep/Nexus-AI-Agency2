@@ -11,7 +11,7 @@
 {{- if .Params.tags }}
 <div class="post-tags">
 {{- range .Params.tags }}
-<a href="{{ $root }}blog/tags/{{ . | urlize }}/" class="post-tags__tag">#{{ . }}</a>
+<a href="{{ $root }}blog/tags/{{ . | urlize }}/index.html" class="post-tags__tag">#{{ . }}</a>
 {{- end }}
 </div>
 {{- end }}
@@ -32,6 +32,6 @@
 {{- end }}
 
 <div class="post-nav">
-<a href="{{ $root }}blog/" class="btn btn--secondary">← Volver al Blog</a>
+<a href="{{ $root }}blog/index.html" class="btn btn--secondary">← Volver al Blog</a>
 </div></div></div></section>
 {{ end }}

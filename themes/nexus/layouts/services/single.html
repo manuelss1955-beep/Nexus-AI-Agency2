@@ -3,11 +3,11 @@
 <section class="page-hero"><div class="container"><div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
 <h1 class="page-hero__title">{{ .Params.hero_title | default .Title | safeHTML }}</h1>
 <p class="page-hero__text">{{ .Params.hero_text | default .Description }}</p>
-<a href="{{ $root }}contact/" class="btn btn--primary btn--lg">{{ .Params.cta_text | default "Solicitar información →" }}</a>
+<a href="{{ $root }}contact/index.html" class="btn btn--primary btn--lg">{{ .Params.cta_text | default "Solicitar información →" }}</a>
 </div></section>
 
 <section class="section"><div class="container"><div class="service-detail">
 {{ .Content }}
-<div class="service-detail__cta"><div><h4>{{ .Params.cta_title | default "¿Listo para empezar?" }}</h4><p>{{ .Params.cta_subtitle | default "Agenda una consultoría gratuita y descubre cómo podemos ayudarte." }}</p></div><a href="{{ $root }}contact/" class="btn btn--primary">Hablar con un experto →</a></div>
+<div class="service-detail__cta"><div><h4>{{ .Params.cta_title | default "¿Listo para empezar?" }}</h4><p>{{ .Params.cta_subtitle | default "Agenda una consultoría gratuita y descubre cómo podemos ayudarte." }}</p></div><a href="{{ $root }}contact/index.html" class="btn btn--primary">Hablar con un experto →</a></div>
 </div></div></section>
 {{ end }}
