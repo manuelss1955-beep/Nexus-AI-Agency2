@@ -46,7 +46,9 @@
 
 {{ define "main" }}
 {{- $root := partial "rootpath.html" . -}}
-<section class="page-hero post-hero"><div class="container"><h1 class="page-hero__title">{{ .Title }}</h1><div class="post-meta"><span>📅 {{ .Date.Format "2 January 2006" }}</span><span>👤 {{ .Params.author | default .Site.Params.author }}</span><span>⏱️ {{ .ReadingTime }} min lectura</span></div></div></section>
+<section class="page-hero post-hero"><div class="container">
+<div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
+<h1 class="page-hero__title">{{ .Title }}</h1><div class="post-meta"><span>📅 {{ .Date.Format "2 January 2006" }}</span><span>👤 {{ .Params.author | default .Site.Params.author }}</span><span>⏱️ {{ .ReadingTime }} min lectura</span></div></div></section>
 
 <section class="section"><div class="container"><div class="post-grid"><article class="post-content">{{ .Content }}</article>
 {{- if .Params.tags }}

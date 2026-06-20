@@ -6,18 +6,113 @@
     {{- range .Site.Menus.main }}
       {{- if eq .Identifier "services" }}
       <div class="nav__dropdown">
-        <span class="nav__link nav__dropdown-toggle{{ if $page.HasMenuCurrent "main" . }} nav__link--active{{ end }}">Servicios <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="nav__link nav__dropdown-toggle{{ if $page.HasMenuCurrent "main" . }} nav__link--active{{ end }}">Servicios y Soluciones <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"/></svg></span>
         <div class="nav__dropdown-menu">
           <div class="nav__dropdown-grid">
-          {{- range $page.Site.Params.services }}
-            <a href="{{ $root }}services/{{ .slug }}/index.html" class="nav__dropdown-item">
-              <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">{{ .icon }}</span>
-              <span class="nav__dropdown-item__text">
-                <span class="nav__dropdown-item__title">{{ .title }}</span>
-                <span class="nav__dropdown-item__desc">{{ index $.Site.Data.servicios .slug "excerpt" | plainify | truncate 55 }}</span>
-              </span>
-            </a>
-          {{- end }}
+            {{- /* Columna 1: Servicios */}}
+            <div class="nav__dropdown-column">
+              <div class="nav__dropdown-column-header">🚀 Servicios</div>
+            {{- range $page.Site.Params.services }}
+              <a href="{{ $root }}services/{{ .slug }}/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">{{ .icon }}</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">{{ .title }}</span>
+                </span>
+              </a>
+            {{- end }}
+            </div>
+            {{- /* Columna 2: Soluciones */}}
+            <div class="nav__dropdown-column">
+              <div class="nav__dropdown-column-header">💡 Soluciones</div>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🤖</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Atención al Cliente IA</span>
+                  <span class="nav__dropdown-item__desc">Chatbots y agentes multicanal</span>
+                </span>
+              </a>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📊</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Automatización de Procesos</span>
+                  <span class="nav__dropdown-item__desc">RRHH, finanzas, logística</span>
+                </span>
+              </a>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🔍</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Análisis Predictivo</span>
+                  <span class="nav__dropdown-item__desc">Datos → decisiones</span>
+                </span>
+              </a>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🎙️</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Call Center IA</span>
+                  <span class="nav__dropdown-item__desc">Voz 24/7 sin esperas</span>
+                </span>
+              </a>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🛒</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Ecommerce Inteligente</span>
+                  <span class="nav__dropdown-item__desc">Ventas + atención + stock</span>
+                </span>
+              </a>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📋</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Transformación Digital</span>
+                  <span class="nav__dropdown-item__desc">Plan integral de IA</span>
+                </span>
+              </a>
+            </div>
+            {{- /* Columna 3: Sectores */}}
+            <div class="nav__dropdown-column">
+              <div class="nav__dropdown-column-header">🏢 Sectores</div>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🛍️</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Retail</span>
+                  <span class="nav__dropdown-item__desc">Tiendas, ecommerce, retail físico</span>
+                </span>
+              </a>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏥</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Salud</span>
+                  <span class="nav__dropdown-item__desc">Clínicas, hospitales, salud digital</span>
+                </span>
+              </a>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏦</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Banca y Fintech</span>
+                  <span class="nav__dropdown-item__desc">Finanzas, seguros, fintech</span>
+                </span>
+              </a>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📦</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Logística</span>
+                  <span class="nav__dropdown-item__desc">Transporte, cadena de suministro</span>
+                </span>
+              </a>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏭</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Industria</span>
+                  <span class="nav__dropdown-item__desc">Manufactura, producción</span>
+                </span>
+              </a>
+              <a href="{{ $root }}contact/index.html" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🍽️</span>
+                <span class="nav__dropdown-item__text">
+                  <span class="nav__dropdown-item__title">Hostelería</span>
+                  <span class="nav__dropdown-item__desc">Hoteles, restaurantes, turismo</span>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -32,11 +127,26 @@
 <div class="nav__mobile">
   {{- range .Site.Menus.main }}
     {{- if eq .Identifier "services" }}
-    <span class="nav__mobile-dropdown-toggle">Servicios <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></span>
+    <span class="nav__mobile-dropdown-toggle">Servicios y Soluciones <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></span>
     <div class="nav__mobile-sub">
+      <div class="nav__mobile-sub-header">🚀 Servicios</div>
       {{- range $page.Site.Params.services }}
       <a href="{{ $root }}services/{{ .slug }}/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">{{ .icon }}</span> {{ .title }}</a>
       {{- end }}
+      <div class="nav__mobile-sub-header">💡 Soluciones</div>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🤖</span> Atención al Cliente IA</a>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📊</span> Automatización de Procesos</a>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🔍</span> Análisis Predictivo</a>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🎙️</span> Call Center IA</a>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🛒</span> Ecommerce Inteligente</a>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📋</span> Transformación Digital</a>
+      <div class="nav__mobile-sub-header">🏢 Sectores</div>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🛍️</span> Retail</a>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏥</span> Salud</a>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏦</span> Banca y Fintech</a>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📦</span> Logística</a>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏭</span> Industria</a>
+      <a href="{{ $root }}contact/index.html"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🍽️</span> Hostelería</a>
     </div>
     {{- else }}
     <a href="{{ $root }}{{ strings.TrimPrefix "/" .URL }}index.html" class="nav__mobile-link">{{ .Name }}</a>
