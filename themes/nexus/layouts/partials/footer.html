@@ -1,19 +1,19 @@
 {{- $root := partial "rootpath.html" . -}}
-<footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="{{ $root }}" class="nav__logo"><span class="nav__logo-icon">◆</span> Nexus AI</a><p>Orquestamos inteligencia artificial para transformar la manera en que las empresas operan, compiten y crecen.</p></div><div class="footer__col"><h4>Servicios</h4>
+<footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="{{ $root }}index.html" class="nav__logo"><span class="nav__logo-icon">◆</span> Nexus AI</a><p>Orquestamos inteligencia artificial para transformar la manera en que las empresas operan, compiten y crecen.</p></div><div class="footer__col"><h4>Servicios</h4>
 {{- range .Site.Params.services }}
-<a href="{{ $root }}services/{{ .slug }}/">{{ .title }}</a>
+<a href="{{ $root }}services/{{ .slug }}/index.html">{{ .title }}</a>
 {{- end }}
 </div><div class="footer__col"><h4>Más Servicios</h4>
 {{- range .Site.Params.services }}
-<a href="{{ $root }}services/{{ .slug }}/">{{ .title }}</a>
+<a href="{{ $root }}services/{{ .slug }}/index.html">{{ .title }}</a>
 {{- end }}
 </div><div class="footer__col"><h4>Enlaces</h4>
-<a href="{{ $root }}about/">Sobre Nosotros</a>
-<a href="{{ $root }}portfolio/">Casos de Éxito</a>
-<a href="{{ $root }}blog/">Blog</a>
-<a href="{{ $root }}contact/">Contacto</a>
-<a href="{{ $root }}legal/aviso-legal/">Aviso Legal</a>
-<a href="{{ $root }}legal/privacidad/">Privacidad</a>
-<a href="{{ $root }}legal/terminos/">Términos</a>
+<a href="{{ $root }}about/index.html">Sobre Nosotros</a>
+<a href="{{ $root }}portfolio/index.html">Casos de Éxito</a>
+<a href="{{ $root }}blog/index.html">Blog</a>
+<a href="{{ $root }}contact/index.html">Contacto</a>
+<a href="{{ $root }}legal/aviso-legal/index.html">Aviso Legal</a>
+<a href="{{ $root }}legal/privacidad/index.html">Privacidad</a>
+<a href="{{ $root }}legal/terminos/index.html">Términos</a>
 </div></div><div class="footer__bottom">© <span data-year></span> Nexus AI Agency, S.L. — Todos los derechos reservados.
-&nbsp;|&nbsp; <a href="{{ $root }}legal/privacidad/">Política de Privacidad</a></div></div></footer>
+&nbsp;|&nbsp; <a href="{{ $root }}legal/privacidad/index.html">Política de Privacidad</a></div></div></footer>
