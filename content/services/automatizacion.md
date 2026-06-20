@@ -16,6 +16,8 @@ sidebar:
 
 
 <!-- overview -->
+<div id="overview"></div>
+
 ## Visión general
 
  Tus empleados pasan horas copiando datos de un sistema a otro, rellenando plantillas, validando facturas, generando informes. Tareas que una máquina haría en segundos.
@@ -30,6 +32,8 @@ Nosotros identificamos los procesos con mayor potencial de automatización en tu
 
 
 <!-- benefits -->
+<div id="benefits"></div>
+
 ## Beneficios
 
 <div class="grid grid--2">
@@ -70,6 +74,8 @@ Nosotros identificamos los procesos con mayor potencial de automatización en tu
 
 
 <!-- features -->
+<div id="features"></div>
+
 ## Áreas de automatización
 
 <div class="service-detail__list">
@@ -85,6 +91,8 @@ Nosotros identificamos los procesos con mayor potencial de automatización en tu
 
 
 <!-- usecases -->
+<div id="usecases"></div>
+
 ## Casos de uso
 
 ### 📄 Facturación y cobros
@@ -101,6 +109,8 @@ Un distribuidor recibe 200 pedidos/día por email y web. El sistema los extrae, 
 
 
 <!-- faq -->
+<div id="faq"></div>
+
 ## Preguntas frecuentes
 
 **¿Qué procesos se pueden automatizar?**

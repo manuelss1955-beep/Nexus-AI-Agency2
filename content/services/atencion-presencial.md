@@ -19,6 +19,8 @@ sidebar:
 
 
 <!-- overview -->
+<div id="overview"></div>
+
 ## Visión general
 
  El comercio físico se enfrenta a un reto: ofrecer experiencia personalizada sin poder multiplicar el personal. Los clientes esperan atención inmediata, información precisa y disponibilidad total.
@@ -33,6 +35,8 @@ Los agentes presenciales de Nexus AI son asistentes virtuales con **visión arti
 
 
 <!-- benefits -->
+<div id="benefits"></div>
+
 ## Beneficios
 
 <div class="grid grid--2">
@@ -73,6 +77,8 @@ Los agentes presenciales de Nexus AI son asistentes virtuales con **visión arti
 
 
 <!-- features -->
+<div id="features"></div>
+
 ## Modalidades de despliegue
 
 <div class="service-detail__list">
@@ -89,6 +95,8 @@ Todas las modalidades incluyen: **visión artificial** (reconoce edad aproximada
 
 
 <!-- usecases -->
+<div id="usecases"></div>
+
 ## Casos de uso
 
 ### 🏬 Retail y tiendas físicas
@@ -108,6 +116,8 @@ Recepcionista virtual que registra llegadas, confirma citas, indica consultas y 
 
 
 <!-- faq -->
+<div id="faq"></div>
+
 ## Preguntas frecuentes
 
 **¿El agente reconoce a los clientes habituales?**

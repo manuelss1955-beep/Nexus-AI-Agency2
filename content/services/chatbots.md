@@ -16,6 +16,8 @@ sidebar:
 
 
 <!-- overview -->
+<div id="overview"></div>
+
 ## Visión general
 
  El 70% de los chatbots empresariales fracasan porque no entienden el contexto, se limitan a respuestas prefijadas o frustran al cliente. El resultado: clientes enfadados y equipos de soporte colapsados.
@@ -30,6 +32,8 @@ Nosotros construimos chatbots con **RAG (Retrieval-Augmented Generation)** que c
 
 
 <!-- benefits -->
+<div id="benefits"></div>
+
 ## Beneficios
 
 <div class="grid grid--2">
@@ -70,6 +74,8 @@ Nosotros construimos chatbots con **RAG (Retrieval-Augmented Generation)** que c
 
 
 <!-- features -->
+<div id="features"></div>
+
 ## Características
 
 <div class="service-detail__list">
@@ -86,6 +92,8 @@ Nosotros construimos chatbots con **RAG (Retrieval-Augmented Generation)** que c
 
 
 <!-- usecases -->
+<div id="usecases"></div>
+
 ## Casos de uso
 
 ### 🏦 Banca y seguros
@@ -105,6 +113,8 @@ Ventanilla virtual: información de trámites, cita previa, estado de expediente
 
 
 <!-- faq -->
+<div id="faq"></div>
+
 ## Preguntas frecuentes
 
 **¿Qué es RAG y por qué es importante?**

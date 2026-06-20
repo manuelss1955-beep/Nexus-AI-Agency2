@@ -15,6 +15,8 @@ sidebar:
 
 
 <!-- overview -->
+<div id="overview"></div>
+
 ## Visión general
 
  El 80% de los proyectos de IA fracasan. No por la tecnología, sino por falta de estrategia: objetivos mal definidos, expectativas irreales, equipos sin preparación.
@@ -29,6 +31,8 @@ Nuestra consultoría empieza donde otras terminan: con **implementación real**.
 
 
 <!-- benefits -->
+<div id="benefits"></div>
+
 ## Beneficios
 
 <div class="grid grid--2">
@@ -69,6 +73,8 @@ Nuestra consultoría empieza donde otras terminan: con **implementación real**.
 
 
 <!-- services -->
+<div id="features"></div>
+
 ## Servicios de consultoría
 
 <div class="service-detail__list">
@@ -84,6 +90,8 @@ Nuestra consultoría empieza donde otras terminan: con **implementación real**.
 
 
 <!-- usecases -->
+<div id="usecases"></div>
+
 ## Casos de uso
 
 ### 🏭 Empresa industrial
@@ -100,6 +108,8 @@ Análisis de viabilidad para IA en diagnóstico asistido. Evaluación de modelos
 
 
 <!-- faq -->
+<div id="faq"></div>
+
 ## Preguntas frecuentes
 
 **¿Qué incluye la consultoría gratuita?**

@@ -19,6 +19,8 @@ sidebar:
 
 
 <!-- overview -->
+<div id="overview"></div>
+
 ## Visión general
 
  Tus empleados dedican horas a tareas repetitivas que una máquina haría mejor, más rápido y sin errores. Mientras, los proyectos estratégicos se acumulan.
@@ -33,6 +35,8 @@ Un agente IA autónomo es un sistema inteligente que **planifica, ejecuta y apre
 
 
 <!-- benefits -->
+<div id="benefits"></div>
+
 ## Beneficios
 
 <div class="grid grid--2">
@@ -73,6 +77,8 @@ Un agente IA autónomo es un sistema inteligente que **planifica, ejecuta y apre
 
 
 <!-- features -->
+<div id="features"></div>
+
 ## Características
 
 <div class="service-detail__list">
@@ -89,6 +95,8 @@ Un agente IA autónomo es un sistema inteligente que **planifica, ejecuta y apre
 
 
 <!-- usecases -->
+<div id="usecases"></div>
+
 ## Casos de uso
 
 ### 🏭 Logística y cadena de suministro
@@ -108,6 +116,8 @@ Revisión autónoma de contratos, extracción de cláusulas, alertas de cumplimi
 
 
 <!-- faq -->
+<div id="faq"></div>
+
 ## Preguntas frecuentes
 
 **¿Qué diferencia hay entre un chatbot y un agente autónomo?**

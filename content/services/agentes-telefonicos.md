@@ -16,6 +16,8 @@ sidebar:
 
 
 <!-- overview -->
+<div id="overview"></div>
+
 ## Visión general
 
  ¿Sigues pagando un call center que solo cubre 8 horas al día? ¿Tus clientes se quejan de las esperas? ¿Tienes que hacer cientos de llamadas de seguimiento y no llegas?
@@ -30,6 +32,8 @@ Los agentes de voz IA de Nexus AI suenan a humanos reales. Entienden contexto, m
 
 
 <!-- benefits -->
+<div id="benefits"></div>
+
 ## Beneficios
 
 <div class="grid grid--2">
@@ -70,6 +74,8 @@ Los agentes de voz IA de Nexus AI suenan a humanos reales. Entienden contexto, m
 
 
 <!-- features -->
+<div id="features"></div>
+
 ## Características
 
 <div class="service-detail__list">
@@ -86,6 +92,8 @@ Los agentes de voz IA de Nexus AI suenan a humanos reales. Entienden contexto, m
 
 
 <!-- usecases -->
+<div id="usecases"></div>
+
 ## Casos de uso
 
 ### 🏨 Hoteles y hostelería
@@ -105,6 +113,8 @@ Atención a vecinos, aviso de averías, coordinación de reparaciones, comunicac
 
 
 <!-- faq -->
+<div id="faq"></div>
+
 ## Preguntas frecuentes
 
 **¿El cliente nota que habla con una IA?**

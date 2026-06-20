@@ -16,6 +16,8 @@ sidebar:
 
 
 <!-- overview -->
+<div id="overview"></div>
+
 ## Visión general
 
  Hoy, conectar un agente IA con tu CRM, tu base de datos o tu ERP requiere integraciones personalizadas, APIs a medida y semanas de desarrollo. Cada nueva conexión es un proyecto nuevo.
@@ -32,6 +34,8 @@ En Nexus AI somos **pioneros en MCP en España**. Implementamos servidores MCP p
 
 
 <!-- benefits -->
+<div id="benefits"></div>
+
 ## Beneficios
 
 <div class="grid grid--2">
@@ -72,6 +76,8 @@ En Nexus AI somos **pioneros en MCP en España**. Implementamos servidores MCP p
 
 
 <!-- features -->
+<div id="features"></div>
+
 ## Capacidades
 
 <div class="service-detail__list">
@@ -87,6 +93,8 @@ En Nexus AI somos **pioneros en MCP en España**. Implementamos servidores MCP p
 
 
 <!-- usecases -->
+<div id="usecases"></div>
+
 ## Casos de uso
 
 ### 🏦 CRM conectado en tiempo real
@@ -106,6 +114,8 @@ Un sistema antiguo que solo habla SOAP o archivos planos. Creamos un servidor MC
 
 
 <!-- faq -->
+<div id="faq"></div>
+
 ## Preguntas frecuentes
 
 **¿Qué es exactamente MCP?**

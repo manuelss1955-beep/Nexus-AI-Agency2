@@ -19,6 +19,8 @@ sidebar:
 
 
 <!-- overview -->
+<div id="overview"></div>
+
 ## Visión general
 
  Miles de empresas españolas siguen funcionando con hojas de cálculo, papeles, correos interminables y procesos manuales que matan la productividad. La digitalización ya no es una ventaja competitiva: es un requisito para sobrevivir.
@@ -33,6 +35,8 @@ No digitalizamos por digitalizar. Aplicamos IA para que los procesos digitales s
 
 
 <!-- benefits -->
+<div id="benefits"></div>
+
 ## Beneficios
 
 <div class="grid grid--2">
@@ -73,6 +77,8 @@ No digitalizamos por digitalizar. Aplicamos IA para que los procesos digitales s
 
 
 <!-- features -->
+<div id="features"></div>
+
 ## Áreas clave de digitalización
 
 <div class="service-detail__list">
@@ -88,6 +94,8 @@ No digitalizamos por digitalizar. Aplicamos IA para que los procesos digitales s
 
 
 <!-- usecases -->
+<div id="usecases"></div>
+
 ## Casos de uso
 
 ### 🏭 PYME industrial
@@ -104,6 +112,8 @@ Gestión de socios, cuotas, donaciones, eventos y comunicación. Sistema accesib
 
 
 <!-- faq -->
+<div id="faq"></div>
+
 ## Preguntas frecuentes
 
 **¿Cuánto tiempo lleva digitalizar una empresa?**

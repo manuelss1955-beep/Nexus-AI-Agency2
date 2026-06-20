@@ -16,6 +16,8 @@ sidebar:
 
 
 <!-- overview -->
+<div id="overview"></div>
+
 ## Visión general
 
  Contratar un estudio de desarrollo tradicional para que luego otro proveedor añada la capa de IA. Dos equipos, dos presupuestos, dos plazos, cero coordinación. El resultado: una app que podría tener IA, pero donde la IA parece un parche.
@@ -30,6 +32,8 @@ En Nexus AI la **IA está en el ADN** de cada aplicación que construimos. No a�
 
 
 <!-- benefits -->
+<div id="benefits"></div>
+
 ## Beneficios
 
 <div class="grid grid--2">
@@ -70,6 +74,8 @@ En Nexus AI la **IA está en el ADN** de cada aplicación que construimos. No a�
 
 
 <!-- features -->
+<div id="features"></div>
+
 ## Capacidades
 
 <div class="service-detail__list">
@@ -87,6 +93,8 @@ En Nexus AI la **IA está en el ADN** de cada aplicación que construimos. No a�
 
 
 <!-- usecases -->
+<div id="usecases"></div>
+
 ## Casos de uso
 
 ### 🛒 SaaS de ventas con IA predictiva
@@ -103,6 +111,8 @@ App web que consolida datos de ventas, finanzas y operaciones. El ejecutivo preg
 
 
 <!-- faq -->
+<div id="faq"></div>
+
 ## Preguntas frecuentes
 
 **¿Qué stack tecnológico usáis?**
