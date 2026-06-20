@@ -1,5 +1,3 @@
-{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
-{{- $root := "" -}}
-{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
+{{- $root := partial "rootpath.html" . -}}
 <script src="{{ $root }}js/main.js"></script>
 {{ if eq .Section "services" }}<script src="{{ $root }}js/services.js"></script>{{ end }}

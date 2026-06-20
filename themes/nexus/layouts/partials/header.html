@@ -1,7 +1,5 @@
 {{- $page := . -}}
-{{- $depth := sub (len (split .RelPermalink "/")) 2 -}}
-{{- $root := "" -}}
-{{- if gt $depth 0 }}{{ $root = strings.Repeat $depth "../" }}{{ end -}}
+{{- $root := partial "rootpath.html" . -}}
 <header class="nav" role="banner"><div class="nav__inner">
   <a href="{{ $root }}" class="nav__logo"><span class="nav__logo-icon">◆</span> Nexus AI</a>
   <nav class="nav__links">
