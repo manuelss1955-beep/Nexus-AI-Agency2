@@ -1,0 +1,134 @@
+baseURL = "https://nexus-ai.agency"
+languageCode = "es-ES"
+title = "Nexus AI — Soluciones de Inteligencia Artificial"
+theme = "nexus"
+defaultContentLanguage = "es"
+summaryLength = 25
+enableGitInfo = false
+disableHugoGeneratorInject = false
+enableRobotsTXT = true
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[taxonomies]
+  tag = "tags"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = "application/rss"
+    baseName = "index"
+    isHTML = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      typographer = true
+      strikethrough = true
+      linkify = true
+      table = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = false
+    style = "monokai"
+  [markup.tableOfContents]
+    endLevel = 4
+    startLevel = 2
+
+[params]
+  description = "Nexus AI — Agencia líder en inteligencia artificial. Agentes autónomos, integraciones MCP, automatización, chatbots y consultoría IA."
+  author = "Nexus AI Agency"
+  email = "hola@nexus-ai.agency"
+  phone = "+34 900 123 456"
+  address = "Madrid, España"
+  founded = 2023
+  projects = 150
+  clients = 40
+  countries = 8
+  accuracy = 98
+  support = "24/7"
+  locale = "es_ES"
+  siteName = "Nexus AI Agency"
+  # googleAnalytics = "G-XXXXXXXXXX"
+
+[menu]
+  [[menu.main]]
+    identifier = "inicio"
+    name = "Inicio"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "Sobre Nosotros"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    identifier = "services"
+    name = "Servicios"
+    url = "/services/"
+    weight = 3
+  [[menu.main]]
+    identifier = "portfolio"
+    name = "Casos de Éxito"
+    url = "/portfolio/"
+    weight = 4
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 5
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contacto"
+    url = "/contact/"
+    weight = 6
+
+[[params.services]]
+    slug = "digitalizacion"
+    icon = "📋"
+    title = "Digitalización de Empresas"
+  [[params.services]]
+    slug = "agentes-ia"
+    icon = "🤖"
+    title = "Agentes IA Autónomos"
+  [[params.services]]
+    slug = "atencion-presencial"
+    icon = "🤝"
+    title = "Atención Presencial IA"
+  [[params.services]]
+    slug = "agentes-telefonicos"
+    icon = "📞"
+    title = "Agentes IA Telefónicos"
+  [[params.services]]
+    slug = "chatbots"
+    icon = "💬"
+    title = "Desarrollo de Chatbots"
+  [[params.services]]
+    slug = "programacion-apps"
+    icon = "💻"
+    title = "Programación de Apps"
+  [[params.services]]
+    slug = "automatizacion"
+    icon = "⚡"
+    title = "Automatización Empresarial"
+  [[params.services]]
+    slug = "integraciones-mcp"
+    icon = "🔌"
+    title = "Integraciones MCP"
+  [[params.services]]
+    slug = "consultoria"
+    icon = "🎯"
+    title = "Consultoría IA"
