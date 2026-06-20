@@ -1,0 +1,51 @@
+---
+title: "Atención Presencial IA"
+description: "Transforma tu atención presencial con IA. Asistentes virtuales en pantallas interactivas, quioscos inteligentes y señalización digital."
+hero_title: "Atención presencial potenciada con <span>inteligencia artificial</span>"
+hero_text: "La atención presencial sigue siendo clave para muchos negocios. Poténciala con asistentes virtuales en pantallas interactivas, quioscos inteligentes y señalización digital con IA."
+sidebar:
+  - {id: overview, label: Visión General}
+  - {id: benefits, label: Beneficios}
+  - {id: solutions, label: Soluciones IA}
+  - {id: usecases, label: Casos de Uso}
+  - {id: cta, label: Contacto}
+cta_title: "¿Listo para transformar tu atención presencial?"
+cta_subtitle: "Agenda una consultoría gratuita."
+---
+<div class="service-content">
+
+## Visión General {#overview}
+
+La atención presencial no desaparece, se transforma. Los clientes que acuden a tiendas, oficinas o centros de servicio esperan una experiencia rápida, personalizada y sin fricciones. La inteligencia artificial aplicada a la atención presencial permite ofrecer asistencia instantánea mediante pantallas interactivas, quioscos inteligentes y señalización digital que guía, informa y resuelve dudas.
+
+Nexus AI ofrece soluciones de **Agentes IA Autónomos**, **Chatbots**, **Agentes IA Telefónicos** y **Digitalización de Empresas** diseñadas para integrar la IA en tu espacio físico.
+
+## Beneficios {#benefits}
+
+- **Atención instantánea**: los asistentes virtuales responden al instante sin colas ni esperas.
+- **Disponibilidad total**: tus pantallas y quioscos funcionan 24/7 sin necesidad de personal.
+- **Experiencia personalizada**: la IA reconoce al cliente y adapta la información a sus necesidades.
+- **Reducción de costes**: libera a tu personal para tareas de alto valor mientras la IA gestiona consultas rutinarias.
+- **Recogida de datos**: cada interacción genera datos valiosos sobre preferencias y comportamiento de clientes.
+
+## Soluciones IA {#solutions}
+
+Nuestras soluciones para atención presencial cubren todos los puntos de contacto físico:
+
+- **Asistentes virtuales en pantallas táctiles**: quioscos interactivos con IA conversacional que guían al cliente.
+- **Señalización digital inteligente**: pantallas que muestran contenido dinámico personalizado según el perfil del cliente.
+- **Chatbots para atención en mostrador**: asistentes que complementan al personal presencial resolviendo consultas rápidas.
+- **Agentes IA Autónomos** para gestión de colas, asignación de turnos y optimización del flujo de clientes.
+- **Agentes IA Telefónicos** para atención telefónica integrada con la experiencia presencial.
+- **Programación de Apps** para crear aplicaciones que mejoren la experiencia en tienda.
+- **Integraciones MCP** para conectar los sistemas de atención presencial con tu CRM y ERP.
+
+## Casos de Uso {#usecases}
+
+- **Quiosco informativo en lobby de hotel**: un asistente virtual que informa sobre servicios, check-in y reservas.
+- **Pantalla interactiva en tienda**: un asistente que recomienda productos, muestra disponibilidad y guía al cliente.
+- **Señalización digital en oficina**: pantallas que muestran información personalizada según el perfil del visitante.
+- **Gestión de colas inteligente**: un agente IA que asigna turnos, estima tiempos de espera y notifica al cliente.
+- **Asistente en punto de venta**: un chatbot que ayuda al cliente con dudas sobre productos mientras espera en caja.
+
+</div>
