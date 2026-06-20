@@ -1,11 +1,54 @@
 {{ define "head-extra" }}
 {{- $root := partial "rootpath.html" . -}}
 <link rel="stylesheet" href="{{ $root }}css/blog.css">
+
+{{- /* Schema.org — Article detallado */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "{{ .Permalink }}#article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ .Summary | plainify | truncate 160 | jsonify }},
+  "url": "{{ .Permalink }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z" }}",
+  "dateModified": "{{ if .Lastmod }}{{ .Lastmod.Format "2006-01-02T15:04:05Z" }}{{ else }}{{ .Date.Format "2006-01-02T15:04:05Z" }}{{ end }}",
+  "wordCount": {{ .WordCount }},
+  "timeRequired": "PT{{ .ReadingTime }}M",
+  "author": {
+    "@type": "Organization",
+    "name": "{{ .Params.author | default .Site.Params.author }}",
+    "url": "{{ .Site.BaseURL }}about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "{{ .Site.BaseURL }}#organization",
+    "name": "Nexus AI Agency",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}assets/icons/favicon.svg"
+    }
+  }
+  {{- if .Params.tags }},
+  "keywords": {{ delimit .Params.tags ", " | jsonify }}{{ end }}
+  {{- with .Params.image }},
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ . | absURL }}"
+  }{{ end }}
+}
+</script>
 {{ end }}
 
 {{ define "main" }}
 {{- $root := partial "rootpath.html" . -}}
-<section class="page-hero post-hero"><div class="container"><h1 class="page-hero__title">{{ .Title }}</h1><div class="post-meta"><span>📅 {{ .Date.Format "2 January 2006" }}</span><span>👤 {{ .Params.author | default .Site.Params.author }}</span><span>⏱️ {{ .ReadingTime }} min lectura</span></div></div></section>
+<section class="page-hero post-hero"><div class="container">
+<div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
+<h1 class="page-hero__title">{{ .Title }}</h1><div class="post-meta"><span>📅 {{ .Date.Format "2 January 2006" }}</span><span>👤 {{ .Params.author | default .Site.Params.author }}</span><span>⏱️ {{ .ReadingTime }} min lectura</span></div></div></section>
 
 <section class="section"><div class="container"><div class="post-grid"><article class="post-content">{{ .Content }}</article>
 {{- if .Params.tags }}
