@@ -2,7 +2,7 @@
  * n8n-chat.js — N8N Chat Widget para Nexus AI Agency
  * Widget de chat embebido para ejecutar Workflows de IA vía n8n
  * 
- * v2.1 — Persistencia de sesión entre páginas (7 días)
+ * v2.2 — Persistencia de sesión entre páginas (7 días)
  *        El sessionId se guarda en localStorage bajo la misma
  *        clave que @n8n/chat espera ('sessionId'), para que
  *        el widget cargue el historial automáticamente.
@@ -14,8 +14,9 @@
   const WEBHOOK_URL = 'https://n8n-production-adf2.up.railway.app/webhook/59acd426-5115-4d1b-9757-80ef5c21deb5/chat';
 
   // Clave que @n8n/chat usa para leer/escribir el sessionId en localStorage
-  // Debe coincidir con chatSessionKey en createChat()
-  const SESSION_KEY = 'sessionId';
+  // ATENCIÓN: la clave real es "n8n-chat/sessionId" (hardcodeada en la librería),
+  // NO el valor de chatSessionKey (que solo nombra el campo en la API).
+  const SESSION_KEY = 'n8n-chat/sessionId';
   const EXPIRY_KEY = 'nexus-chat-session-expiry';
   const EXPIRY_MS = 7 * 24 * 60 * 60 * 1000; // 7 días
 
