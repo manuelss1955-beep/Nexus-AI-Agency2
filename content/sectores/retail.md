@@ -1,6 +1,6 @@
 ---
 title: "Retail"
-description: "Transforma tu negocio retail con IA. Atención al cliente automatizada, personalización de ofertas y gestión inteligente de inventario."
+description: "IA para retail y ecommerce. Atención al cliente automatizada, personalización de ofertas y gestión de inventario inteligente con chatbots y agentes IA."
 hero_title: "Retail inteligente con <span>IA</span>"
 hero_text: "El sector retail enfrenta el desafío de ofrecer experiencias personalizadas a escala. La IA permite automatizar la atención, personalizar ofertas y optimizar el inventario en tiempo real."
 sidebar:
@@ -16,17 +16,17 @@ cta_subtitle: "Agenda una consultoría gratuita."
 
 ## Visión General {#overview}
 
-El sector retail opera en un entorno cada vez más competitivo donde la experiencia del cliente es el principal diferenciador. La inteligencia artificial permite a las tiendas físicas y online ofrecer atención personalizada 24/7, optimizar inventarios, predecir tendencias de compra y automatizar la comunicación con los clientes.
+El retail en España mueve más de 300.000M€ anuales, pero el 70% de las decisiones de compra dependen de la experiencia digital. La IA permite a tiendas físicas y online ofrecer atención personalizada 24/7, optimizar inventarios en tiempo real y predecir tendencias de compra.
 
-Nexus AI ofrece soluciones de **Chatbots**, **Agentes IA Telefónicos**, **Agentes IA Autónomos** y **Automatización Empresarial** para transformar tu negocio retail.
+Nexus AI ofrece soluciones de **Chatbots**, **Agentes IA Telefónicos**, **Atención Presencial IA** y **Automatización Empresarial** para transformar tu negocio retail.
 
 ## Beneficios {#benefits}
 
-- **Atención al cliente 24/7**: chatbots y agentes telefónicos que resuelven consultas sin horarios.
-- **Personalización a escala**: ofertas y recomendaciones adaptadas a cada cliente.
-- **Optimización de inventario**: predicción de demanda y gestión automática de stock.
-- **Reducción de costes**: automatización de procesos de atención y back-office.
-- **Fidelización de clientes**: programas de lealtad inteligentes con IA.
+- **Atención al cliente 24/7**: chatbots y agentes telefónicos que resuelven consultas, gestionan devoluciones y seguimiento de pedidos sin horarios.
+- **Personalización a escala**: recomendaciones de productos basadas en historial de compra y comportamiento del usuario.
+- **Gestión inteligente de inventario**: agentes IA que monitorizan stock, predicen rotura y automatizan reposiciones.
+- **Recuperación de carritos abandonados**: campañas automatizadas con IA que recuperan hasta un 15% de ventas perdidas.
+- **Kioscos interactivos en tienda**: atención presencial con IA para guiar al cliente y gestionar pedidos en punto de venta.
 
 ## Soluciones IA {#solutions}
 

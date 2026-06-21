@@ -1,6 +1,6 @@
 ---
 title: "Digitalización de Empresas"
-description: "Transformación digital completa con inteligencia artificial. Automatización de procesos, digitalización de documentos y modernización de infraestructura TI."
+description: "Digitalización de empresas con IA. Automatización de procesos, digitalización documental y modernización TI. Transforma tu negocio con agentes inteligentes e integraciones MCP."
 hero_title: "Digitaliza tu empresa con <span>inteligencia</span>"
 hero_text: "Lleva tu negocio al siguiente nivel con soluciones de digitalización impulsadas por IA. Automatiza procesos, digitaliza documentos y moderniza tu infraestructura tecnológica sin complicaciones."
 sidebar:
@@ -48,4 +48,5 @@ Nuestras soluciones de digitalización cubren todos los aspectos de tu negocio:
 - **Digitalización de atención al cliente**: un sistema multicanal (web, WhatsApp, teléfono) que resuelve el 80% de las consultas sin intervención humana.
 - **Integración de sistemas**: conexión de CRM, ERP y plataformas de ecommerce mediante MCP para una visión unificada del negocio.
 
-</div>
+</div><div class="service-stats"><div class="service-stats__grid"><div class="service-stats__item"><span class="service-stats__number">50%</span><span class="service-stats__label">Reducción procesos manuales</span></div><div class="service-stats__item"><span class="service-stats__number">24/7</span><span class="service-stats__label">Operación sin interrupciones</span></div><div class="service-stats__item"><span class="service-stats__number">+40%</span><span class="service-stats__label">Productividad operativa</span></div><div class="service-stats__item"><span class="service-stats__number">-60%</span><span class="service-stats__label">Errores en procesos documentales</span></div></div></div>
+<div class="service-testimonial"><blockquote><p>"Digitalizamos toda nuestra gestión documental con Nexus AI. Lo que antes era un proceso de 3 días ahora se hace en 2 horas con un 99% de precisión."</p><footer>— Responsable de administración, empresa de servicios</footer></blockquote></div>

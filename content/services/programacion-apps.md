@@ -1,6 +1,6 @@
 ---
 title: "Desarrollo de software"
-description: "Desarrollo de aplicaciones web y móviles con IA integrada. Apps inteligentes con chatbots, agentes autónomos y automatización."
+description: "Desarrollo de apps web y móviles con IA integrada. Aplicaciones inteligentes con chatbots, agentes autónomos y automatización. MVPs en semanas, SaaS escalable."
 hero_title: "Apps inteligentes con IA <span>integrada</span>"
 hero_text: "Creamos aplicaciones web y móviles con inteligencia artificial integrada desde el diseño. Apps que aprenden, se adaptan y automatizan procesos."
 sidebar:
@@ -44,4 +44,5 @@ Nexus AI desarrolla **Apps**, **Chatbots**, **Agentes IA Autónomos** e **Integr
 - **App de fidelización**: personaliza ofertas según comportamiento.
 - **App de telemedicina**: triaje inicial y agenda consultas.
 
-</div>
+</div><div class="service-stats"><div class="service-stats__grid"><div class="service-stats__item"><span class="service-stats__number">MVP</span><span class="service-stats__label">Funcional en semanas</span></div><div class="service-stats__item"><span class="service-stats__number">+40%</span><span class="service-stats__label">Eficiencia con IA integrada</span></div><div class="service-stats__item"><span class="service-stats__number">100%</span><span class="service-stats__label">Código propietario</span></div><div class="service-stats__item"><span class="service-stats__number">∞</span><span class="service-stats__label">Escalabilidad cloud</span></div></div></div>
+<div class="service-testimonial"><blockquote><p>"Nexus AI desarrolló nuestra app de gestión de flotas con IA integrada en 8 semanas. Hoy gestionamos 300 vehículos con un solo agente autónomo que optimiza rutas en tiempo real."</p><footer>— Director de operaciones, empresa de transporte</footer></blockquote></div>

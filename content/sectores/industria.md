@@ -1,6 +1,6 @@
 ---
 title: "Industria"
-description: "Transforma tu industria con IA. Automatización de procesos, mantenimiento predictivo y optimización de producción."
+description: "IA para industria 4.0. Automatización de producción, mantenimiento predictivo y optimización de procesos con agentes IA autónomos e integraciones MCP."
 hero_title: "Industria inteligente con <span>IA</span>"
 hero_text: "La industria 4.0 exige eficiencia, calidad y flexibilidad. La IA permite automatizar procesos, predecir fallos y optimizar la producción en tiempo real."
 sidebar:
@@ -16,15 +16,17 @@ cta_subtitle: "Agenda una consultoría gratuita."
 
 ## Visión General {#overview}
 
-El sector industrial busca constantemente mejorar la eficiencia, reducir paradas no planificadas y optimizar la calidad. La inteligencia artificial permite monitorizar procesos en tiempo real, predecir fallos antes de que ocurran y automatizar tareas repetitivas.
+El sector industrial español representa el 16% del PIB y emplea a más de 2,5 millones de personas. Una hora de parada no planificada puede costar hasta 260.000€ en sectores como automoción o químico. La IA permite monitorizar procesos en tiempo real, predecir fallos antes de que ocurran y automatizar tareas repetitivas en planta y en back-office.
+
+Nexus AI ofrece soluciones de **Agentes IA Autónomos**, **Automatización Empresarial**, **Integraciones MCP** y **Chatbots** para el sector industrial.
 
 ## Beneficios {#benefits}
 
-- **Mantenimiento predictivo**: anticipa fallos antes de que ocurran.
-- **Optimización de producción**: ajusta parámetros en tiempo real.
-- **Control de calidad**: detección automática de defectos.
-- **Automatización de procesos**: reduce intervención manual.
-- **Eficiencia energética**: optimización del consumo.
+- **Mantenimiento predictivo**: anticipa fallos antes de que ocurran, reduciendo paradas no planificadas hasta un 50%.
+- **Optimización de producción**: agentes IA que ajustan parámetros de producción en tiempo real según demanda y capacidad.
+- **Control de calidad visual**: detección automática de defectos en línea de producción mediante IA.
+- **Automatización de procesos administrativos**: pedidos, facturación, documentación de calidad y gestión de proveedores.
+- **Eficiencia energética**: optimización del consumo en planta basada en patrones de uso y costes energéticos.
 
 ## Soluciones IA {#solutions}
 

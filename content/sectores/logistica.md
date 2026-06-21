@@ -1,6 +1,6 @@
 ---
 title: "Logística"
-description: "Optimiza tu cadena de suministro con IA. Seguimiento inteligente, automatización logística y gestión de flotas con agentes autónomos."
+description: "IA para logística y cadena de suministro. Seguimiento inteligente de envíos, automatización de almacenes y optimización de rutas con agentes autónomos 24/7."
 hero_title: "Logística conectada con <span>inteligencia</span>"
 hero_text: "El sector logístico mueve el mundo. Agiliza tus operaciones, optimiza rutas, automatiza la atención a clientes y transportistas, y toma decisiones basadas en datos en tiempo real con inteligencia artificial."
 sidebar:
@@ -16,17 +16,17 @@ cta_subtitle: "Agenda una consultoría gratuita."
 
 ## Visión General {#overview}
 
-El sector logístico opera con márgenes ajustados y enfrenta una presión constante por reducir tiempos de entrega, optimizar rutas y mantener informados a los clientes en todo momento. La inteligencia artificial permite automatizar la coordinación entre transportistas, almacenes y clientes finales, reduciendo costes y mejorando la experiencia de entrega.
+El sector logístico en España mueve más de 1.800 millones de envíos anuales, con márgenes que no superan el 3-5%. Una incidencia en la cadena de frío puede costar 100.000€ por lote. La IA permite automatizar la coordinación entre transportistas, almacenes y clientes finales, reduciendo costes y mejorando la experiencia de entrega.
 
 Nexus AI ofrece soluciones de **Agentes IA Autónomos**, **Agentes IA Telefónicos**, **Chatbots** y **Automatización Empresarial** diseñadas para transformar cada eslabón de la cadena de suministro.
 
 ## Beneficios {#benefits}
 
-- **Optimización de rutas en tiempo real**: agentes IA que analizan tráfico, clima y capacidad.
-- **Atención al cliente proactiva**: notificaciones automáticas de estado de envío.
-- **Reducción de incidencias**: detección temprana de anomalías en la cadena de frío.
-- **Coordinación multicanal**: integración con transportistas y clientes.
-- **Eficiencia operativa**: automatización de albaranes, facturación y documentación.
+- **Optimización de rutas en tiempo real**: agentes IA que analizan tráfico, clima, capacidad y ventanas horarias, reduciendo costes de combustible hasta un 15%.
+- **Atención al cliente proactiva**: notificaciones automáticas de estado de envío, incidencias y cambios de ventana de entrega en tiempo real.
+- **Reducción de incidencias**: detección temprana de anomalías en la cadena de frío y alertas automáticas con capacidad de reacción inmediata.
+- **Coordinación multicanal**: integración con transportistas, almacenes y clientes a través de chatbots, agentes telefónicos y APIs MCP.
+- **Eficiencia operativa**: automatización de albaranes, facturación, documentación aduanera y gestión de flotas.
 
 ## Soluciones IA {#solutions}
 

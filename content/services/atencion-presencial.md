@@ -1,6 +1,6 @@
 ---
 title: "Atención Presencial IA"
-description: "Transforma tu atención presencial con IA. Asistentes virtuales en pantallas interactivas, quioscos inteligentes y señalización digital."
+description: "Atención presencial con IA para retail, hostelería y eventos. Asistentes virtuales en kioscos interactivos y pantallas que ven, oyen y conversan. Guía a tus clientes 24/7."
 hero_title: "Atención presencial potenciada con <span>inteligencia artificial</span>"
 hero_text: "La atención presencial sigue siendo clave para muchos negocios. Poténciala con asistentes virtuales en pantallas interactivas, quioscos inteligentes y señalización digital con IA."
 sidebar:
@@ -48,4 +48,5 @@ Nuestras soluciones para atención presencial cubren todos los puntos de contact
 - **Gestión de colas inteligente**: un agente IA que asigna turnos, estima tiempos de espera y notifica al cliente.
 - **Asistente en punto de venta**: un chatbot que ayuda al cliente con dudas sobre productos mientras espera en caja.
 
-</div>
+</div><div class="service-stats"><div class="service-stats__grid"><div class="service-stats__item"><span class="service-stats__number">70%</span><span class="service-stats__label">Consultas resueltas en kiosco</span></div><div class="service-stats__item"><span class="service-stats__number">24/7</span><span class="service-stats__label">Atención sin horarios</span></div><div class="service-stats__item"><span class="service-stats__number">-50%</span><span class="service-stats__label">Colas en punto de atención</span></div><div class="service-stats__item"><span class="service-stats__number">2-4</span><span class="service-stats__label">Semanas de instalación</span></div></div></div>
+<div class="service-testimonial"><blockquote><p>"Instalamos kioscos con IA en nuestro centro comercial. El 65% de los visitantes usan el asistente virtual para encontrar tiendas, consultar horarios y conocer promociones. La experiencia de cliente mejoró notablemente."</p><footer>— Gerente de marketing, centro comercial</footer></blockquote></div>

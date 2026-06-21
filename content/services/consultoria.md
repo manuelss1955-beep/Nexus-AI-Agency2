@@ -1,6 +1,6 @@
 ---
 title: "Consultoría IA"
-description: "Consultoría estratégica en inteligencia artificial para empresas. Hoja de ruta, selección de tecnología e implementación."
+description: "Consultoría IA estratégica para empresas. Hoja de ruta personalizada, selección tecnológica imparcial e implantación de IA con ROI garantizado en menos de 90 días."
 hero_title: "Estrategia IA para tu empresa, <span>sin ruido</span>"
 hero_text: "No necesitas más tecnología, necesitas un plan. Te ayudamos a identificar dónde la IA genera más valor en tu negocio."
 sidebar:
@@ -42,4 +42,5 @@ Implementar IA requiere análisis de procesos, datos, cultura organizacional y o
 - **Arquitectura de datos**: diseño de flujo para asistente virtual.
 - **Plan de formación**: capacitación en IA para equipos.
 
-</div>
+</div><div class="service-stats"><div class="service-stats__grid"><div class="service-stats__item"><span class="service-stats__number">90%</span><span class="service-stats__label">Proyectos que llegan a implementación</span></div><div class="service-stats__item"><span class="service-stats__number">30</span><span class="service-stats__label">Días para el diagnóstico completo</span></div><div class="service-stats__item"><span class="service-stats__number">+40</span><span class="service-stats__label">Empresas asesoradas</span></div><div class="service-stats__item"><span class="service-stats__number">8</span><span class="service-stats__label">Países con presencia</span></div></div></div>
+<div class="service-testimonial"><blockquote><p>"Llegamos a Nexus AI sin saber por dónde empezar con la IA. En 30 días tenían un diagnóstico certero de nuestra situación y una hoja de ruta clara. Hoy estamos automatizando 8 procesos clave."</p><footer>— Gerente de innovación, grupo industrial</footer></blockquote></div>

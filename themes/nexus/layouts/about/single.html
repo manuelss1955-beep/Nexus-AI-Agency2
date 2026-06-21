@@ -6,6 +6,19 @@
   {{ with .Params.hero_text }}<p class="page-hero__text">{{ . }}</p>{{ end }}
 </div></section>
 
+{{ with .Params.stats }}
+<section class="section" style="padding:var(--space-xl) 0"><div class="container">
+  <div class="hero__stats">
+    {{- range . }}
+    <div class="hero__stat">
+      <span class="hero__stat-number">{{ .number }}</span>
+      <span class="hero__stat-label">{{ .label }}</span>
+    </div>
+    {{- end }}
+  </div>
+</div></section>
+{{- end }}
+
 {{ with .Params.values }}
 <section class="section"><div class="container">
   <div class="section__header">
@@ -46,6 +59,45 @@
 <section class="section"><div class="container">
   {{ .Content }}
 </div></section>
+
+{{ with .Params.team }}
+<section class="section section--alt"><div class="container">
+  <div class="section__header">
+    <h2 class="section__title">Conoce al equipo</h2>
+  </div>
+  <div class="grid grid--3">
+    {{- range . }}
+    <div class="feature" style="text-align:center">
+      <div style="font-size:3rem;margin-bottom:var(--space-sm)">{{ .emoji }}</div>
+      <div class="feature__content">
+        <h3 style="font-size:1.1rem">{{ .name }}</h3>
+        <p style="font-size:var(--fs-sm);color:var(--accent);font-weight:600;margin-bottom:var(--space-sm)">{{ .role }}</p>
+        <p style="font-size:var(--fs-sm);color:var(--text-secondary)">{{ .bio }}</p>
+      </div>
+    </div>
+    {{- end }}
+  </div>
+</div></section>
+{{- end }}
+
+{{ with .Params.diferenciadores }}
+<section class="section section--alt"><div class="container">
+  <div class="section__header">
+    <h2 class="section__title">¿Por qué Nexus AI?</h2>
+  </div>
+  <div class="grid grid--2">
+    {{- range . }}
+    <div class="feature">
+      <div class="feature__icon">{{ .icon }}</div>
+      <div class="feature__content">
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </div>
+    </div>
+    {{- end }}
+  </div>
+</div></section>
+{{- end }}
 
 <section class="section section--alt"><div class="container text-center">
   <h2 class="section__title" style="font-size:1.6rem">{{ .Params.cta_title | default "¿Hablamos?" }}</h2>

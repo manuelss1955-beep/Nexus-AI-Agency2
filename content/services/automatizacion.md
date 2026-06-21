@@ -1,6 +1,6 @@
 ---
 title: "Automatización Empresarial"
-description: "Automatización de procesos empresariales con IA. Workflows inteligentes, RPA avanzado y orquestación de sistemas."
+description: "Automatización empresarial con workflows inteligentes impulsados por IA. RPA avanzado, orquestación de sistemas y eliminación de tareas repetitivas con resultados medibles."
 hero_title: "Automatiza tu empresa con <span>workflows inteligentes</span>"
 hero_text: "La automatización tradicional se queda corta. Con IA, tus procesos no solo se ejecutan solos: se optimizan, aprenden y se adaptan en tiempo real."
 sidebar:
@@ -44,4 +44,5 @@ Nexus AI ofrece **Automatización Empresarial**, **Agentes IA Autónomos**, **In
 - **Gestión de incidencias**: clasifica, asigna y resuelve automáticamente.
 - **Automatización de informes**: recopila datos y distribuye periódicamente.
 
-</div>
+</div><div class="service-stats"><div class="service-stats__grid"><div class="service-stats__item"><span class="service-stats__number">70%</span><span class="service-stats__label">Tareas repetitivas eliminadas</span></div><div class="service-stats__item"><span class="service-stats__number">ROI</span><span class="service-stats__label">Positivo en menos de 90 días</span></div><div class="service-stats__item"><span class="service-stats__number">99%</span><span class="service-stats__label">Precisión en procesos automatizados</span></div><div class="service-stats__item"><span class="service-stats__number">4 sem</span><span class="service-stats__label">Implementación media</span></div></div></div>
+<div class="service-testimonial"><blockquote><p>"Automatizamos 14 procesos administrativos con Nexus AI. Lo que antes requería 3 personas a tiempo completo ahora lo gestiona un agente autónomo. Ahorramos 120.000€/año."</p><footer>— Director financiero, empresa logística 200+ empleados</footer></blockquote></div>

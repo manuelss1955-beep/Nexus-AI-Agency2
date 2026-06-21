@@ -1,6 +1,6 @@
 ---
 title: "Salud"
-description: "Transforma tu centro de salud con IA. Atención al paciente automatizada, gestión de citas y telemedicina con agentes inteligentes."
+description: "IA para salud y clínicas. Gestión de citas automatizada, telemedicina y atención al paciente 24/7 con agentes IA. Reduce no-shows hasta un 40%."
 hero_title: "Salud conectada con <span>inteligencia artificial</span>"
 hero_text: "El sector salud enfrenta el reto de ofrecer atención de calidad con recursos limitados. La IA permite automatizar la gestión de citas, la atención al paciente y los procesos administrativos."
 sidebar:
@@ -16,17 +16,17 @@ cta_subtitle: "Agenda una consultoría gratuita."
 
 ## Visión General {#overview}
 
-Los centros de salud y clínicas manejan un volumen creciente de llamadas, citas y consultas administrativas. La inteligencia artificial permite automatizar la gestión de citas, la atención al paciente y los procesos administrativos.
+El sector salud en España gestiona más de 400 millones de consultas al año. Clínicas y hospitales dedican hasta un 30% de su tiempo a tareas administrativas. La inteligencia artificial permite automatizar todo ese volumen sin perder calidad asistencial, cumpliendo con LOPD, RGPD y normativa sanitaria.
 
-Nexus AI ofrece soluciones de **Chatbots**, **Agentes IA Telefónicos**, **Agentes IA Autónomos** y **Automatización Empresarial** para el sector salud.
+Nexus AI ofrece soluciones de **Chatbots**, **Agentes IA Telefónicos**, **Agentes IA Autónomos** y **Automatización Empresarial** diseñadas específicamente para clínicas, hospitales y centros de salud.
 
 ## Beneficios {#benefits}
 
-- **Gestión automatizada de citas**: agenda, confirma y recuerda citas sin intervención.
-- **Atención al paciente 24/7**: resuelve dudas y consultas administrativas.
-- **Reducción de no-shows**: recordatorios inteligentes y reasignación automática.
-- **Triaje inteligente**: clasificación de pacientes según urgencia.
-- **Automatización administrativa**: facturación, historiales y documentación.
+- **Gestión automatizada de citas**: agenda, confirma y recuerda citas sin intervención humana. Reduce no-shows hasta un 40%.
+- **Atención al paciente 24/7**: resuelve dudas sobre horarios, especialistas, documentos y ubicaciones en cualquier momento.
+- **Triaje inteligente**: clasifica pacientes por nivel de urgencia y deriva al servicio adecuado según sintomatología.
+- **Automatización administrativa**: facturación, historiales clínicos y gestión de reembolsos sin errores.
+- **Cumplimiento normativo**: todas las soluciones cumplen con LOPD, RGPD y normativa sanitaria vigente.
 
 ## Soluciones IA {#solutions}
 

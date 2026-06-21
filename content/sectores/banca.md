@@ -1,6 +1,6 @@
 ---
 title: "Banca y Fintech"
-description: "Transforma tu entidad financiera con IA. Atención al cliente automatizada, detección de fraude y asesoramiento financiero inteligente."
+description: "IA para banca y fintech. Automatiza atención al cliente financiero con agentes IA, chatbots y asistentes telefónicos. Reduce costes operativos hasta un 60% y mejora la experiencia del cliente."
 hero_title: "Banca inteligente con <span>IA</span>"
 hero_text: "El sector financiero está en plena transformación digital. La IA permite ofrecer atención personalizada 24/7, detectar fraudes en tiempo real y automatizar procesos de back-office."
 sidebar:
@@ -16,15 +16,17 @@ cta_subtitle: "Agenda una consultoría gratuita."
 
 ## Visión General {#overview}
 
-La banca y las fintech operan en un entorno de alta regulación y competencia creciente. La inteligencia artificial ofrece oportunidades para mejorar la experiencia del cliente, optimizar procesos y fortalecer la seguridad.
+El sector financiero en España gestiona más de 2,5 billones de euros en activos. La presión regulatoria (BCE, CNMV, Banco de España) y la competencia de fintechs exigen eficiencia operativa sin precedentes. La IA permite automatizar la atención al cliente, la detección de fraude y los procesos de cumplimiento normativo sin perder precisión.
+
+Nexus AI ofrece soluciones de **Chatbots**, **Agentes IA Telefónicos**, **Agentes IA Autónomos** y **Automatización Empresarial** diseñadas para cumplir con los estándares de seguridad y regulación del sector financiero.
 
 ## Beneficios {#benefits}
 
-- **Atención al cliente 24/7**: chatbots y agentes telefónicos para consultas bancarias.
-- **Asesoramiento financiero**: recomendaciones personalizadas basadas en datos.
-- **Detección de fraude**: análisis de patrones en tiempo real.
-- **Automatización de procesos**: conciliación, informes y cumplimiento normativo.
-- **Segmentación de clientes**: ofertas personalizadas según perfil y comportamiento.
+- **Atención al cliente 24/7**: chatbots y agentes telefónicos para consultas bancarias, reclamaciones y gestión de productos en múltiples idiomas.
+- **Detección de fraude en tiempo real**: agentes IA que analizan patrones de transacciones y alertan sobre actividad sospechosa al instante.
+- **Asesoramiento financiero personalizado**: recomendaciones de inversión basadas en perfil de riesgo, historial y objetivos del cliente.
+- **Automatización regulatoria**: generación automática de informes para CNMV, Banco de España y cumplimiento normativo (MiFID II, RGPD).
+- **Segmentación inteligente de clientes**: ofertas personalizadas según comportamiento financiero y ciclo de vida del cliente.
 
 ## Soluciones IA {#solutions}
 

@@ -1,6 +1,6 @@
 ---
 title: "Hostelería"
-description: "Transforma tu hotel, restaurante o negocio hostelero con IA. Reservas inteligentes, atención al cliente automatizada y guest experience."
+description: "IA para hostelería y restauración. Automatiza reservas, atención al cliente y guest experience con chatbots y agentes IA. Hoteles y restaurantes inteligentes."
 hero_title: "Hostelería con <span>inteligencia</span>"
 hero_text: "La hostelería vive de la experiencia del cliente. La IA permite ofrecer un servicio personalizado 24/7, automatizar reservas y mejorar la satisfacción."
 sidebar:
@@ -16,15 +16,17 @@ cta_subtitle: "Agenda una consultoría gratuita."
 
 ## Visión General {#overview}
 
-El sector hostelero busca ofrecer experiencias memorables mientras optimiza costes operativos. La IA permite automatizar reservas, atención al cliente y procesos de back-office.
+El sector hostelero en España representa el 12% del PIB y más de 300.000 establecimientos. Con márgenes ajustados y alta estacionalidad, hoteles y restaurantes buscan optimizar cada interacción con el cliente. La IA permite automatizar reservas, atención al cliente y procesos de back-office sin perder el trato personal que define al sector.
+
+Nexus AI ofrece soluciones de **Chatbots**, **Agentes IA Telefónicos**, **Atención Presencial IA** y **Automatización Empresarial** para hoteles, restaurantes y alojamientos turísticos.
 
 ## Beneficios {#benefits}
 
-- **Reservas inteligentes**: gestión multicanal de reservas 24/7.
-- **Atención al cliente**: chatbots y agentes telefónicos para consultas.
-- **Personalización**: ofertas y recomendaciones basadas en preferencias.
-- **Optimización de revenue**: precios dinámicos basados en demanda.
-- **Automatización**: check-in, facturación y comunicación post-estancia.
+- **Reservas inteligentes**: gestión multicanal de reservas 24/7 desde web, WhatsApp y teléfono sin intervención humana.
+- **Atención al cliente**: chatbots y agentes telefónicos que resuelven dudas sobre horarios, menús, ubicaciones y servicios.
+- **Personalización de estancias**: ofertas y recomendaciones basadas en historial de huéspedes y preferencias.
+- **Optimización de revenue**: precios dinámicos basados en ocupación, estacionalidad y eventos locales.
+- **Automatización operativa**: check-in/out digital, facturación automatizada y comunicación post-estancia.
 
 ## Soluciones IA {#solutions}
 

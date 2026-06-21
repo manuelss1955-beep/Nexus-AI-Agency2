@@ -1,6 +1,6 @@
 ---
 title: "Agentes IA Autónomos"
-description: "Agentes de IA que ejecutan tareas complejas de forma autónoma. Automatización inteligente, toma de decisiones y ejecución sin supervisión humana."
+description: "Agentes IA autónomos para empresas. Automatiza tareas complejas, toma de decisiones y ejecución sin supervisión humana 24/7. Solicita demo gratuita."
 hero_title: "Agentes IA que trabajan por ti de forma <span>autónoma</span>"
 hero_text: "Imagina tener un equipo de asistentes digitales que trabajan 24/7, toman decisiones y ejecutan tareas complejas sin supervisión humana. Así funcionan nuestros agentes IA autónomos."
 sidebar:
@@ -48,5 +48,33 @@ Nuestros agentes autónomos se adaptan a cualquier necesidad empresarial:
 - **Atención al cliente multicapa**: un chatbot que resuelve consultas simples y deriva las complejas a un agente autónomo especializado.
 - **Automatización de informes**: un agente que recopila datos de múltiples fuentes, genera informes ejecutivos y los distribuye automáticamente.
 - **Gestión de incidencias TI**: un agente que detecta, diagnostica y resuelve incidencias técnicas sin intervención humana.
+
+<div class="service-stats">
+  <div class="service-stats__grid">
+    <div class="service-stats__item">
+      <span class="service-stats__number">97%</span>
+      <span class="service-stats__label">Precisión en toma de decisiones</span>
+    </div>
+    <div class="service-stats__item">
+      <span class="service-stats__number">24/7</span>
+      <span class="service-stats__label">Disponibilidad sin interrupciones</span>
+    </div>
+    <div class="service-stats__item">
+      <span class="service-stats__number">60%</span>
+      <span class="service-stats__label">Reducción de costes operativos</span>
+    </div>
+    <div class="service-stats__item">
+      <span class="service-stats__number">2-4</span>
+      <span class="service-stats__label">Semanas de implementación</span>
+    </div>
+  </div>
+</div>
+
+<div class="service-testimonial">
+  <blockquote>
+    <p>"Implementamos un agente autónomo para la gestión de incidencias TI. En el primer mes redujimos el tiempo medio de resolución de 4 horas a 12 minutos. El ROI fue positivo en menos de 60 días."</p>
+    <footer>— Director de operaciones, empresa logística nacional</footer>
+  </blockquote>
+</div>
 
 </div>

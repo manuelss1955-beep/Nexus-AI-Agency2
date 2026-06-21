@@ -1,6 +1,6 @@
 ---
 title: "Agentes IA Telefónicos"
-description: "Agentes telefónicos con IA que atienden llamadas 24/7. Automatización de centralita, atención al cliente y gestión de incidencias por voz."
+description: "Agentes telefónicos IA para empresas. Centralita inteligente que atiende llamadas 24/7, agenda citas y resuelve incidencias sin esperas. Reduce costes hasta un 60%."
 hero_title: "Agentes telefónicos con IA que suenan a <span>personas reales</span>"
 hero_text: "Olvida los menús interminables y las respuestas robóticas. Nuestros agentes telefónicos con IA mantienen conversaciones naturales, entienden el contexto y resuelven incidencias sin frustrar al cliente."
 sidebar:
@@ -48,4 +48,5 @@ Nuestros agentes telefónicos se adaptan a cualquier sector y necesidad:
 - **Cobro amistoso**: un agente que realiza llamadas de recordatorio de pago con capacidad de negociación.
 - **Encuestas de satisfacción**: un agente que realiza llamadas de postventa y recoge feedback estructurado.
 
-</div>
+</div><div class="service-stats"><div class="service-stats__grid"><div class="service-stats__item"><span class="service-stats__number">60%</span><span class="service-stats__label">Reducción costes telefónicos</span></div><div class="service-stats__item"><span class="service-stats__number">24/7</span><span class="service-stats__label">Disponibilidad sin pausas</span></div><div class="service-stats__item"><span class="service-stats__number">80%</span><span class="service-stats__label">Llamadas resueltas sin agente</span></div><div class="service-stats__item"><span class="service-stats__number">2 sem</span><span class="service-stats__label">Implementación media</span></div></div></div>
+<div class="service-testimonial"><blockquote><p>"Desde que implementamos el agente telefónico, el 70% de nuestras llamadas entrantes las resuelve el asistente sin intervención humana. Nuestro equipo comercial se centra en cerrar ventas, no en atender consultas repetitivas."</p><footer>— CEO, clínica dental con 15 centros</footer></blockquote></div>
