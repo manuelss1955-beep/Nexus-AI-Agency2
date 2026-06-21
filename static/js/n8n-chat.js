@@ -99,7 +99,16 @@
       '  },',
       "  defaultLanguage: 'es',",
       '  enableStreaming: false,',
-      '});'
+      '});',
+      '',
+      '// ─── Cargar historial de sesión previa ──────────────────',
+      'setTimeout(() => {',
+      '  const _el = document.querySelector("#n8n-chat");',
+      '  if (_el && _el.__vue_app__) {',
+      '    const $chat = _el.__vue_app__.config.globalProperties.$chat;',
+      '    if ($chat?.loadPreviousSession) $chat.loadPreviousSession();',
+      '  }',
+      '}, 800);'
     ].join('\n');
     document.body.appendChild(script);
   }
