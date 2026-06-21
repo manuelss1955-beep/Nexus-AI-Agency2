@@ -44,24 +44,25 @@
 #n8n-chat-form-overlay {
   width: 100%; height: 100%; z-index: 9999;
   background: #fff;
-  display: flex; align-items: center; justify-content: center;
-  padding: 24px; box-sizing: border-box;
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 12px 24px 24px; box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   flex: 1;
 }
 #n8n-chat-form-overlay .nfo-inner {
   width: 100%; max-width: 320px;
+  margin-top: 8px;
 }
 #n8n-chat-form-overlay h3 {
   font-size: 1.2rem; font-weight: 700; margin: 0 0 4px;
   color: #111827;
 }
 #n8n-chat-form-overlay p {
-  font-size: 0.85rem; color: #6B7280; margin: 0 0 20px;
+  font-size: 0.85rem; color: #6B7280; margin: 0 0 16px;
   line-height: 1.5;
 }
 #n8n-chat-form-overlay .nfo-field {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 #n8n-chat-form-overlay input {
   width: 100%; padding: 10px 14px; border: 1px solid #D1D5DB;
@@ -76,7 +77,7 @@
   width: 100%; padding: 12px; background: #2563EB; color: #fff;
   border: none; border-radius: 8px; font-size: 0.95rem;
   font-weight: 600; font-family: inherit; cursor: pointer;
-  margin-top: 8px; transition: background 0.2s;
+  margin-top: 18px; transition: background 0.2s;
 }
 #n8n-chat-form-overlay .nfo-btn:hover {
   background: #1D4ED8;
