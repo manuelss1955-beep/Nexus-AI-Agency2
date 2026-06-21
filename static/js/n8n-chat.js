@@ -44,28 +44,28 @@
 #n8n-chat-form-overlay {
   width: 100%; height: 100%; z-index: 9999;
   background: #fff;
-  display: flex; align-items: flex-start; justify-content: center;
-  padding: 12px 24px 24px; box-sizing: border-box;
+  display: flex; align-items: center; justify-content: center;
+  padding: 8px 24px; box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   flex: 1;
 }
 #n8n-chat-form-overlay .nfo-inner {
   width: 100%; max-width: 320px;
-  margin-top: 8px;
+  margin-top: 0;
 }
 #n8n-chat-form-overlay h3 {
   font-size: 1.2rem; font-weight: 700; margin: 0 0 4px;
   color: #111827;
 }
 #n8n-chat-form-overlay p {
-  font-size: 0.85rem; color: #6B7280; margin: 0 0 16px;
+  font-size: 0.85rem; color: #6B7280; margin: 0 0 12px;
   line-height: 1.5;
 }
 #n8n-chat-form-overlay .nfo-field {
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 #n8n-chat-form-overlay input {
-  width: 100%; padding: 10px 14px; border: 1px solid #D1D5DB;
+  width: 100%; padding: 8px 12px; border: 1px solid #D1D5DB;
   border-radius: 8px; font-size: 0.9rem; font-family: inherit;
   outline: none; box-sizing: border-box;
   transition: border-color 0.2s;
@@ -77,7 +77,7 @@
   width: 100%; padding: 12px; background: #2563EB; color: #fff;
   border: none; border-radius: 8px; font-size: 0.95rem;
   font-weight: 600; font-family: inherit; cursor: pointer;
-  margin-top: 18px; transition: background 0.2s;
+  margin-top: 16px; transition: background 0.2s;
 }
 #n8n-chat-form-overlay .nfo-btn:hover {
   background: #1D4ED8;
@@ -130,7 +130,7 @@
     }
     var formContainer = document.createElement('div');
     formContainer.id = 'n8n-chat-form-overlay';
-    formContainer.style.cssText = 'position:absolute;top:60px;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:Inter,sans-serif;background:#fff;border-radius:0;';
+    formContainer.style.cssText = 'position:absolute;top:60px;left:0;right:0;bottom:0;z-index:9999;display:flex;justify-content:center;box-sizing:border-box;font-family:Inter,sans-serif;background:#fff;border-radius:0;';
     formContainer.innerHTML =
       '<div class="nfo-inner">' +
         '<h3>Antes de empezar 💬</h3>' +
@@ -139,7 +139,7 @@
           '<div class="nfo-field"><input type="text" id="nfo-name" placeholder="Nombre *" required></div>' +
           '<div class="nfo-field"><input type="tel" id="nfo-phone" placeholder="Teléfono *" required></div>' +
           '<div class="nfo-field"><input type="email" id="nfo-email" placeholder="Email *" required></div>' +
-          '<div class="nfo-field"><textarea id="nfo-message" placeholder="Describe brevemente en qué podemos ayudarte" rows="3" style="width:100%;padding:10px 14px;border:1px solid #D1D5DB;border-radius:8px;font-size:0.9rem;font-family:inherit;outline:none;box-sizing:border-box;resize:none;transition:border-color 0.2s;"></textarea></div>' +
+          '<div class="nfo-field"><textarea id="nfo-message" placeholder="Describe brevemente en qué podemos ayudarte" rows="3" style="width:100%;padding:8px 12px;border:1px solid #D1D5DB;border-radius:8px;font-size:0.9rem;font-family:inherit;outline:none;box-sizing:border-box;resize:none;transition:border-color 0.2s;"></textarea></div>' +
           '<button type="submit" class="nfo-btn" id="nfo-submit">Comenzar Chat →</button>' +
         '</form>' +
       '</div>';
@@ -214,7 +214,7 @@
       '  i18n: {',
       '    es: {',
       "      title: 'Nexus AI',",
-      "      subtitle: 'Asistente IA — Respondemos en menos de 24h',",
+      "      subtitle: 'Asistente virtual — 24/7 a tu servicio',",
       "      footer: '',",
       "      getStarted: 'Nueva Conversación',",
       "      inputPlaceholder: 'Escribe tu mensaje...',",

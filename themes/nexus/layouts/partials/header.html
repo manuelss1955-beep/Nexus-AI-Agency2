@@ -10,14 +10,39 @@
         <div class="nav__dropdown-menu">
           <div class="nav__dropdown-grid">
             <div class="nav__dropdown-column">
+              <div class="nav__dropdown-column-header">🔄 Servicios 360</div>
+              <a href="{{ $root }}services/digitalizacion" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏢</span>
+                <span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Digitalización de empresas</span></span>
+              </a>
+              <a href="{{ $root }}services/consultoria" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🤖</span>
+                <span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Consultoría IA</span></span>
+              </a>
+              <a href="{{ $root }}services/kit-digital" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🛠️</span>
+                <span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Kit digital</span></span>
+              </a>
+              <a href="{{ $root }}services/kit-consulting" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📊</span>
+                <span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Kit consulting</span></span>
+              </a>
+              <a href="{{ $root }}formacion/formacion-incompany" class="nav__dropdown-item">
+                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">👥</span>
+                <span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Formación In‑Company</span><span class="nav__dropdown-item__desc">A medida para tu equipo</span></span>
+              </a>
+            </div>
+            <div class="nav__dropdown-column">
               <div class="nav__dropdown-column-header">🚀 Servicios</div>
             {{- range $page.Site.Params.services }}
+              {{- if and (ne .slug "digitalizacion") (ne .slug "consultoria") }}
               <a href="{{ $root }}services/{{ .slug }}" class="nav__dropdown-item">
                 <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">{{ .icon }}</span>
                 <span class="nav__dropdown-item__text">
                   <span class="nav__dropdown-item__title">{{ .title }}</span>
                 </span>
               </a>
+              {{- end }}
             {{- end }}
             </div>
             <div class="nav__dropdown-column">
@@ -39,8 +64,6 @@
               <a href="{{ $root }}formacion/ia-agentica" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🤖</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de IA Agéntica</span><span class="nav__dropdown-item__desc">Agentes autónomos avanzados</span></span></a>
               <a href="{{ $root }}formacion/automatizacion-ia" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">⚡</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de Automatización con IA</span><span class="nav__dropdown-item__desc">n8n, MCP, workflows</span></span></a>
               <a href="{{ $root }}formacion/desarrollo-ia" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">💻</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de Desarrollo con IA</span><span class="nav__dropdown-item__desc">Apps potenciadas por IA</span></span></a>
-              <a href="{{ $root }}formacion/formacion-incompany" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">👥</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Formación In‑Company</span><span class="nav__dropdown-item__desc">A medida para tu equipo</span></span></a>
-              <a href="{{ $root }}formacion/webinars-workshops" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📹</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Webinars y Workshops</span><span class="nav__dropdown-item__desc">Eventos en vivo y grabados</span></span></a>
             </div>
           </div>
         </div>
@@ -63,9 +86,17 @@
     {{- if eq .Identifier "services" }}
     <span class="nav__mobile-dropdown-toggle">Servicios y Soluciones <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></span>
     <div class="nav__mobile-sub">
+      <div class="nav__mobile-sub-header">🔄 Servicios 360</div>
+      <a href="{{ $root }}services/digitalizacion"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏢</span> Digitalización de empresas</a>
+      <a href="{{ $root }}services/consultoria-ia"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🤖</span> Consultoría IA</a>
+      <a href="{{ $root }}services/kit-digital"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🛠️</span> Kit digital</a>
+      <a href="{{ $root }}services/kit-consulting"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📊</span> Kit consulting</a>
+      <a href="{{ $root }}formacion/formacion-incompany"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">👥</span> Formación In‑Company</a>
       <div class="nav__mobile-sub-header">🚀 Servicios</div>
       {{- range $page.Site.Params.services }}
+      {{- if and (ne .slug "digitalizacion") (ne .slug "consultoria") }}
       <a href="{{ $root }}services/{{ .slug }}"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">{{ .icon }}</span> {{ .title }}</a>
+      {{- end }}
       {{- end }}
       <div class="nav__mobile-sub-header">💡 Soluciones</div>
       <div class="nav__mobile-sub-header">🏢 Sectores</div>
@@ -81,8 +112,6 @@
       <a href="{{ $root }}formacion/ia-agentica"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🤖</span> Curso de IA Agéntica</a>
       <a href="{{ $root }}formacion/automatizacion-ia"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">⚡</span> Curso de Automatización con IA</a>
       <a href="{{ $root }}formacion/desarrollo-ia"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">💻</span> Curso de Desarrollo con IA</a>
-      <a href="{{ $root }}formacion/formacion-incompany"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">👥</span> Formación In‑Company</a>
-      <a href="{{ $root }}formacion/webinars-workshops"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📹</span> Webinars y Workshops</a>
     </div>
     {{- else }}
     {{- $mobileLinkUrl := strings.TrimPrefix "/" .URL -}}
