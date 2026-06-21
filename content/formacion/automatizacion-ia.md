@@ -36,13 +36,6 @@ testimonials:
   - quote: "Pasamos de tener 3 personas dedicadas a conciliar facturas a tener un agente IA que lo hace en minutos. El curso nos dio el marco y la confianza."
     author: "Elena Pastor"
     role: "CFO, Cadena de Retail ModaExpress"
-sidebar:
-  - {id: overview, label: "Visión General"}
-  - {id: objectives, label: "Objetivos del Curso"}
-  - {id: content, label: "Contenido del Curso"}
-  - {id: methodology, label: "Metodología"}
-  - {id: cta, label: "Solicitar Información"}
-cta_title: "Automatiza lo que hoy te consume tiempo"
 cta_subtitle: "Próxima convocatoria: 12 plazas. Solicita información o reserva tu plaza."
 faq:
   - q: "¿Qué diferencia hay entre RPA tradicional y automatización con IA?"
@@ -58,7 +51,7 @@ faq:
 ---
 <div class="service-content">
 
-## Visión General {#overview}
+## Visión General
 
 Cada día, en las empresas de todo el mundo, miles de profesionales dedican horas a tareas repetitivas que una máquina podría hacer en segundos. El problema no es que sean difíciles. Es que consumen un tiempo que debería dedicarse a decisiones estratégicas, relación con clientes y mejora continua.
 
@@ -68,7 +61,7 @@ La inteligencia artificial cambia eso. Los sistemas de automatización con IA en
 
 Este curso de 40 horas te enseña a diseñar, implementar y mantener sistemas de automatización inteligente. Desde la identificación de procesos candidatos hasta el despliegue en producción, pasando por la integración con sistemas existentes. Cada módulo incluye ejercicios prácticos con herramientas reales. Al terminar el curso, tendrás al menos un proceso real de tu empresa automatizado y funcionando.
 
-## Objetivos del Curso {#objectives}
+## Objetivos del Curso
 
 - Identificar y priorizar procesos automatizables con metodología probada
 - Diferenciar qué procesos usar RPA, cuáles IA y cuáles una combinación
@@ -79,7 +72,7 @@ Este curso de 40 horas te enseña a diseñar, implementar y mantener sistemas de
 - Medir el impacto en costes, tiempos y calidad
 - Mantener y escalar automatizaciones de forma sostenible
 
-## Contenido del Curso {#content}
+## Contenido del Curso
 
 ### BLOQUE 1 — FUNDAMENTOS (20h)
 
@@ -112,7 +105,7 @@ Métricas clave, alertas, A/B testing, mejora continua, versionado, de 1 a 100 p
 ### Proyecto Final (6h tuteladas)
 Automatización completa de un proceso real: viabilidad, diseño, implementación, integración, pruebas, despliegue y documentación.
 
-## Metodología {#methodology}
+## Metodología
 
 **70% práctica, 20% teoría, 10% conceptos.** Cada módulo incluye demo, ejercicio guiado y tarea aplicada.
 

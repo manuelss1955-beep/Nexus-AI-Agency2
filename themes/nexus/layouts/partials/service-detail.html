@@ -1,7 +1,8 @@
 {{- $root := partial "rootpath.html" .page -}}
 {{- $ctaTitle := .ctaTitle | default "¿Listo para empezar?" -}}
 {{- $ctaSubtitle := .ctaSubtitle | default "Agenda una consultoría gratuita." -}}
-{{- $sidebar := .sidebar | default slice -}}
+{{- $toc := .toc | default "" -}}
+{{- $ctaLabel := .ctaLabel | default "Contacto" -}}
 <section class="section"><div class="container"><div class="service-detail__grid">
   <div class="service-detail__content">
     {{ .content }}
@@ -13,15 +14,10 @@
       <a href="{{ $root }}contact" class="btn btn--primary">Hablar con un experto →</a>
     </div>
   </div>
-  {{- if $sidebar }}
-  <aside class="service-detail__sidebar"><nav>
-    {{- range $i, $item := $sidebar }}
-    {{- if eq $item.id "cta" }}
-    <a href="{{ $root }}contact" class="service-detail__nav-item{{ if eq $i 0 }} service-detail__nav-item--active{{ end }}"><span class="service-detail__nav-item__num">{{ add $i 1 }}</span>{{ $item.label }}</a>
-    {{- else }}
-    <a href="#{{ $item.id }}" class="service-detail__nav-item{{ if eq $i 0 }} service-detail__nav-item--active{{ end }}"><span class="service-detail__nav-item__num">{{ add $i 1 }}</span>{{ $item.label }}</a>
+  <aside class="service-detail__sidebar">
+    {{- with $toc }}
+    <nav class="service-detail__toc">{{ . }}</nav>
     {{- end }}
-    {{- end }}
-  </nav></aside>
-  {{- end }}
+    <a href="{{ $root }}contact" class="service-detail__nav-item service-detail__toc-cta"><span class="service-detail__nav-item__num">★</span>{{ $ctaLabel }}</a>
+  </aside>
 </div></div></section>

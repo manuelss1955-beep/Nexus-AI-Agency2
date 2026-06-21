@@ -36,13 +36,6 @@ testimonials:
   - quote: "El módulo de fine-tuning valió todo el curso. Fine-tuneamos un modelo para nuestro dominio legal con precisión del 94%."
     author: "Laura Santana"
     role: "ML Engineer, Despacho de Abogados 360"
-sidebar:
-  - {id: overview, label: "Visión General"}
-  - {id: objectives, label: "Objetivos del Curso"}
-  - {id: content, label: "Contenido del Curso"}
-  - {id: methodology, label: "Metodología"}
-  - {id: cta, label: "Solicitar Información"}
-cta_title: "Construye la próxima generación de apps con IA"
 cta_subtitle: "Plazas limitadas. Solicita información o reserva tu plaza."
 faq:
   - q: "¿Qué diferencia este curso del de IA Agéntica?"
@@ -58,7 +51,7 @@ faq:
 ---
 <div class="service-content">
 
-## Visión General {#overview}
+## Visión General
 
 El mercado de software está experimentando una transformación tan profunda como la que trajo internet: toda aplicación que no integre IA quedará obsoleta. No hablamos de añadir un chat GPT genérico a una web: hablamos de aplicaciones donde la IA es parte fundamental de la arquitectura —búsqueda semántica, generación personalizada, asistentes contextuales, sistemas que aprenden con cada interacción.
 
@@ -66,7 +59,7 @@ Pero integrar IA no es trivial. Requiere entender LLMs por dentro, APIs eficient
 
 Este curso de 40 horas es para desarrolladores con experiencia que quieren pasar de usar ChatGPT a construir productos con IA desde cero. Cubrimos todo el stack: APIs de LLMs, prompts en producción, embeddings, RAG, fine-tuning y MLOps.
 
-## Objetivos del Curso {#objectives}
+## Objetivos del Curso
 
 - Integrar APIs de LLMs (OpenAI, Anthropic, Google, AWS) en apps full-stack
 - Implementar sistemas RAG con búsqueda semántica y generación contextual
@@ -75,7 +68,7 @@ Este curso de 40 horas es para desarrolladores con experiencia que quieren pasar
 - Construir APIs de IA con streaming, errores y control de costes
 - Desplegar aplicaciones IA con CI/CD, monitorización y escalado
 
-## Contenido del Curso {#content}
+## Contenido del Curso
 
 ### BLOQUE 1 — APIs Y PROMPTS (20h)
 
@@ -108,7 +101,7 @@ CI/CD para apps IA, versionado (DVC, MLflow, LangSmith), testing, monitorizació
 ### Proyecto Final (8h tuteladas)
 App full-stack con IA: frontend (React/Next.js), backend (FastAPI), RAG, fine-tuning, streaming, CI/CD, monitorización.
 
-## Metodología {#methodology}
+## Metodología
 
 **80% código, 15% arquitectura, 5% conceptos.** APIs reales, ejercicios evaluados.
 

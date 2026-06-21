@@ -36,13 +36,6 @@ testimonials:
   - quote: "El curso más útil que he hecho en años. Explica conceptos complejos de forma clara sin simplificar en exceso. Salí con criterio para evaluar proveedores y proyectos."
     author: "Javier Montero"
     role: "CEO, Logística Express 24h"
-sidebar:
-  - {id: overview, label: "Visión General"}
-  - {id: objectives, label: "Objetivos del Curso"}
-  - {id: content, label: "Contenido del Curso"}
-  - {id: methodology, label: "Metodología"}
-  - {id: cta, label: "Solicitar Información"}
-cta_title: "Domina la IA sin ser ingeniero"
 cta_subtitle: "Próxima convocatoria: plazas limitadas. Solicita información sin compromiso."
 faq:
   - q: "¿Necesito conocimientos técnicos para este curso?"
@@ -58,7 +51,7 @@ faq:
 ---
 <div class="service-content">
 
-## Visión General {#overview}
+## Visión General
 
 La inteligencia artificial ha dejado de ser una promesa de futuro para convertirse en el motor que impulsa las empresas más competitivas del planeta. Sin embargo, para la mayoría de los profesionales y directivos, sigue siendo un territorio desconocido lleno de términos técnicos, hype mediático y ruido informativo. El resultado: decisiones pospuestas, oportunidades perdidas y la sensación de estar quedándose atrás mientras la competencia avanza.
 
@@ -68,7 +61,7 @@ En 40 horas pasarás de sentirte abrumado por el ruido a tener un criterio funda
 
 Al finalizar, no serás un ingeniero de IA. Serás algo más valioso para tu empresa: un líder con criterio para decidir dónde, cómo y cuándo invertir en inteligencia artificial.
 
-## Objetivos del Curso {#objectives}
+## Objetivos del Curso
 
 Al completar este curso de 40 horas serás capaz de:
 
@@ -80,7 +73,7 @@ Al completar este curso de 40 horas serás capaz de:
 - **Anticipar riesgos** éticos, legales y de privacidad antes de que se conviertan en problemas
 - **Construir un plan de adopción** de IA para tu empresa con hitos, KPIs y presupuesto estimado
 
-## Contenido del Curso {#content}
+## Contenido del Curso
 
 ### BLOQUE 1 — FUNDAMENTOS (20h)
 
@@ -174,7 +167,7 @@ Al completar este curso de 40 horas serás capaz de:
 ### Proyecto Final (4h tuteladas)
 Plan de Adopción de IA para tu empresa, con entregas parciales en cada módulo y defensa final.
 
-## Metodología {#methodology}
+## Metodología
 
 Seguimos la regla **70/20/10**: 70% práctica guiada, 20% teoría aplicada, 10% conceptos.
 

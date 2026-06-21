@@ -36,14 +36,6 @@ testimonials:
   - quote: "No usaron un curso estándar. Analizaron nuestros procesos, diseñaron el programa a medida y los ejercicios eran con nuestros datos reales."
     author: "Sonia Fresneda"
     role: "Directora de RRHH, Clínica Dentalcare"
-sidebar:
-  - {id: overview, label: "Visión General"}
-  - {id: objectives, label: "Objetivos"}
-  - {id: content, label: "Nuestra Metodología"}
-  - {id: areas, label: "Áreas de Especialización"}
-  - {id: results, label: "Resultados"}
-  - {id: cta, label: "Solicitar Información"}
-cta_title: "Formación IA que transforma tu equipo"
 cta_subtitle: "Solicita un diagnóstico gratuito y te proponemos el programa en 48h."
 faq:
   - q: "¿Cómo funciona el proceso?"
@@ -59,7 +51,7 @@ faq:
 ---
 <div class="service-content">
 
-## Visión General {#overview}
+## Visión General
 
 La formación en IA es una de las decisiones estratégicas más importantes que una empresa puede tomar. No porque sea una moda, sino porque el coste de no formarse es cada día más evidente: equipos que no saben integrar IA, decisiones basadas en intuiciones en vez de datos, horas perdidas en tareas automatizables, oportunidades de negocio que se quedan sobre la mesa.
 
@@ -69,7 +61,7 @@ Nosotros hacemos lo contrario. Antes de diseñar un programa, pasamos tiempo den
 
 No vendemos cursos. Vendemos resultados medibles: procesos automatizados, decisiones mejoradas, horas liberadas, ingresos incrementados. Cada programa incluye KPIs definidos desde el día 1 y soporte post-formación para asegurar el impacto.
 
-## Objetivos {#objectives}
+## Objetivos
 
 **Para la empresa:**
 - Diagnosticar el nivel de madurez IA del equipo y la organización
@@ -83,7 +75,7 @@ No vendemos cursos. Vendemos resultados medibles: procesos automatizados, decisi
 - Obtener certificación que acredite sus conocimientos
 - Contar con acompañamiento experto para dudas reales
 
-## Nuestra Metodología {#content}
+## Nuestra Metodología
 
 ### Fase 1: Diagnóstico de Necesidades
 Entrevista con dirección, evaluación del equipo, mapeo de procesos, análisis sectorial. Entregable: informe con recomendaciones.
@@ -103,7 +95,7 @@ Evaluación por módulo, defensa del proyecto, certificado digital Nexus AI, inf
 ### Fase 6: Soporte Post-Formación (3 meses)
 Sesiones de seguimiento mensuales, acceso a materiales 6 meses, consultas técnicas ilimitadas, actualizaciones, descuento en futuras formaciones.
 
-## Áreas de Especialización {#areas}
+## Áreas de Especialización
 
 | Área | Perfil | Duración |
 |------|--------|----------|
@@ -116,7 +108,7 @@ Sesiones de seguimiento mensuales, acceso a materiales 6 meses, consultas técni
 | IA para Marketing y Ventas | Marketing, Revenue Operations | 20h |
 | IA Conversacional | Atención al Cliente, CX | 20h |
 
-## Resultados {#results}
+## Resultados
 
 | Métrica | Valor |
 |---------|-------|
@@ -131,7 +123,7 @@ Sesiones de seguimiento mensuales, acceso a materiales 6 meses, consultas técni
 - **Clínica (15 centros):** IA Conversacional. 80% citas automatizadas. -50% no-shows. 4.7/5 satisfacción.
 - **Retail (50 tiendas):** Digitalización con IA. 3 pilotos durante el curso, 2 en producción a los 3 meses. Ahorro 120.000 euros/año.
 
-## ¿Hablamos? {#cta}
+## ¿Hablamos?
 Solicita un diagnóstico gratuito y en 48h recibirás: análisis de necesidades, programa recomendado, duración y presupuesto, curriculum del instructor, cronograma. Sin compromiso.
 
 </div>

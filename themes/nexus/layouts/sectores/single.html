@@ -13,9 +13,10 @@
 {{ partial "service-detail.html" (dict
   "page" .
   "content" .Content
-  "sidebar" .Params.sidebar
+  "toc" .TableOfContents
   "ctaTitle" (.Params.cta_title | default "¿Listo para transformar tu sector?")
   "ctaSubtitle" (.Params.cta_subtitle | default "Agenda una consultoría gratuita.")
+  "ctaLabel" "Contacto"
 ) }}
 
 {{ end }}

@@ -3,24 +3,17 @@ title: "Automatización Empresarial"
 description: "Automatización empresarial con workflows inteligentes impulsados por IA. RPA avanzado, orquestación de sistemas y eliminación de tareas repetitivas con resultados medibles."
 hero_title: "Automatiza tu empresa con <span>workflows inteligentes</span>"
 hero_text: "La automatización tradicional se queda corta. Con IA, tus procesos no solo se ejecutan solos: se optimizan, aprenden y se adaptan en tiempo real."
-sidebar:
-  - {id: overview, label: Visión General}
-  - {id: benefits, label: Beneficios}
-  - {id: solutions, label: Soluciones IA}
-  - {id: usecases, label: Casos de Uso}
-  - {id: cta, label: Contacto}
-cta_title: "¿Listo para automatizar tus procesos?"
 cta_subtitle: "Agenda una consultoría gratuita."
 ---
 <div class="service-content">
 
-## Visión General {#overview}
+## Visión General
 
 La automatización empresarial ha evolucionado más allá de los robots de procesos (RPA) tradicionales. Con inteligencia artificial, los procesos aprenden de cada iteración, se adaptan a condiciones cambiantes y optimizan su propio rendimiento.
 
 Nexus AI ofrece **Automatización Empresarial**, **Agentes IA Autónomos**, **Integraciones MCP** y **Digitalización de Empresas**.
 
-## Beneficios {#benefits}
+## Beneficios
 
 - **Procesos que se optimizan solos**: la IA mejora el rendimiento automáticamente.
 - **Reducción de errores**: elimina errores humanos en procesos críticos.
@@ -28,7 +21,7 @@ Nexus AI ofrece **Automatización Empresarial**, **Agentes IA Autónomos**, **In
 - **Integración total**: workflows conectan ERP, CRM, bases de datos y APIs.
 - **ROI medible**: reducción de costes operativos del 40-70%.
 
-## Soluciones IA {#solutions}
+## Soluciones IA
 
 - **Automatización de back-office**: facturación, contabilidad, conciliación.
 - **Automatización de RRHH**: nóminas, contratos, onboarding.
@@ -36,7 +29,7 @@ Nexus AI ofrece **Automatización Empresarial**, **Agentes IA Autónomos**, **In
 - **Automatización de atención al cliente**: tickets y derivación inteligente.
 - **Agentes IA Autónomos**, **Integraciones MCP**, **Chatbots**.
 
-## Casos de Uso {#usecases}
+## Casos de Uso
 
 - **Ciclo completo de facturación**: desde recepción hasta pago automatizado.
 - **Onboarding de empleados**: contratos, altas y credenciales automáticos.

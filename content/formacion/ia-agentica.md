@@ -36,13 +36,6 @@ testimonials:
   - quote: "El módulo de MCP nos cambió la forma de pensar las integraciones. Ahora conectamos agentes a sistemas legacy en días, no meses."
     author: "Patricia Núñez"
     role: "Cloud Architect, Banca Digital"
-sidebar:
-  - {id: overview, label: "Visión General"}
-  - {id: objectives, label: "Objetivos del Curso"}
-  - {id: content, label: "Contenido del Curso"}
-  - {id: methodology, label: "Metodología"}
-  - {id: cta, label: "Solicitar Información"}
-cta_title: "Construye el futuro del software: agentes autónomos"
 cta_subtitle: "Plazas limitadas a 10 alumnos. Solicita información."
 faq:
   - q: "¿Qué requisitos técnicos necesito?"
@@ -58,7 +51,7 @@ faq:
 ---
 <div class="service-content">
 
-## Visión General {#overview}
+## Visión General
 
 Los grandes modelos de lenguaje han demostrado ser extraordinariamente capaces en tareas de generación y análisis. Pero su verdadero potencial no está en responder preguntas: está en actuar. Cuando un LLM planifica una secuencia de pasos, ejecuta código, consulta una base de datos, envía un email, aprende del resultado y ajusta su estrategia en tiempo real —deja de ser un chat para convertirse en un agente.
 
@@ -66,7 +59,7 @@ Los agentes IA autónomos son la evolución más disruptiva de la inteligencia a
 
 Este curso de 40 horas es el programa más avanzado en IA agéntica. Diseñado para desarrolladores y arquitectos que ya trabajan con IA y quieren el salto a sistemas autónomos. Cubrimos los 6 frameworks principales, patrones de razonamiento, memoria persistente, integración MCP y despliegue en producción con observabilidad y control de costes.
 
-## Objetivos del Curso {#objectives}
+## Objetivos del Curso
 
 - Diseñar arquitecturas de agentes con planificación, razonamiento, memoria y herramientas
 - Implementar agentes en LangChain+LangGraph, CrewAI, AutoGen y Semantic Kernel
@@ -75,7 +68,7 @@ Este curso de 40 horas es el programa más avanzado en IA agéntica. Diseñado p
 - Implementar memoria persistente con bases de datos vectoriales
 - Desplegar agentes en producción con Docker, CI/CD y monitorización
 
-## Contenido del Curso {#content}
+## Contenido del Curso
 
 ### BLOQUE 1 — FUNDAMENTOS (20h)
 
@@ -108,7 +101,7 @@ Agentes multimodales, fine-tuning, edge computing, aprendizaje continuo. Taller:
 ### Proyecto Final (8h tuteladas)
 Sistema multiagente completo con API, memoria persistente, integraciones, despliegue y monitorización.
 
-## Metodología {#methodology}
+## Metodología
 
 **80% código, 15% arquitectura, 5% conceptos.** Ejercicios evaluados y revisión entre pares.
 

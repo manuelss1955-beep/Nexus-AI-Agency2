@@ -35,6 +35,20 @@
 <section class="section"><div class="container"><div class="post-grid">
 <article class="post-content">{{ .Content }}</article>
 
+<aside class="post-sidebar">
+  {{- if .TableOfContents }}
+  <div class="post-sidebar__toc">
+    <h4 class="post-sidebar__title">📑 En este artículo</h4>
+    <nav class="post-sidebar__nav">{{ .TableOfContents }}</nav>
+  </div>
+  {{- end }}
+  <div class="post-sidebar__cta">
+    <h4>¿Necesitas IA?</h4>
+    <p>Hablemos de tu proyecto</p>
+    <a href="{{ $root }}contact" class="btn btn--primary btn--sm">Contactar</a>
+  </div>
+</aside>
+
 {{ partial "newsletter-form.html" . }}
 
 {{- if .Params.tags }}

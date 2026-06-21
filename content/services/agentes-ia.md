@@ -3,24 +3,17 @@ title: "Agentes IA Autónomos"
 description: "Agentes IA autónomos para empresas. Automatiza tareas complejas, toma de decisiones y ejecución sin supervisión humana 24/7. Solicita demo gratuita."
 hero_title: "Agentes IA que trabajan por ti de forma <span>autónoma</span>"
 hero_text: "Imagina tener un equipo de asistentes digitales que trabajan 24/7, toman decisiones y ejecutan tareas complejas sin supervisión humana. Así funcionan nuestros agentes IA autónomos."
-sidebar:
-  - {id: overview, label: Visión General}
-  - {id: benefits, label: Beneficios}
-  - {id: solutions, label: Soluciones IA}
-  - {id: usecases, label: Casos de Uso}
-  - {id: cta, label: Contacto}
-cta_title: "¿Listo para automatizar tu negocio con agentes IA?"
 cta_subtitle: "Agenda una consultoría gratuita."
 ---
 <div class="service-content">
 
-## Visión General {#overview}
+## Visión General
 
 Los agentes IA autónomos representan el siguiente nivel de la automatización empresarial. A diferencia de los chatbots tradicionales que responden preguntas, los agentes autónomos pueden planificar, ejecutar y verificar tareas complejas de principio a fin: gestionar inventarios, coordinar equipos, optimizar procesos y tomar decisiones en tiempo real basadas en datos.
 
 Nexus AI diseña e implementa **Agentes IA Autónomos**, **Integraciones MCP** y **Automatización Empresarial** para que las empresas deleguen tareas complejas en asistentes digitales inteligentes.
 
-## Beneficios {#benefits}
+## Beneficios
 
 - **Autonomía real**: los agentes toman decisiones y ejecutan tareas sin intervención humana, siguiendo reglas de negocio y aprendiendo de cada interacción.
 - **Disponibilidad 24/7/365**: tus procesos críticos nunca se detienen. Los agentes trabajan mientras tu equipo descansa.
@@ -28,7 +21,7 @@ Nexus AI diseña e implementa **Agentes IA Autónomos**, **Integraciones MCP** y
 - **Integración con tu ecosistema**: conexión con ERP, CRM, bases de datos y APIs mediante MCP para actuar sobre tus sistemas.
 - **Escalabilidad sin límites**: desde 1 agente hasta cientos, escalando según la demanda sin costes fijos.
 
-## Soluciones IA {#solutions}
+## Soluciones IA
 
 Nuestros agentes autónomos se adaptan a cualquier necesidad empresarial:
 
@@ -41,7 +34,7 @@ Nuestros agentes autónomos se adaptan a cualquier necesidad empresarial:
 - **Integraciones MCP** para conectar tus agentes con cualquier sistema o servicio externo.
 - **Consultoría IA** para diseñar la arquitectura de agentes autónomos de tu empresa.
 
-## Casos de Uso {#usecases}
+## Casos de Uso
 
 - **Gestión de inventario**: un agente que monitoriza el stock, predice roturas y genera pedidos de reposición automáticamente.
 - **Coordinación de flotas**: un agente que asigna rutas, gestiona incidencias y optimiza el consumo de combustible en tiempo real.

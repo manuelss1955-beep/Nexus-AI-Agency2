@@ -3,25 +3,17 @@ title: "Kit Digital"
 description: "Te ayudamos a solicitar e implementar el Programa Kit Digital. Subvenciones de hasta 12.000€ para digitalizar tu pyme con soluciones IA."
 hero_title: "Kit Digital: <span>digitaliza tu pyme</span> con ayudas públicas"
 hero_text: "El Programa Kit Digital subvenciona la digitalización de pymes y autónomos con bonos de hasta 12.000€. Te guiamos en la solicitud e implantación de soluciones IA."
-sidebar:
-  - {id: overview, label: Visión General}
-  - {id: segments, label: Segmentos y Cuantías}
-  - {id: solutions, label: Soluciones Subvencionables}
-  - {id: process, label: Proceso}
-  - {id: faq, label: Preguntas Frecuentes}
-  - {id: cta, label: Contacto}
-cta_title: "¿Quieres saber si tu empresa puede optar al Kit Digital?"
 cta_subtitle: "Analizamos tu caso sin compromiso y te guiamos en todo el proceso."
 ---
 <div class="service-content">
 
-## Visión General {#overview}
+## Visión General
 
 El **Programa Kit Digital** es una iniciativa del Gobierno de España, financiada por los fondos europeos **Next Generation EU**, que concede ayudas directas a pymes y autónomos para impulsar su digitalización. Con bonos de hasta **12.000€**, las empresas pueden implantar soluciones tecnológicas que mejoren su competitividad, eficiencia y presencia digital.
 
 En **Nexus AI** somos agentes digitalizadores adheridos al programa. Te acompañamos desde la solicitud hasta la implementación de las soluciones de IA y automatización que mejor encajan con tu negocio.
 
-## Segmentos y Cuantías {#segments}
+## Segmentos y Cuantías
 
 La ayuda se concede en función del número de empleados de la empresa:
 
@@ -33,7 +25,7 @@ La ayuda se concede en función del número de empleados de la empresa:
 
 Cada empresa puede destinar el bono a una o varias soluciones de digitalización dentro del catálogo oficial del programa.
 
-## Soluciones Subvencionables {#solutions}
+## Soluciones Subvencionables
 
 Nuestras soluciones IA encajan perfectamente en las categorías del Kit Digital:
 
@@ -45,7 +37,7 @@ Nuestras soluciones IA encajan perfectamente en las categorías del Kit Digital:
 - **💻 Desarrollo de software** — Creación de páginas web, tiendas online y aplicaciones a medida con IA integrada.
 - **🎯 Consultoría IA** — Diagnóstico de madurez digital y hoja de ruta personalizada para aprovechar al máximo el bono Kit Digital.
 
-## Proceso {#process}
+## Proceso
 
 Te acompañamos en cada paso para que obtengas y aproveches tu ayuda:
 
@@ -57,7 +49,7 @@ Te acompañamos en cada paso para que obtengas y aproveches tu ayuda:
 
 > 💡 **Sin coste adicional para tu empresa.** El bono Kit Digital cubre el 100% del coste de las soluciones contratadas dentro de los límites establecidos.
 
-## Preguntas Frecuentes {#faq}
+## Preguntas Frecuentes
 
 **¿Mi empresa puede solicitar el Kit Digital?**
 Pueden solicitarlo pymes y autónomos con domicilio fiscal en España, que estén dados de alta en el Censo de Empresarios y cumplan los requisitos de cada convocatoria.

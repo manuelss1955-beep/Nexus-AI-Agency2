@@ -3,24 +3,17 @@ title: "Desarrollo de software"
 description: "Desarrollo de apps web y móviles con IA integrada. Aplicaciones inteligentes con chatbots, agentes autónomos y automatización. MVPs en semanas, SaaS escalable."
 hero_title: "Apps inteligentes con IA <span>integrada</span>"
 hero_text: "Creamos aplicaciones web y móviles con inteligencia artificial integrada desde el diseño. Apps que aprenden, se adaptan y automatizan procesos."
-sidebar:
-  - {id: overview, label: Visión General}
-  - {id: benefits, label: Beneficios}
-  - {id: solutions, label: Soluciones IA}
-  - {id: usecases, label: Casos de Uso}
-  - {id: cta, label: Contacto}
-cta_title: "¿Listo para crear tu app con IA integrada?"
 cta_subtitle: "Agenda una consultoría gratuita."
 ---
 <div class="service-content">
 
-## Visión General {#overview}
+## Visión General
 
 Las aplicaciones web y móviles son la puerta de entrada digital de cualquier negocio. Integrar inteligencia artificial en tu app no es un lujo, es una ventaja competitiva. Desde chatbots que guían al usuario hasta agentes autónomos que ejecutan tareas en segundo plano, la IA transforma la experiencia de usuario y automatiza procesos críticos.
 
 Nexus AI desarrolla **Apps**, **Chatbots**, **Agentes IA Autónomos** e **Integraciones MCP** para crear aplicaciones inteligentes que marcan la diferencia.
 
-## Beneficios {#benefits}
+## Beneficios
 
 - **IA desde el día uno**: la inteligencia artificial se integra en el diseño de la app.
 - **Experiencia personalizada**: la app aprende del comportamiento del usuario.
@@ -28,7 +21,7 @@ Nexus AI desarrolla **Apps**, **Chatbots**, **Agentes IA Autónomos** e **Integr
 - **Chatbot nativo**: asistente conversacional integrado para atención instantánea.
 - **Escalabilidad cloud**: apps diseñadas para escalar a millones de usuarios.
 
-## Soluciones IA {#solutions}
+## Soluciones IA
 
 - **Apps web progresivas (PWA)**: con chatbots integrados.
 - **Apps móviles nativas**: iOS y Android con agentes autónomos.
@@ -36,7 +29,7 @@ Nexus AI desarrolla **Apps**, **Chatbots**, **Agentes IA Autónomos** e **Integr
 - **Apps de atención al cliente**: chatbot + agente telefónico unificados.
 - **Chatbots**, **Agentes IA Autónomos**, **Integraciones MCP**.
 
-## Casos de Uso {#usecases}
+## Casos de Uso
 
 - **App de tracking logístico**: predice retrasos y optimiza rutas.
 - **App de atención al cliente**: resuelve incidencias y agenda llamadas.

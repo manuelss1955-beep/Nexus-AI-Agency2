@@ -36,13 +36,6 @@ testimonials:
   - quote: "Cada módulo termina con algo que puedes aplicar el lunes siguiente. En 3 meses habíamos lanzado 2 proyectos piloto."
     author: "Rafael Soto"
     role: "COO, Cadena Hotelera Costaluz"
-sidebar:
-  - {id: overview, label: "Visión General"}
-  - {id: objectives, label: "Objetivos del Curso"}
-  - {id: content, label: "Contenido del Curso"}
-  - {id: methodology, label: "Metodología"}
-  - {id: cta, label: "Solicitar Información"}
-cta_title: "Lidera la transformación IA de tu empresa"
 cta_subtitle: "Próxima convocatoria: 12 plazas. Solicita información o reserva tu plaza."
 faq:
   - q: "¿Qué diferencia este curso del de Introducción a la IA?"
@@ -58,7 +51,7 @@ faq:
 ---
 <div class="service-content">
 
-## Visión General {#overview}
+## Visión General
 
 La inteligencia artificial ya no es una ventaja competitiva: se está convirtiendo en un requisito de supervivencia empresarial. Las empresas que han integrado IA en sus procesos están creciendo a tasas que duplican las de sus competidores. Las que no, empiezan a notar la brecha.
 
@@ -68,7 +61,7 @@ Este curso de 40 horas está diseñado para directivos que necesitan dejar de ha
 
 Cada módulo termina con un entregable práctico que se integra en tu plan estratégico final. No es teoría: es una hoja de ruta ejecutable que presentarás a tu comité de dirección al terminar el curso.
 
-## Objetivos del Curso {#objectives}
+## Objetivos del Curso
 
 Al completar este curso serás capaz de:
 
@@ -82,7 +75,7 @@ Al completar este curso serás capaz de:
 - **Medir el retorno** de inversión con métricas de negocio, no técnicas
 - **Evaluar riesgos** legales, éticos y de privacidad antes de desplegar
 
-## Contenido del Curso {#content}
+## Contenido del Curso
 
 ### BLOQUE 1 — ESTRATEGIA (20h)
 
@@ -115,7 +108,7 @@ AI Act Europeo, GDPR, ISO 42001, sesgo algorítmico, supervisión humana. Taller
 ### Proyecto Final (6h tuteladas)
 Plan Estratégico de IA completo: diagnóstico, roadmap, 3 casos con business case, presupuesto, KPIs, riesgos, plan de comunicación. Presentación ante comité simulado.
 
-## Metodología {#methodology}
+## Metodología
 
 **Executive Learning:** 50% teoría aplicada, 30% talleres, 20% mentoría.
 
