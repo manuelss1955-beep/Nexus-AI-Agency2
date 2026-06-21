@@ -32,7 +32,8 @@
   "extraClass" "post-hero"
 ) }}
 
-<section class="section"><div class="container"><div class="post-grid">
+<section class="section"><div class="container">
+<div class="post-grid">
 <article class="post-content">{{ .Content }}</article>
 
 <aside class="post-sidebar">
@@ -48,6 +49,9 @@
     <a href="{{ $root }}contact" class="btn btn--primary btn--sm">Contactar</a>
   </div>
 </aside>
+</div>
+
+<div class="post-grid__after">
 
 {{ partial "newsletter-form.html" . }}
 
