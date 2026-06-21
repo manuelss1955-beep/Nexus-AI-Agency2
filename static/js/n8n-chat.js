@@ -127,7 +127,7 @@
     }
     var formContainer = document.createElement('div');
     formContainer.id = 'n8n-chat-form-overlay';
-    formContainer.style.cssText = 'position:absolute;top:60px;left:0;right:0;bottom:72px;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:Inter,sans-serif;background:#fff;border-radius:0;';
+    formContainer.style.cssText = 'position:absolute;top:60px;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:Inter,sans-serif;background:#fff;border-radius:0;';
     formContainer.innerHTML =
       '<div class="nfo-inner">' +
         '<h3>Antes de empezar 💬</h3>' +
