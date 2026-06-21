@@ -1,5 +1,5 @@
 baseURL = "https://nexus-ai.agency"
-languageCode = "es-ES"
+locale = "es-ES"
 title = "Nexus AI — Soluciones de Inteligencia Artificial"
 theme = "nexus"
 defaultContentLanguage = "es"
@@ -62,7 +62,6 @@ ignoreLogs = ['warning-goldmark-raw-html']
   support = "24/7"
   locale = "es_ES"
   siteName = "Nexus AI Agency"
-  # googleAnalytics = "G-XXXXXXXXXX"
 
 [menu]
   [[menu.main]]
