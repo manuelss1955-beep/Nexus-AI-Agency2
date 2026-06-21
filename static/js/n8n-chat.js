@@ -101,7 +101,9 @@
       if (existing) return;
 
       // El chat está abierto y visible → insertar formulario
-      createFormOverlay(msgArea);
+      if (!window._nexusFormSubmitted) {
+        createFormOverlay(msgArea);
+      }
     });
 
     observer.observe(target, {
@@ -168,6 +170,7 @@
       }).catch(function(){});
 
       formContainer.remove();
+      window._nexusFormSubmitted = true;
     });
   }
 
