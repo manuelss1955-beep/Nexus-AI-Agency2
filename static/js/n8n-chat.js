@@ -6,7 +6,7 @@
   'use strict';
 
   // ⚠️ IMPORTANTE: Reemplaza con tu webhook real de n8n
-  const WEBHOOK_URL = ''; // ← COLOCA AQUÍ TU WEBHOOK URL
+  const WEBHOOK_URL = 'https://n8n-production-adf2.up.railway.app/webhook/59acd426-5115-4d1b-9757-80ef5c21deb5/chat';
 
   // ─── Carga CSS ──────────────────────────────────────────────
   function loadCSS() {
