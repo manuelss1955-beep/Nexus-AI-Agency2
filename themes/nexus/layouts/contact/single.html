@@ -80,14 +80,4 @@
     </form>
   </div>
 </div></section>
-
-{{ .Content }}
-
-{{ with .Params.cta_title }}
-<section class="section section--alt"><div class="container text-center">
-  <h2 class="section__title" style="font-size:1.6rem">{{ . }}</h2>
-  <p style="color:var(--text-secondary);margin-bottom:var(--space-xl)">{{ $.Params.cta_subtitle }}</p>
-  <a href="mailto:{{ $.Site.Params.email }}" class="btn btn--primary btn--lg">Enviar Email →</a>
-</div></section>
-{{ end }}
 {{ end }}
