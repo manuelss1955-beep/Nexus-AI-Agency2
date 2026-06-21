@@ -42,11 +42,12 @@
     var style = document.createElement('style');
     style.textContent = `
 #n8n-chat-form-overlay {
-  position: absolute; inset: 0; z-index: 9999;
-  background: #fff; border-radius: 16px;
+  width: 100%; height: 100%; z-index: 9999;
+  background: #fff;
   display: flex; align-items: center; justify-content: center;
   padding: 24px; box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  flex: 1;
 }
 #n8n-chat-form-overlay .nfo-inner {
   width: 100%; max-width: 320px;
@@ -105,10 +106,9 @@
         // Esperar a que Vue abra la ventana (next tick)
         requestAnimationFrame(function() {
           requestAnimationFrame(function() {
-            var wrapper = target.querySelector('.chat-window-wrapper');
-            if (wrapper && !document.getElementById('n8n-chat-form-overlay')) {
-              // Insertar el overlay DENTRO del wrapper, sobre el chat
-              createFormOverlay(wrapper);
+            var msgArea = target.querySelector('.chat-messages-list');
+            if (msgArea && !document.getElementById('n8n-chat-form-overlay')) {
+              createFormOverlay(msgArea);
             }
           });
         });
@@ -120,9 +120,13 @@
   function createFormOverlay(container) {
     if (document.getElementById('n8n-chat-form-overlay')) return;
 
-    var overlay = document.createElement('div');
-    overlay.id = 'n8n-chat-form-overlay';
-    overlay.innerHTML =
+    // Ocultar el area de mensajes y mostrar el formulario
+    container.style.display = 'none';
+
+    var formContainer = document.createElement('div');
+    formContainer.id = 'n8n-chat-form-overlay';
+    formContainer.style.cssText = 'width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:Inter,sans-serif;background:#fff;';
+    formContainer.innerHTML =
       '<div class="nfo-inner">' +
         '<h3>Antes de empezar 💬</h3>' +
         '<p>Déjanos tus datos para atenderte mejor</p>' +
@@ -134,7 +138,7 @@
         '</form>' +
       '</div>';
 
-    (container || document.getElementById('n8n-chat')).appendChild(overlay);
+    container.appendChild(formContainer);
 
     document.getElementById('nfo-form').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -162,7 +166,9 @@
         })
       }).catch(function(){});
 
-      overlay.remove();
+      // Restaurar el area de mensajes y quitar el formulario
+      container.style.display = '';
+      formContainer.remove();
     });
   }
 
