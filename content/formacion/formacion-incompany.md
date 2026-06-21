@@ -25,7 +25,7 @@ audience:
     - "Habéis probado cursos genéricos sin resultados reales"
     - "Necesitáis un programa adaptado a vuestros horarios y necesidades"
     - "Buscáis un partner que os acompañe antes, durante y después"
-  no:
+  excluye:
     - "Buscas un curso abierto para un empleado individual"
     - "Necesitas solo una charla inspiracional de 2 horas"
     - "No tenéis presupuesto ni compromiso para un programa completo"

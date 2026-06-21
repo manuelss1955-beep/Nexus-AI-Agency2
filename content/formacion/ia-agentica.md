@@ -25,7 +25,7 @@ audience:
     - "Ya usas LLMs y quieres ir más allá: agentes que planifican, usan herramientas y colaboran"
     - "Necesitas diseñar sistemas multiagente que resuelvan problemas complejos"
     - "Quieres dominar MCP, LangChain, CrewAI, AutoGen en producción"
-  no:
+  excluye:
     - "Empiezas con IA y necesitas fundamentos"
     - "Buscas automatización de procesos con low-code"
     - "Necesitas aplicaciones full-stack con IA, no arquitecturas agénticas"

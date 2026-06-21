@@ -25,7 +25,7 @@ audience:
     - "Quieres entender qué es realmente la IA sin rodeos técnicos ni hype"
     - "Te han pedido que lideres un proyecto de transformación digital"
     - "Necesitas separar las oportunidades reales de las modas pasajeras"
-  no:
+  excluye:
     - "Buscas un curso técnico de programación con IA"
     - "Ya implementas proyectos de IA y buscas arquitecturas avanzadas"
     - "Solo te interesa una charla divulgativa de 2 horas"

@@ -25,7 +25,7 @@ audience:
     - "Trabajas con RPA y quieres dar el salto a automatización con IA"
     - "Quieres implementar agentes y flujos automatizados en tu empresa"
     - "Buscas reducir costes operativos manteniendo la calidad del servicio"
-  no:
+  excluye:
     - "Buscas solo RPA tradicional (este curso cubre RPA + IA)"
     - "Necesitas una introducción general a la IA"
     - "Buscas arquitecturas de agentes autónomos avanzados"

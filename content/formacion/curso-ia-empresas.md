@@ -25,7 +25,7 @@ audience:
     - "Diriges un departamento y quieres identificar casos de uso reales para tu equipo"
     - "Te han encargado liderar la transformación digital de tu organización"
     - "Necesitas entender el impacto económico y organizativo de la IA"
-  no:
+  excluye:
     - "Buscas un curso técnico para programar con IA"
     - "Necesitas una introducción general a la IA sin enfoque directivo"
     - "Buscas una consultoría externa, no formación para tu equipo"

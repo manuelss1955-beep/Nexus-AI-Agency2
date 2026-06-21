@@ -9,12 +9,14 @@
 
 {{ with .Params.key_data }}
 <section class="section" style="padding:var(--space-lg) 0"><div class="container">
-  <div class="grid grid--5" style="text-align:center;justify-items:center">
+  <div class="grid grid--5" style="align-items:start">
     {{ range . }}
-    <div>
-      <div style="font-size:1.8rem;margin-bottom:var(--space-xs)">{{ .icon }}</div>
-      <div style="font-weight:700;font-size:var(--fs-sm)">{{ .label }}</div>
-      <div style="font-size:var(--fs-xs);color:var(--text-muted)">{{ .value }}</div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="font-size:1.8rem;flex-shrink:0">{{ .icon }}</div>
+      <div>
+        <div style="font-weight:700;font-size:var(--fs-sm)">{{ .label }}</div>
+        <div style="font-size:var(--fs-xs);color:var(--text-muted)">{{ .value }}</div>
+      </div>
     </div>
     {{ end }}
   </div>
@@ -40,7 +42,7 @@
     <div>
       <h4 style="font-size:1rem;color:var(--text-muted);margin-bottom:var(--space-sm)">❌ No, si...</h4>
       <ul style="margin:0;padding-left:var(--space-md)">
-        {{ range .no }}
+        {{ range .excluye }}
         <li style="margin-bottom:var(--space-xs)">{{ . | markdownify }}</li>
         {{ end }}
       </ul>

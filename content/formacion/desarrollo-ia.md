@@ -25,7 +25,7 @@ audience:
     - "Has usado ChatGPT pero quieres construir productos con APIs de LLMs y RAG"
     - "Necesitas búsqueda semántica, asistentes inteligentes o generación de contenido"
     - "Quieres dominar el pipeline: prompt, API, vector DB, fine-tuning, producción"
-  no:
+  excluye:
     - "Buscas arquitecturas de agentes autónomos avanzados"
     - "No tienes experiencia en programación"
     - "Buscas automatización de procesos con low-code"
