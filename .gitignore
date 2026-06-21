@@ -4,3 +4,6 @@ node_modules/
 public/
 resources/
 *.log
+
+# Zipped builds
+static/*.zip
