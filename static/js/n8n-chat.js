@@ -11,7 +11,7 @@
   'use strict';
 
   // ⚠️ Reemplaza con tu webhook real de n8n
-  const WEBHOOK_URL = 'https://n8n-production-adf2.up.railway.app/webhook/59acd426-5115-4d1b-9757-80ef5c21deb5/chat';
+  const WEBHOOK_URL = 'https://n8n-production-adf2.up.railway.app/webhook/2d39cc9d-95f1-4e6e-b840-d4bfa55b74dd/chat';
 
   // Clave que @n8n/chat usa para leer/escribir el sessionId en localStorage
   // ATENCIÓN: la clave real es "n8n-chat/sessionId" (hardcodeada en la librería),
