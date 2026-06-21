@@ -1,0 +1,165 @@
+/**
+ * n8n-chat-theme.css — Tema personalizado para @n8n/chat
+ * Adapta el diseño del chatbot al estilo corporativo de Nexus AI
+ * Colores, tipografía y bordes consistentes con el sitio web
+ */
+
+/* ─── Variables CSS del Chat (sobrescriben las de @n8n/chat) ─── */
+.n8n-chat {
+  /* Colores primarios — Azul corporativo Nexus AI */
+  --chat--color--primary: #2563EB;
+  --chat--color--primary-shade-50: #1D4ED8;
+  --chat--color--primary--shade-100: #1E40AF;
+
+  /* Colores secundarios — Verde */
+  --chat--color--secondary: #059669;
+  --chat--color-secondary-shade-50: #047857;
+
+  /* Colores base */
+  --chat--color-white: #FFFFFF;
+  --chat--color-light: #F8F9FA;
+  --chat--color-light-shade-50: #E5E7EB;
+  --chat--color-light-shade-100: #D1D5DB;
+  --chat--color-medium: #D2D4D9;
+  --chat--color-dark: #111827;
+  --chat--color-disabled: #D2D4D9;
+
+  /* Tipografía — Inter (misma que el sitio) */
+  --chat--font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
+  /* Bordes redondeados — Consistentes con el sitio (radius-lg = 16px) */
+  --chat--border-radius: 12px;
+
+  /* ─── Ventana ─── */
+  --chat--window--width: 380px;
+  --chat--window--height: 520px;
+  --chat--window--bottom: 20px;
+  --chat--window--right: 20px;
+  --chat--window--border: 1px solid var(--chat--color-light-shade-50);
+  --chat--window--border-radius: 16px;
+
+  /* ─── Header ─── */
+  --chat--header--background: #111827;
+  --chat--header--color: #FFFFFF;
+  --chat--header--padding: 16px;
+
+  /* ─── Heading / Título ─── */
+  --chat--heading--font-size: 1.5rem;
+  --chat--subtitle--font-size: 0.875rem;
+  --chat--subtitle--line-height: 1.5;
+
+  /* ─── Mensajes ─── */
+  --chat--message--font-size: 0.938rem;
+  --chat--message--padding: 12px 16px;
+  --chat--message--border-radius: 12px;
+  --chat--message-line-height: 1.6;
+  --chat--message--margin-bottom: 8px;
+
+  /* Mensajes del bot */
+  --chat--message--bot--background: #FFFFFF;
+  --chat--message--bot--color: #111827;
+  --chat--message--bot--border: 1px solid var(--chat--color-light-shade-50);
+
+  /* Mensajes del usuario */
+  --chat--message--user--background: #2563EB;
+  --chat--message--user--color: #FFFFFF;
+  --chat--message--user--border: none;
+
+  /* Fondo del body del chat */
+  --chat--body--background: #F8F9FA;
+
+  /* ─── Toggle Button ─── */
+  --chat--toggle--size: 56px;
+  --chat--toggle--width: 56px;
+  --chat--toggle--height: 56px;
+  --chat--toggle--border-radius: 50%;
+  --chat--toggle--background: #2563EB;
+  --chat--toggle--hover--background: #1D4ED8;
+  --chat--toggle--active--background: #1E40AF;
+  --chat--toggle--color: #FFFFFF;
+
+  /* ─── Input / Textarea ─── */
+  --chat--textarea--height: 48px;
+  --chat--input--font-size: 0.938rem;
+  --chat--input--padding: 10px 14px;
+  --chat--input--background: #FFFFFF;
+  --chat--input--border-radius: 10px;
+  --chat--input--container--background: #FFFFFF;
+  --chat--input--container--border: 1px solid #E5E7EB;
+  --chat--input--container--border-radius: 16px;
+  --chat--input--container--padding: 4px 4px 4px 12px;
+
+  /* Botón de enviar */
+  --chat--input--send--button--background: #EFF6FF;
+  --chat--input--send--button--color: #2563EB;
+  --chat--input--send--button--background-hover: #DBEAFE;
+  --chat--input--send--button--color-hover: #1D4ED8;
+  --chat--input--button--border-radius: 50%;
+
+  /* ─── Footer ─── */
+  --chat--footer--background: #F8F9FA;
+  --chat--footer--color: #6B7280;
+  --chat--footer--border-top: 1px solid #E5E7EB;
+  --chat--footer--padding: 8px;
+
+  /* ─── Espaciado general ─── */
+  --chat--spacing: 1rem;
+  --chat--messages-list--padding: 12px;
+}
+
+/* ─── Personalizaciones adicionales ─── */
+
+/* Sombra en la ventana del chat */
+.n8n-chat-window {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Sombra en el toggle button */
+.n8n-chat-toggle {
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease !important;
+}
+
+.n8n-chat-toggle:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35) !important;
+}
+
+/* Header con icono decorativo */
+.n8n-chat-header::before {
+  content: '◆';
+  font-size: 1.2rem;
+  color: #2563EB;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+/* Enlaces dentro de mensajes */
+.chat-message-markdown a {
+  color: #2563EB !important;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Código en mensajes */
+.chat-message-markdown code {
+  background: #F3F4F6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+/* Scrollbar personalizada */
+.n8n-chat-body::-webkit-scrollbar {
+  width: 6px;
+}
+.n8n-chat-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+.n8n-chat-body::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 3px;
+}
+.n8n-chat-body::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
