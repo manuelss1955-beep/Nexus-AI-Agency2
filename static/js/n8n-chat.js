@@ -138,6 +138,7 @@
           '<div class="nfo-field"><input type="text" id="nfo-name" placeholder="Nombre *" required></div>' +
           '<div class="nfo-field"><input type="tel" id="nfo-phone" placeholder="Teléfono *" required></div>' +
           '<div class="nfo-field"><input type="email" id="nfo-email" placeholder="Email *" required></div>' +
+          '<div class="nfo-field"><textarea id="nfo-message" placeholder="Describe brevemente en qué podemos ayudarte" rows="3" style="width:100%;padding:10px 14px;border:1px solid #D1D5DB;border-radius:8px;font-size:0.9rem;font-family:inherit;outline:none;box-sizing:border-box;resize:none;transition:border-color 0.2s;"></textarea></div>' +
           '<button type="submit" class="nfo-btn" id="nfo-submit">Comenzar Chat →</button>' +
         '</form>' +
       '</div>';
@@ -153,6 +154,7 @@
         name: document.getElementById('nfo-name').value.trim(),
         phone: document.getElementById('nfo-phone').value.trim(),
         email: document.getElementById('nfo-email').value.trim(),
+        message: document.getElementById('nfo-message').value.trim(),
         timestamp: Date.now()
       };
       localStorage.setItem(USER_KEY, JSON.stringify(data));
@@ -165,7 +167,8 @@
           sessionId: getOrCreateSessionId(),
           name: data.name,
           phone: data.phone,
-          email: data.email
+          email: data.email,
+          message: data.message
         })
       }).catch(function(){});
 
