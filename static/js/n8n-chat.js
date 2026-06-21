@@ -89,29 +89,27 @@
   }
 
   // ─── Detectar apertura del chat y mostrar formulario ────
-  function setupToggleListener() {
-    // Esperar a que el botón toggle aparezca en el DOM
-    var checkInterval = setInterval(function() {
-      var target = document.getElementById('n8n-chat');
-      if (!target) return;
-      var toggle = target.querySelector('.chat-window-toggle');
-      if (!toggle) return;
+  function setupChatObserver() {
+    var target = document.getElementById('n8n-chat');
+    if (!target) return;
 
-      clearInterval(checkInterval);
+    // Observar cambios en el DOM para detectar cuándo se abre el chat
+    var observer = new MutationObserver(function() {
+      var msgArea = target.querySelector('.chat-messages-list');
+      if (!msgArea) return;
+      var existing = document.getElementById('n8n-chat-form-overlay');
+      if (existing) return;
 
-      // Interceptar el click en el toggle
-      toggle.addEventListener('click', function(e) {
-        // Esperar a que Vue abra la ventana (next tick)
-        requestAnimationFrame(function() {
-          requestAnimationFrame(function() {
-            var msgArea = target.querySelector('.chat-messages-list');
-            if (msgArea && !document.getElementById('n8n-chat-form-overlay')) {
-              createFormOverlay(msgArea);
-            }
-          });
-        });
-      }, true);
-    }, 200);
+      // El chat está abierto y visible → insertar formulario
+      createFormOverlay(msgArea);
+    });
+
+    observer.observe(target, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['style', 'class']
+    });
   }
 
   // ─── Crear overlay del formulario ────────────────────────────
@@ -225,7 +223,7 @@
 
   // ─── Hook post-montaje ──────────────────────────────────────
   window._nexusChatReady = function() {
-    setupToggleListener();
+    setupChatObserver();
   };
 
   // ─── Reset de sesión (expuesto globalmente) ─────────────────
