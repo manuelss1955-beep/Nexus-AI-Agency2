@@ -1,8 +1,6 @@
-# Hugo
-/public/
-/resources/_gen/
+# Hugo Nexus AI Agency
+node_modules/
 .hugo_build.lock
-
-# OS
-.DS_Store
-Thumbs.db
+public/
+resources/
+*.log

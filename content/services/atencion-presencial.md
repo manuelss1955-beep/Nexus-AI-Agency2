@@ -1,134 +1,51 @@
 ---
 title: "Atención Presencial IA"
-description: "Asistentes virtuales con IA para tiendas, hoteles, museos y ferias."
-slug: "atencion-presencial"
-icon: "🤝"
-hero_title: "Agentes de IA para atención <span>presencial</span> en tiendas y eventos"
-hero_text: "Asistentes virtuales con inteligencia artificial para puntos de venta físicos, ferias, hoteles, restaurantes y espacios públicos. Ven, oyen y conversan de forma natural."
-cta_text: "Solicitar demo presencial →"
-features_title: "Modalidades de despliegue"
-cta_title: "¿Quieres verlo en acción?"
-cta_subtitle: "Solicita una demo presencial y comprueba cómo un agente IA transforma la experiencia de tus clientes en tienda."
+description: "Transforma tu atención presencial con IA. Asistentes virtuales en pantallas interactivas, quioscos inteligentes y señalización digital."
+hero_title: "Atención presencial potenciada con <span>inteligencia artificial</span>"
+hero_text: "La atención presencial sigue siendo clave para muchos negocios. Poténciala con asistentes virtuales en pantallas interactivas, quioscos inteligentes y señalización digital con IA."
 sidebar:
-  - {id: overview, label: "Visión general"}
-  - {id: benefits, label: "Beneficios"}
-  - {id: features, label: "Modalidades de despliegue"}
-  - {id: usecases, label: "Casos de uso"}
-  - {id: faq, label: "FAQ"}
+  - {id: overview, label: Visión General}
+  - {id: benefits, label: Beneficios}
+  - {id: solutions, label: Soluciones IA}
+  - {id: usecases, label: Casos de Uso}
   - {id: cta, label: Contacto}
+cta_title: "¿Listo para transformar tu atención presencial?"
+cta_subtitle: "Agenda una consultoría gratuita."
 ---
+<div class="service-content">
 
+## Visión General {#overview}
 
-<!-- overview -->
-<div id="overview"></div>
+La atención presencial no desaparece, se transforma. Los clientes que acuden a tiendas, oficinas o centros de servicio esperan una experiencia rápida, personalizada y sin fricciones. La inteligencia artificial aplicada a la atención presencial permite ofrecer asistencia instantánea mediante pantallas interactivas, quioscos inteligentes y señalización digital que guía, informa y resuelve dudas.
 
-## Visión general
+Nexus AI ofrece soluciones de **Agentes IA Autónomos**, **Chatbots**, **Agentes IA Telefónicos** y **Digitalización de Empresas** diseñadas para integrar la IA en tu espacio físico.
 
- El comercio físico se enfrenta a un reto: ofrecer experiencia personalizada sin poder multiplicar el personal. Los clientes esperan atención inmediata, información precisa y disponibilidad total.
+## Beneficios {#benefits}
 
-Los agentes presenciales de Nexus AI son asistentes virtuales con **visión artificial, voz y comprensión contextual** que se despliegan en espacios físicos. Atienden clientes, resuelven dudas, guían en la compra y liberan a tu personal para tareas de alto valor.
+- **Atención instantánea**: los asistentes virtuales responden al instante sin colas ni esperas.
+- **Disponibilidad total**: tus pantallas y quioscos funcionan 24/7 sin necesidad de personal.
+- **Experiencia personalizada**: la IA reconoce al cliente y adapta la información a sus necesidades.
+- **Reducción de costes**: libera a tu personal para tareas de alto valor mientras la IA gestiona consultas rutinarias.
+- **Recogida de datos**: cada interacción genera datos valiosos sobre preferencias y comportamiento de clientes.
 
-<div class="feature" style="margin-top:1.5rem;padding:1.5rem;background:var(--accent-light);border-radius:var(--radius-md)">
-<div class="feature__content">
-<strong>Dato real:</strong> Tiendas con agentes presenciales reportan un <strong>+35% en ventas cruzadas</strong> y una reducción del <strong>50% en consultas repetitivas</strong> al personal de tienda.
-</div>
-</div>
+## Soluciones IA {#solutions}
 
+Nuestras soluciones para atención presencial cubren todos los puntos de contacto físico:
 
-<!-- benefits -->
-<div id="benefits"></div>
+- **Asistentes virtuales en pantallas táctiles**: quioscos interactivos con IA conversacional que guían al cliente.
+- **Señalización digital inteligente**: pantallas que muestran contenido dinámico personalizado según el perfil del cliente.
+- **Chatbots para atención en mostrador**: asistentes que complementan al personal presencial resolviendo consultas rápidas.
+- **Agentes IA Autónomos** para gestión de colas, asignación de turnos y optimización del flujo de clientes.
+- **Agentes IA Telefónicos** para atención telefónica integrada con la experiencia presencial.
+- **Programación de Apps** para crear aplicaciones que mejoren la experiencia en tienda.
+- **Integraciones MCP** para conectar los sistemas de atención presencial con tu CRM y ERP.
 
-## Beneficios
+## Casos de Uso {#usecases}
 
-<div class="grid grid--2">
-
-<div class="feature">
-<div class="feature__icon">🤝</div>
-<div class="feature__content">
-<h3>Atención inmediata sin colas</h3>
-<p>El agente atiende al cliente en el momento exacto en que entra. Sin esperas, sin frustración.</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">📈</div>
-<div class="feature__content">
-<h3>+35% ventas cruzadas</h3>
-<p>El agente sugiere productos complementarios basados en lo que el cliente está viendo. Como un vendedor experto 24/7.</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">👥</div>
-<div class="feature__content">
-<h3>Tu equipo se enfoca en vender</h3>
-<p>El agente absorbe el 80% de las consultas repetitivas (horarios, precios, ubicaciones). Tu personal vende, no informa.</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">📊</div>
-<div class="feature__content">
-<h3>Analítica de interacciones reales</h3>
-<p>Sabes qué preguntan los clientes, qué productos interesan más, dónde pasan más tiempo. Datos que antes no tenías.</p>
-</div>
-</div>
+- **Quiosco informativo en lobby de hotel**: un asistente virtual que informa sobre servicios, check-in y reservas.
+- **Pantalla interactiva en tienda**: un asistente que recomienda productos, muestra disponibilidad y guía al cliente.
+- **Señalización digital en oficina**: pantallas que muestran información personalizada según el perfil del visitante.
+- **Gestión de colas inteligente**: un agente IA que asigna turnos, estima tiempos de espera y notifica al cliente.
+- **Asistente en punto de venta**: un chatbot que ayuda al cliente con dudas sobre productos mientras espera en caja.
 
 </div>
-
-
-<!-- features -->
-<div id="features"></div>
-
-## Modalidades de despliegue
-
-<div class="service-detail__list">
-
-- **Kiosko interactivo:** Pantalla táctil con avatar virtual. Ideal para centros comerciales, museos, ferias y vestíbulos.
-- **Proyección holográfica:** Agente en tamaño real proyectado. Impacto visual máximo en eventos y flagship stores.
-- **Tablet asistente:** El agente acompaña al cliente mientras recorre la tienda. Se activa por proximidad o código QR.
-- **Pantalla digital:** Panel informativo con agente visible. Perfecto para recepción de hoteles, clínicas y oficinas.
-- **Totem exterior:** Resistente a la intemperie. Para información turística, acceso a eventos y restauración.
-
-</div>
-
-Todas las modalidades incluyen: **visión artificial** (reconoce edad aproximada, género, emociones), **voz bidireccional** (habla y escucha), **multidioma** y **conexión a sistemas externos** (inventario, reservas, CRM).
-
-
-<!-- usecases -->
-<div id="usecases"></div>
-
-## Casos de uso
-
-### 🏬 Retail y tiendas físicas
-Asistente en tienda que recibe al cliente, recomienda productos basados en sus intereses, consulta disponibilidad en tiempo real y guía hasta el producto. Una tienda de moda aumentó un **28%** el ticket medio.
-
-### 🏛️ Museos y centros culturales
-Guía virtual interactivo que explica obras, responde preguntas y ofrece información adicional en múltiples idiomas. Sin necesidad de audioguías ni apps.
-
-### 🏨 Hoteles
-Conserje digital en el lobby: check-in informativo, recomendaciones de restaurantes, reserva de servicios del hotel, información de horarios y eventos.
-
-### 🎪 Ferias y congresos
-Asistente que recibe a asistentes, muestra el plano, indica ponencias, responde sobre expositores y recoge leads. Un congreso redujo el **40%** de consultas al personal de organización.
-
-### 🏥 Clínicas
-Recepcionista virtual que registra llegadas, confirma citas, indica consultas y resuelve dudas sobre horarios y especialistas.
-
-
-<!-- faq -->
-<div id="faq"></div>
-
-## Preguntas frecuentes
-
-**¿El agente reconoce a los clientes habituales?**
-Sí. Integrado con tu CRM, el agente puede saludar por nombre, recordar preferencias y ofrecer un trato personalizado.
-
-**¿Funciona sin conexión a internet?**
-No, requiere conexión para la capa de IA. Pero está diseñado para funcionar con conectividad estándar (4G/5G/WiFi). Si hay cortes, el modo seguro muestra información básica offline.
-
-**¿Qué mantenimiento requiere?**
-Nosotros gestionamos las actualizaciones de software, el entrenamiento del modelo y el soporte remoto. Tú solo necesitas enchufarlo.
-
-**¿Qué idiomas soporta?**
-Español, catalán, inglés, francés, portugués, alemán e italiano. Ampliable a cualquier idioma adicional bajo demanda.

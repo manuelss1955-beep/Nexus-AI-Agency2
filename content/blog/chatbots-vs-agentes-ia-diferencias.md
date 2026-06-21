@@ -1,47 +1,27 @@
 ---
-title: "Chatbots vs Agentes IA: diferencias clave que debes conocer"
+title: "Chatbots vs Agentes IA: diferencias clave"
 date: 2026-06-10
 tags: ["Chatbots", "Agentes IA", "Tutorial"]
 author: "Nexus AI"
 emoji: "🤖"
-excerpt: "¿Cuál es la diferencia real entre un chatbot tradicional y un agente IA autónomo? Te explicamos todo lo que necesitas saber."
+excerpt: "Las diferencias entre chatbots tradicionales y agentes IA autónomos."
 ---
 
-En el mundo de la IA conversacional, los términos "chatbot" y "agente IA" a menudo se usan indistintamente, pero representan tecnologías fundamentalmente diferentes.
+Los términos "chatbot" y "agente IA" se usan indistintamente, pero representan tecnologías diferentes.
 
-## ¿Qué es un chatbot tradicional?
+## Chatbot tradicional
+Funcionan con árboles de decisión predefinidos. Respuestas basadas en reglas fijas, ideales para FAQ simples.
 
-Los chatbots tradicionales funcionan con árboles de decisión predefinidos. Siguen flujos programados y solo pueden responder a preguntas específicas para las que fueron entrenados.
-
-**Características:**
-- Respuestas basadas en reglas fijas
-- Capacidad limitada de comprensión
-- No aprenden de interacciones previas
-- Ideales para FAQ simples
-
-## ¿Qué es un agente IA autónomo?
-
-Los agentes IA utilizan modelos de lenguaje avanzados (LLMs) que les permiten comprender contexto, razonar y ejecutar acciones complejas.
-
-**Características:**
-- Comprensión del lenguaje natural
-- Capacidad de razonamiento y toma de decisiones
-- Aprendizaje continuo
-- Integración con sistemas externos vía MCP
-- Ejecución de tareas multi-paso
+## Agente IA autónomo
+Usan modelos de lenguaje avanzados (LLMs). Comprenden contexto, razonan y ejecutan acciones complejas.
 
 ## Diferencias clave
-
 | Aspecto | Chatbot | Agente IA |
 |---------|---------|-----------|
-| Comprensión | Limitada a keywords | Contextual |
+| Comprensión | Keywords | Contextual |
 | Flexibilidad | Baja | Alta |
 | Integraciones | Limitadas | Ilimitadas (MCP) |
-| Aprendizaje | No aprende | Aprende y mejora |
-| Coste | Bajo | Medio-Alto |
+| Aprendizaje | No | Sí |
 
 ## ¿Cuál elegir?
-
-Para **consultas simples** como horarios o preguntas frecuentes, un chatbot puede ser suficiente. Para **procesos complejos** que requieren razonamiento, integración con múltiples sistemas y autonomía, necesitas un agente IA.
-
-En Nexus AI te ayudamos a determinar la solución óptima para tu negocio.
+Para consultas simples, un chatbot basta. Para procesos complejos con integraciones, necesitas un agente IA.

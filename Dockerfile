@@ -1,49 +1,9 @@
-# ============================================================
-# Dockerfile — Nexus AI Agency (Hugo)
-# Multi-stage: Alpine + Hugo → nginx
-# ============================================================
-
-# ─── Stage 1: Build ──────────────────────────────────────────
-FROM alpine:3.21 AS builder
-
-# Hugo desde repositorio oficial de Alpine (v0.160.x)
-RUN apk add --no-cache hugo && hugo version
-
-WORKDIR /src
+FROM hugomods/hugo:latest AS builder
+WORKDIR /site
 COPY . .
-
 RUN hugo --minify
 
-# ─── Stage 2: Serve ──────────────────────────────────────────
-FROM nginx:1.27-alpine
-
-LABEL maintainer="Nexus AI Agency <hola@nexus-ai.agency>"
-LABEL description="Nexus AI Agency — Sitio web corporativo generado con Hugo"
-
-COPY --from=builder /src/public /usr/share/nginx/html
-
-RUN rm /etc/nginx/conf.d/default.conf
-COPY <<'NGINX_EOF' /etc/nginx/conf.d/default.conf
-server {
-    listen 80;
-    server_name _;
-    root /usr/share/nginx/html;
-    index index.html;
-    gzip on;
-    gzip_types text/plain text/css application/javascript application/json image/svg+xml;
-    gzip_min_length 256;
-    location / { try_files $uri $uri/ =404; }
-    location ~* \.(css|js|svg|png|jpg|jpeg|gif|ico|woff2?)$ {
-        expires 1y;
-        add_header Cache-Control "public, immutable";
-    }
-    add_header X-Frame-Options "SAMEORIGIN" always;
-    add_header X-Content-Type-Options "nosniff" always;
-    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
-}
-NGINX_EOF
-
+FROM nginx:alpine
+COPY --from=builder /site/public /usr/share/nginx/html
 EXPOSE 80
-
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD wget -qO- http://localhost/ || exit 1
+CMD ["nginx", "-g", "daemon off;"]

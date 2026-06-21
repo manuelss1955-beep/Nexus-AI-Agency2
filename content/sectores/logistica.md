@@ -22,31 +22,26 @@ Nexus AI ofrece soluciones de **Agentes IA Autónomos**, **Agentes IA Telefónic
 
 ## Beneficios {#benefits}
 
-- **Optimización de rutas en tiempo real**: agentes IA que analizan tráfico, clima y capacidad para sugerir la ruta más eficiente.
-- **Atención al cliente proactiva**: notificaciones automáticas de estado de envío, incidencias y ventanas de entrega sin intervención humana.
-- **Reducción de incidencias**: detección temprana de anomalías en la cadena de frío, retrasos o desviaciones de ruta.
-- **Coordinación multicanal**: integración con transportistas, almacenes y clientes a través de WhatsApp, web, app y teléfono.
-- **Eficiencia operativa**: automatiza la gestión de albaranes, facturación y documentación de transporte.
+- **Optimización de rutas en tiempo real**: agentes IA que analizan tráfico, clima y capacidad.
+- **Atención al cliente proactiva**: notificaciones automáticas de estado de envío.
+- **Reducción de incidencias**: detección temprana de anomalías en la cadena de frío.
+- **Coordinación multicanal**: integración con transportistas y clientes.
+- **Eficiencia operativa**: automatización de albaranes, facturación y documentación.
 
 ## Soluciones IA {#solutions}
 
-Nuestras soluciones para logística cubren toda la cadena de valor:
-
-- **Agentes IA Autónomos** para monitorización de flotas, predicción de retrasos, optimización de carga y gestión de incidencias.
-- **Chatbots** para que los clientes consulten el estado de su envío, reciban notificaciones y gestionen incidencias al instante.
-- **Agentes IA Telefónicos** para coordinación con transportistas, confirmación de entregas y gestión de rutas.
-- **Automatización Empresarial** para procesos de facturación, generación de albaranes, documentación aduanera y conciliación.
-- **Digitalización de Empresas** para modernizar la gestión de almacenes, inventarios y trazabilidad.
-- **Programación de Apps** para crear aplicaciones de seguimiento de flotas y gestión de entregas con IA integrada.
-- **Integraciones MCP** para conectar ERP, WMS, TMS y plataformas de tracking en un ecosistema unificado.
-- **Consultoría IA** para diseñar la estrategia de digitalización logística.
+- **Agentes IA Autónomos** para monitorización de flotas y predicción de retrasos.
+- **Chatbots** para consulta de estado de envío y gestión de incidencias.
+- **Agentes IA Telefónicos** para coordinación con transportistas.
+- **Automatización Empresarial** para facturación y documentación aduanera.
+- **Digitalización de Empresas**, **Programación de Apps**, **Integraciones MCP**.
 
 ## Casos de Uso {#usecases}
 
-- **Seguimiento inteligente de envíos**: un chatbot que permite a los clientes consultar el estado exacto de su pedido y recibir alertas proactivas.
-- **Coordinación de última milla**: un agente telefónico que contacta con el destinatario para confirmar ventana de entrega y gestionar incidencias.
-- **Gestión de flotas**: un agente IA autónomo que monitoriza la flota en tiempo real, detecta desviaciones de ruta y sugiere optimizaciones.
-- **Centralita logística**: atención automatizada a transportistas para confirmar citas de carga/descarga y gestionar documentación.
-- **Alertas de cadena de frío**: un agente IA que detecta variaciones de temperatura en tiempo real y activa protocolos de contingencia.
+- **Seguimiento inteligente de envíos**: chatbot que permite consultar estado del pedido.
+- **Coordinación de última milla**: agente telefónico que confirma ventana de entrega.
+- **Gestión de flotas**: monitorización en tiempo real y optimización de rutas.
+- **Centralita logística**: atención automatizada a transportistas.
+- **Alertas de cadena de frío**: detección de variaciones de temperatura.
 
 </div>

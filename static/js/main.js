@@ -1,6 +1,6 @@
 /**
  * main.js — Nexus AI Agency
- * Navegación, animaciones, formularios, cookies, contadores, copiar código
+ * Navegación, animaciones, formularios, cookies, contadores
  */
 (function(){'use strict';
 document.addEventListener('DOMContentLoaded',function(){initNav();initScrollAnimations();initSmoothScroll();initFormValidation();initCookieBanner();initCounters();initCopyButtons();});
@@ -14,14 +14,26 @@ function initNav(){
     mobileMenu.querySelectorAll('a').forEach(function(l){l.addEventListener('click',closeMobile);});
     mobileMenu.querySelectorAll('.nav__mobile-dropdown-toggle').forEach(function(toggle){toggle.addEventListener('click',function(){toggle.classList.toggle('open');var sub=toggle.nextElementSibling;if(sub&&sub.classList.contains('nav__mobile-sub'))sub.classList.toggle('open');});});
   }
-  var path=window.location.pathname;document.querySelectorAll('.nav__link').forEach(function(l){var h=l.getAttribute('href');if(h&&(path.endsWith(h)||path.includes(h.replace('/',''))))l.classList.add('nav__link--active');});
 }
 function initScrollAnimations(){var els=document.querySelectorAll('.animate');if(!els.length)return;var obs=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting)i.target.classList.add('visible');});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el);});}
 function initSmoothScroll(){document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();var nh=document.querySelector('.nav')?.offsetHeight||72;window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-nh-20,behavior:'smooth'});}});});}
-function initFormValidation(){var form=document.querySelector('.form');if(!form)return;var phone=document.getElementById('phone');if(phone){phone.addEventListener('input',function(){var v=this.value.replace(/^\(\+034\)\s*/,'');this.value=v.startsWith('+')?v:'+34 '+v;});}form.addEventListener('submit',function(e){var valid=true;form.querySelectorAll('[required]').forEach(function(f){var g=f.closest('.form__group'),ex=g?.querySelector('.form__error');if(ex)ex.remove();if(!f.value.trim()){valid=false;var err=document.createElement('span');err.className='form__error';err.style.cssText='color:#EF4444;font-size:0.75rem;margin-top:4px;display:block;';err.textContent='Campo obligatorio';g?.appendChild(err);f.style.borderColor='#EF4444';}else if(f.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value)){valid=false;var err=document.createElement('span');err.className='form__error';err.style.cssText='color:#EF4444;font-size:0.75rem;margin-top:4px;display:block;';err.textContent='Email inválido';g?.appendChild(err);f.style.borderColor='#EF4444';}else{f.style.borderColor='#E5E7EB'}});if(!valid){e.preventDefault();var firstErr=form.querySelector('.form__error');if(firstErr)firstErr.closest('.form__group')?.querySelector('input,textarea,select')?.focus();}});form.querySelectorAll('[required]').forEach(function(f){f.addEventListener('input',function(){f.style.borderColor='#E5E7EB';var err=f.closest('.form__group')?.querySelector('.form__error');if(err)err.remove();});});}
+function initFormValidation(){
+  var form=document.querySelector('.form');if(!form)return;
+  form.addEventListener('submit',function(e){
+    var valid=true;
+    form.querySelectorAll('[required]').forEach(function(f){
+      var g=f.closest('.form__group'),ex=g?.querySelector('.form__error');
+      if(ex)ex.remove();
+      if(!f.value.trim()){valid=false;var err=document.createElement('span');err.className='form__error';err.style.cssText='color:#EF4444;font-size:0.75rem;margin-top:4px;display:block;';err.textContent='Campo obligatorio';g?.appendChild(err);f.style.borderColor='#EF4444';}
+      else if(f.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value)){valid=false;var err=document.createElement('span');err.className='form__error';err.style.cssText='color:#EF4444;font-size:0.75rem;margin-top:4px;display:block;';err.textContent='Email inválido';g?.appendChild(err);f.style.borderColor='#EF4444';}
+      else{f.style.borderColor='#E5E7EB'}
+    });
+    if(!valid){e.preventDefault();var firstErr=form.querySelector('.form__error');if(firstErr)firstErr.closest('.form__group')?.querySelector('input,textarea,select')?.focus();}
+  });
+}
 function initCookieBanner(){var b=document.querySelector('.cookie-banner');if(!b)return;if(!localStorage.getItem('cookiesAccepted'))setTimeout(function(){b.classList.add('show');},500);b.querySelectorAll('[data-cookie-action]').forEach(function(btn){btn.addEventListener('click',function(){var a=btn.dataset.cookieAction;if(a==='accept')localStorage.setItem('cookiesAccepted','all');else if(a==='essential')localStorage.setItem('cookiesAccepted','essential');b.classList.remove('show');});});}
 function initCounters(){var cnt=document.querySelectorAll('[data-count]');if(!cnt.length)return;var obs=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting){var el=en.target,target=parseInt(el.dataset.count),d=2000,s=performance.now();function up(ts){var p=Math.min((ts-s)/d,1),ease=1-Math.pow(1-p,3);el.textContent=Math.floor(ease*target)+'+';if(p<1)requestAnimationFrame(up);else el.textContent=target.toLocaleString()+'+';}requestAnimationFrame(up);obs.unobserve(el);}});},{threshold:0.5});cnt.forEach(function(c){obs.observe(c);});}
-function initCopyButtons(){document.querySelectorAll('.post-content pre').forEach(function(pre){var btn=document.createElement('button');btn.className='copy-btn';btn.textContent='📋 Copiar';btn.setAttribute('aria-label','Copiar código');btn.addEventListener('click',function(){var code=pre.querySelector('code');if(!code){code=pre;}var text=code.textContent||'';if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){btn.textContent='✓ Copiado!';setTimeout(function(){btn.textContent='📋 Copiar';},2000);}).catch(function(){fallbackCopy(text,btn);});}else{fallbackCopy(text,btn);}});pre.appendChild(btn);});}
+function initCopyButtons(){document.querySelectorAll('.post-content pre').forEach(function(pre){var btn=document.createElement('button');btn.className='copy-btn';btn.textContent='📋 Copiar';btn.setAttribute('aria-label','Copiar código');btn.addEventListener('click',function(){var code=pre.querySelector('code')||pre,text=code.textContent||'';if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){btn.textContent='✓ Copiado!';setTimeout(function(){btn.textContent='📋 Copiar';},2000);}).catch(function(){fallbackCopy(text,btn);});}else{fallbackCopy(text,btn);}});pre.appendChild(btn);});}
 function fallbackCopy(text,btn){var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');btn.textContent='✓ Copiado!';setTimeout(function(){btn.textContent='📋 Copiar';},2000);}catch(e){}document.body.removeChild(ta);}
 document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear();});
 })();

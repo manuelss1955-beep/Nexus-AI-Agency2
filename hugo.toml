@@ -1,5 +1,5 @@
 baseURL = "https://nexus-ai.agency"
-languageCode = "es-ES"
+locale = "es-ES"
 title = "Nexus AI — Soluciones de Inteligencia Artificial"
 theme = "nexus"
 defaultContentLanguage = "es"
@@ -9,18 +9,14 @@ disableHugoGeneratorInject = false
 enableRobotsTXT = true
 ignoreLogs = ['warning-goldmark-raw-html']
 
-# Taxonomías — Blog
 [taxonomies]
   tag = "tags"
 
-# Tiempo de lectura — ya usado en templates con .ReadingTime
-# Sitemap XML
 [sitemap]
   changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
 
-# RSS
 [outputFormats]
   [outputFormats.RSS]
     mediatype = "application/rss"
@@ -41,8 +37,6 @@ ignoreLogs = ['warning-goldmark-raw-html']
       strikethrough = true
       linkify = true
       table = true
-
-  # Código resaltado (Chroma)
   [markup.highlight]
     codeFences = true
     guessSyntax = true
@@ -50,8 +44,6 @@ ignoreLogs = ['warning-goldmark-raw-html']
     lineNumbersInTable = false
     noClasses = false
     style = "monokai"
-
-  # TOC
   [markup.tableOfContents]
     endLevel = 4
     startLevel = 2
@@ -70,8 +62,6 @@ ignoreLogs = ['warning-goldmark-raw-html']
   support = "24/7"
   locale = "es_ES"
   siteName = "Nexus AI Agency"
-  # Google Analytics 4 — Descomentar y añadir Measurement ID
-  # googleAnalytics = "G-XXXXXXXXXX"
 
 [menu]
   [[menu.main]]

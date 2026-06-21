@@ -3,69 +3,27 @@
 {{- $root := partial "rootpath.html" . -}}
 <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 
-{{- /* Google Fonts — Inter */ -}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-{{- /* Favicon */ -}}
 <link rel="icon" type="image/svg+xml" href="{{ $root }}assets/icons/favicon.svg">
 
-{{- /* Styles */ -}}
-<link rel="stylesheet" href="{{ $root }}css/main.css">
+<link rel="stylesheet" href="{{ $root }}css/main-a.css">
+<link rel="stylesheet" href="{{ $root }}css/main-b.css">
+<link rel="stylesheet" href="{{ $root }}css/main-c.css">
 <link rel="stylesheet" href="{{ $root }}css/blog.css">
 
-{{- /* ==============================================
-     GOOGLE ANALYTICS 4
-     ============================================== */ -}}
 {{- if .Site.Params.googleAnalytics -}}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '{{ .Site.Params.googleAnalytics }}', {
-    send_page_view: true
-  });
-
-  {{- /* Eventos de seguimiento adicionales */ -}}
-  document.addEventListener('DOMContentLoaded', function() {
-    {{- /* Clics en CTAs y botones principales */ -}}
-    document.querySelectorAll('.btn, .service-detail__cta a, .page-hero a.btn, .post-card a, .footer a, .nav a').forEach(function(el) {
-      el.addEventListener('click', function() {
-        gtag('event', 'click', {
-          'event_category': 'navigation',
-          'event_label': el.textContent.trim() || el.href,
-          'value': el.href || ''
-        });
-      });
-    });
-
-    {{- /* Scroll profundo (>50% de la página) */ -}}
-    var maxScroll = 0;
-    window.addEventListener('scroll', function() {
-      var scrollPercent = Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100);
-      if (scrollPercent > maxScroll) {
-        maxScroll = scrollPercent;
-        if (maxScroll >= 50 && maxScroll < 75) {
-          gtag('event', 'scroll_depth', {'event_category': 'engagement', 'event_label': '50%'});
-        } else if (maxScroll >= 75) {
-          gtag('event', 'scroll_depth', {'event_category': 'engagement', 'event_label': '75%'});
-        }
-      }
-    }, {passive: true});
-
-    {{- /* Tiempo en página (30s, 60s, 120s) */ -}}
-    setTimeout(function() { gtag('event', 'time_on_page', {'event_category': 'engagement', 'event_label': '30s'}); }, 30000);
-    setTimeout(function() { gtag('event', 'time_on_page', {'event_category': 'engagement', 'event_label': '60s'}); }, 60000);
-    setTimeout(function() { gtag('event', 'time_on_page', {'event_category': 'engagement', 'event_label': '120s'}); }, 120000);
-  });
+  gtag('config', '{{ .Site.Params.googleAnalytics }}', {send_page_view: true});
 </script>
 {{- end -}}
 
-{{- /* ==============================================
-     SCHEMA.ORG — LocalBusiness (todas las páginas)
-     ============================================== */ -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,86 +32,27 @@
   "name": "Nexus AI Agency",
   "alternateName": "Nexus AI",
   "description": {{ .Site.Params.description | jsonify }},
-  "url": "{{ .Site.BaseURL }}",
-  {{- with .Site.Params.email }}
-  "email": "{{ . }}",{{ end }}
-  {{- with .Site.Params.phone }}
-  "telephone": "{{ . }}",{{ end }}
-  {{- with .Site.Params.address }}
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "{{ . }}",
-    "addressCountry": "ES"
-  },
-  {{- end }}
-  "areaServed": ["ES", "LATAM", "MX", "CO"],
+  "url": "{{ .Site.BaseURL }}",{{ with .Site.Params.email }}
+  "email": "{{ . }}",{{ end }}{{ with .Site.Params.phone }}
+  "telephone": "{{ . }}",{{ end }}{{ with .Site.Params.address }}
+  "address": {"@type": "PostalAddress","addressLocality": "{{ . }}","addressCountry": "ES"},{{ end }}
+  "areaServed": ["ES","LATAM","MX","CO"],
   "priceRange": "€€",
   "image": "{{ .Site.BaseURL }}assets/icons/favicon.svg",
   "foundingDate": "{{ .Site.Params.founded }}",
-  "numberOfEmployees": {
-    "@type": "QuantitativeValue",
-    "minValue": 10,
-    "maxValue": 50
-  },
-  "knowsAbout": [
-    "Inteligencia Artificial",
-    "Machine Learning",
-    "Automatización Empresarial",
-    "Chatbots",
-    "Agentes IA Autónomos",
-    "Integraciones MCP",
-    "Transformación Digital"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Servicios de IA Empresarial",
-    "itemListElement": [
-      {{- $services := .Site.Params.services -}}
-      {{- range $i, $svc := $services -}}
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "{{ $svc.title }}",
-          "url": "{{ $.Site.BaseURL }}services/{{ $svc.slug }}/"
-        }
-      }{{- if ne $i (sub (len $services) 1) -}},{{- end -}}
-      {{- end -}}
-    ]
-  },
-  "sameAs": [
-    "https://linkedin.com/company/nexus-ai"
-  ]
+  "numberOfEmployees": {"@type":"QuantitativeValue","minValue":10,"maxValue":50},
+  "knowsAbout": ["Inteligencia Artificial","Machine Learning","Automatización Empresarial","Chatbots","Agentes IA Autónomos","Integraciones MCP","Transformación Digital"],
+  "hasOfferCatalog": {"@type":"OfferCatalog","name":"Servicios de IA Empresarial","itemListElement":[{{- $services := .Site.Params.services -}}{{- range $i,$svc := $services -}}{"@type":"Offer","itemOffered":{"@type":"Service","name":"{{ $svc.title }}","url":"{{ $.Site.BaseURL }}services/{{ $svc.slug }}/"}}{{- if ne $i (sub (len $services) 1) -}},{{- end -}}{{- end -}}]},
+  "sameAs": ["https://linkedin.com/company/nexus-ai"]
 }
 </script>
 
-{{- /* Schema.org — WebSite (solo homepage) */ -}}
 {{- if .IsHome -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "{{ .Site.BaseURL }}#website",
-  "name": "{{ .Site.Title }}",
-  "url": "{{ .Site.BaseURL }}",
-  "description": {{ .Site.Params.description | jsonify }},
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "{{ .Site.BaseURL }}search/?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  },
-  "publisher": {
-    "@type": "LocalBusiness",
-    "@id": "{{ .Site.BaseURL }}#organization"
-  }
-}
+{"@context":"https://schema.org","@type":"WebSite","@id":"{{ .Site.BaseURL }}#website","name":"{{ .Site.Title }}","url":"{{ .Site.BaseURL }}","description":{{ .Site.Params.description | jsonify }},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"{{ .Site.BaseURL }}search/?q={search_term_string}"},"query-input":"required name=search_term_string"},"publisher":{"@type":"LocalBusiness","@id":"{{ .Site.BaseURL }}#organization"}}
 </script>
 {{- end -}}
 
-{{- /* Schema.org — BreadcrumbList (todas las páginas excepto homepage) */ -}}
 {{- if not .IsHome -}}
 {{- $root := partial "rootpath.html" . -}}
 {{- $relPath := strings.TrimPrefix "/" (strings.TrimSuffix "/" .RelPermalink) -}}
@@ -161,21 +60,6 @@
 {{- $total := len $segments -}}
 {{- $labels := dict "formacion" "Formación" "curso-ia-empresas" "Curso de IA para Empresas" "introduccion-ia" "Introducción a la IA" "ia-agentica" "IA Agéntica" "automatizacion-ia" "Automatización con IA" "desarrollo-ia" "Desarrollo con IA" "formacion-incompany" "Formación In‑Company" "webinars-workshops" "Webinars y Workshops" "sectores" "Sectores" "retail" "Retail" "salud" "Salud" "banca" "Banca y Fintech" "logistica" "Logística" "industria" "Industria" "hosteleria" "Hostelería" "about" "Sobre Nosotros" "services" "Servicios" "portfolio" "Casos de Éxito" "blog" "Blog" "contact" "Contacto" "legal" "Legal" "tags" "Tags" "digitalizacion" "Digitalización" "agentes-ia" "Agentes IA" "automatizacion" "Automatización" "chatbots" "Chatbots" "consultoria" "Consultoría" "atencion-presencial" "Atención Presencial" "programacion-apps" "Programación de Apps" "integraciones-mcp" "Integraciones MCP" "agentes-telefonicos" "Agentes Telefónicos" "aviso-legal" "Aviso Legal" "privacidad" "Privacidad" "terminos" "Términos" -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "name": "Inicio",
-    "item": "{{ .Site.BaseURL }}"
-  }{{- $currentPath := "" -}}{{- range $i, $seg := $segments -}}{{- $currentPath = printf "%s%s/" $currentPath $seg -}}{{- $label := $seg | humanize -}}{{- with index $labels $seg -}}{{- $label = . -}}{{- end -}}
-  ,{
-    "@type": "ListItem",
-    "position": {{ add $i 2 }},
-    "name": "{{ if eq (add $i 1) $total }}{{ $.Title }}{{ else }}{{ $label }}{{ end }}",
-    {{- if ne (add $i 1) $total }}"item": "{{ $.Site.BaseURL }}{{ $currentPath }}"{{ end -}}
-  }{{- end -}}
-  ]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"{{ .Site.BaseURL }}"}{{- $currentPath := "" -}}{{- range $i,$seg := $segments -}}{{- $currentPath = printf "%s%s/" $currentPath $seg -}}{{- $label := $seg | humanize -}}{{- with index $labels $seg -}}{{- $label = . -}}{{- end -}},{"@type":"ListItem","position":{{ add $i 2 }},"name":"{{ if eq (add $i 1) $total }}{{ $.Title }}{{ else }}{{ $label }}{{ end }}",{{- if ne (add $i 1) $total }}"item":"{{ $.Site.BaseURL }}{{ $currentPath }}"{{ end -}}}{{- end -}}]}
 </script>
 {{- end -}}

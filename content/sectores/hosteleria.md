@@ -1,8 +1,8 @@
 ---
 title: "Hostelería"
-description: "Transforma tu hotel, restaurante o negocio hostelero con IA. Reservas inteligentes, atención al huésped y automatización de la experiencia hospitality."
-hero_title: "Hostelería con alma <span>digital</span>"
-hero_text: "La hostelería vive de las experiencias. La inteligencia artificial te permite ofrecer un servicio impecable, disponible 24/7, sin perder el toque humano. Automatiza reservas, atención al cliente y gestión operativa para centrarte en lo que importa: tus huéspedes y comensales."
+description: "Transforma tu hotel, restaurante o negocio hostelero con IA. Reservas inteligentes, atención al cliente automatizada y guest experience."
+hero_title: "Hostelería con <span>inteligencia</span>"
+hero_text: "La hostelería vive de la experiencia del cliente. La IA permite ofrecer un servicio personalizado 24/7, automatizar reservas y mejorar la satisfacción."
 sidebar:
   - {id: overview, label: Visión General}
   - {id: benefits, label: Beneficios}
@@ -16,39 +16,29 @@ cta_subtitle: "Agenda una consultoría gratuita."
 
 ## Visión General {#overview}
 
-El sector hostelero —hoteles, restaurantes, bares, cafeterías y alojamientos turísticos— compite cada día por ofrecer la mejor experiencia al cliente. En un entorno donde la valoración online y el boca a boca digital lo deciden todo, la calidad del servicio y la capacidad de respuesta son factores críticos. La inteligencia artificial permite estar disponible para tus clientes en todo momento, automatizar la gestión de reservas y ofrecer un servicio personalizado que fideliza y sorprende.
-
-Nexus AI ofrece soluciones de **Agentes IA Autónomos**, **Agentes IA Telefónicos**, **Chatbots** y **Atención Presencial IA** diseñadas para el sector hospitality.
+El sector hostelero busca ofrecer experiencias memorables mientras optimiza costes operativos. La IA permite automatizar reservas, atención al cliente y procesos de back-office.
 
 ## Beneficios {#benefits}
 
-- **Reservas 24/7**: tus clientes pueden reservar mesa o habitación a cualquier hora, desde cualquier canal, sin intervención humana.
-- **Atención multilingüe**: los agentes IA atienden en múltiples idiomas, eliminando barreras con turistas internacionales.
-- **Reducción de no-shows**: llamadas automáticas de confirmación y recordatorio que reducen las ausencias hasta un 40%.
-- **Up-selling automatizado**: el asistente IA sugiere mejoras de habitación, menús especiales o servicios adicionales en el momento adecuado.
-- **Gestión de opiniones**: monitoriza y responde automáticamente a reseñas en Google, Tripadvisor y redes sociales.
-- **Eficiencia operativa**: libera a tu equipo de recepción y sala para que se concentre en la atención personalizada.
+- **Reservas inteligentes**: gestión multicanal de reservas 24/7.
+- **Atención al cliente**: chatbots y agentes telefónicos para consultas.
+- **Personalización**: ofertas y recomendaciones basadas en preferencias.
+- **Optimización de revenue**: precios dinámicos basados en demanda.
+- **Automatización**: check-in, facturación y comunicación post-estancia.
 
 ## Soluciones IA {#solutions}
 
-Nuestras soluciones para hostelería cubren cada punto de contacto con el cliente:
-
-- **Chatbots** para web y WhatsApp: reservas, consultas sobre servicios, horarios, ubicación y menús.
-- **Agentes IA Telefónicos** que gestionan llamadas de reserva, confirmaciones, cambios y cancelaciones de forma autónoma.
-- **Atención Presencial IA** en lobby o entrada: pantallas interactivas y asistentes virtuales que informan y guían a los huéspedes.
-- **Agentes IA Autónomos** para análisis de ocupación, predicción de demanda, optimización de precios y gestión de inventario.
-- **Automatización Empresarial** para procesos de facturación, check-in/check-out exprés, gestión de incidencias y housekeeping.
-- **Digitalización de Empresas** para modernizar la gestión del restaurante, hotel o negocio hostelero.
-- **Programación de Apps** para crear aplicaciones de reserva, fidelización y experiencia de huésped con IA.
-- **Integraciones MCP** para conectar PMS, POS, sistemas de reservas y plataformas de booking.
-- **Consultoría IA** para diseñar la estrategia digital de tu negocio hostelero.
+- **Chatbots** para reservas, consultas y atención al huésped.
+- **Agentes IA Telefónicos** para confirmación de reservas.
+- **Agentes IA Autónomos** para gestión de revenue y precios.
+- **Automatización Empresarial** para back-office hostelero.
 
 ## Casos de Uso {#usecases}
 
-- **Recepcionista virtual**: un chatbot web y de WhatsApp que gestiona reservas, consulta disponibilidad y resuelve dudas sobre el alojamiento.
-- **Centralita de restaurante**: un agente telefónico que atiende llamadas, gestiona reservas de mesas, confirma alérgenos y preferencias alimentarias.
-- **Asistente de check-in**: un agente de atención presencial IA en el lobby que agiliza el registro de huéspedes y proporciona información turística.
-- **Up-selling inteligente**: durante la interacción, el agente IA sugiere mejora de habitación, cena incluida o actividades complementarias.
-- **Gestión de incidencias**: un chatbot que permite a los huéspedes reportar incidencias (averías, ruidos, solicitudes) y las deriva automáticamente al departamento correspondiente.
+- **Chatbot de reservas**: gestiona disponibilidad y reservas 24/7.
+- **Agente telefónico**: confirma reservas y gestiona cancelaciones.
+- **Asistente en habitación**: chatbot para servicio de habitaciones.
+- **Revenue management**: IA que ajusta precios según demanda.
+- **Post-estancia**: encuestas y comunicación automatizada.
 
 </div>

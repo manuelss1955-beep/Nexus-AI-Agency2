@@ -25,9 +25,5 @@
 {{- if $paginator.HasNext }}<a href="{{ $root }}{{ strings.TrimPrefix "/" $paginator.Next.URL }}" class="btn btn--sm btn--secondary">Siguiente →</a>{{ end }}
 </div>
 {{- end }}
-
-<div class="text-center" style="margin-top:3rem">
-<a href="{{ $root }}blog" class="btn btn--secondary">Ver todos los artículos →</a>
-</div>
 </div></section>
 {{ end }}

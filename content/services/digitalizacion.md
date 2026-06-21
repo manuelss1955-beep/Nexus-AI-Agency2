@@ -1,133 +1,51 @@
 ---
 title: "Digitalización de Empresas"
-description: "Transformamos procesos analógicos en digitales con IA."
-slug: "digitalizacion"
-icon: "📋"
-hero_title: "Digitaliza tu empresa con <span>inteligencia artificial</span>"
-hero_text: "Transformamos procesos analógicos y obsoletos en sistemas digitales inteligentes. Automatización documental, flujos de trabajo digitales, ERPs modernos y mucho más."
-cta_text: "Solicitar diagnóstico digital →"
-features_title: "Áreas clave"
-cta_title: "¿Listo para digitalizar tu empresa?"
-cta_subtitle: "Solicita un diagnóstico digital gratuito y descubre el potencial de transformación de tu negocio."
+description: "Transformación digital completa con inteligencia artificial. Automatización de procesos, digitalización de documentos y modernización de infraestructura TI."
+hero_title: "Digitaliza tu empresa con <span>inteligencia</span>"
+hero_text: "Lleva tu negocio al siguiente nivel con soluciones de digitalización impulsadas por IA. Automatiza procesos, digitaliza documentos y moderniza tu infraestructura tecnológica sin complicaciones."
 sidebar:
-  - {id: overview, label: "Visión general"}
-  - {id: benefits, label: "Beneficios"}
-  - {id: features, label: "Áreas clave de digitalización"}
-  - {id: usecases, label: "Casos de uso"}
-  - {id: faq, label: "FAQ"}
+  - {id: overview, label: Visión General}
+  - {id: benefits, label: Beneficios}
+  - {id: solutions, label: Soluciones IA}
+  - {id: usecases, label: Casos de Uso}
   - {id: cta, label: Contacto}
+cta_title: "¿Listo para digitalizar tu empresa?"
+cta_subtitle: "Agenda una consultoría gratuita y descubre cómo la IA puede transformar tu negocio."
 ---
+<div class="service-content">
 
+## Visión General {#overview}
 
-<!-- overview -->
-<div id="overview"></div>
+La digitalización ya no es una opción, es una necesidad competitiva. Sin embargo, muchas empresas se enfrentan a procesos manuales obsoletos, datos dispersos y una infraestructura que no escala. La inteligencia artificial acelera la transformación digital al automatizar la captura de datos, optimizar flujos de trabajo y conectar sistemas de forma inteligente.
 
-## Visión general
+Nexus AI ofrece soluciones de **Agentes IA Autónomos**, **Agentes IA Telefónicos**, **Chatbots**, **Automatización Empresarial** e **Integraciones MCP** diseñadas para digitalizar cada área de tu negocio.
 
- Miles de empresas españolas siguen funcionando con hojas de cálculo, papeles, correos interminables y procesos manuales que matan la productividad. La digitalización ya no es una ventaja competitiva: es un requisito para sobrevivir.
+## Beneficios {#benefits}
 
-No digitalizamos por digitalizar. Aplicamos IA para que los procesos digitales sean **inteligentes desde el día 1**: documentos que se procesan solos, flujos que se adaptan, datos que generan decisiones automáticas.
+- **Automatización inteligente de procesos**: agentes IA que capturan, clasifican y procesan documentos, facturas y formularios sin intervención manual.
+- **Centralización de datos**: integración de fuentes de datos dispersas en un ecosistema unificado con IA que los estructura y relaciona.
+- **Reducción de costes operativos**: elimina tareas repetitivas y libera a tu equipo para trabajo de alto valor.
+- **Escalabilidad sin fricción**: procesos digitalizados que crecen con tu negocio sin necesidad de contratar más personal.
+- **Toma de decisiones basada en datos**: dashboards inteligentes con información en tiempo real generada por agentes IA.
 
-<div class="feature" style="margin-top:1.5rem;padding:1.5rem;background:var(--accent-light);border-radius:var(--radius-md)">
-<div class="feature__content">
-<strong>Dato real:</strong> Las empresas que digitalizan con IA reducen sus costes operativos un <strong>40% de media</strong> y recuperan la inversión en menos de <strong>6 meses</strong>.
-</div>
-</div>
+## Soluciones IA {#solutions}
 
+Nuestras soluciones de digitalización cubren todos los aspectos de tu negocio:
 
-<!-- benefits -->
-<div id="benefits"></div>
+- **Agentes IA Autónomos** para monitorización de procesos, detección de cuellos de botella y optimización de flujos de trabajo.
+- **Chatbots** para atención al cliente multicanal con capacidad de gestionar pedidos, consultas y reservas.
+- **Agentes IA Telefónicos** para centralita digital con atención automatizada 24/7.
+- **Automatización Empresarial** para digitalización de facturación, contabilidad, RRHH y documentación.
+- **Programación de Apps** para crear aplicaciones web y móvil que digitalicen la relación con tus clientes.
+- **Integraciones MCP** para conectar ERP, CRM, plataformas de ecommerce y herramientas de gestión en un ecosistema unificado.
+- **Consultoría IA** para diseñar la hoja de ruta de transformación digital de tu empresa.
 
-## Beneficios
+## Casos de Uso {#usecases}
 
-<div class="grid grid--2">
-
-<div class="feature">
-<div class="feature__icon">📄</div>
-<div class="feature__content">
-<h3>Fin al papel y los procesos manuales</h3>
-<p>Cada documento, cada formulario, cada aprobación que hoy se hace en papel pasará a ser digital con flujo automatizado.</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">🗄️</div>
-<div class="feature__content">
-<h3>Datos centralizados y accesibles</h3>
-<p>Toda tu información en un solo lugar. Accesible desde cualquier dispositivo, con permisos y trazabilidad.</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">🔗</div>
-<div class="feature__content">
-<h3>Sistemas que hablan entre sí</h3>
-<p>Tu facturación conectada con contabilidad, tu CRM con el ERP, tus ventas con el inventario. Sin duplicar datos.</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">🤖</div>
-<div class="feature__content">
-<h3>IA integrada desde el inicio</h3>
-<p>No digitalizamos con herramientas tontas. Cada proceso incluye una capa de IA que lo hace inteligente: clasificación automática, extracción de datos, alertas predictivas.</p>
-</div>
-</div>
+- **Digitalización de facturación**: un agente IA que extrae datos de facturas, las clasifica y las integra con tu ERP automáticamente.
+- **Centralita digital**: un agente telefónico que atiende llamadas entrantes, deriva a departamentos y agenda reuniones sin intervención humana.
+- **Automatización de RRHH**: un chatbot que gestiona solicitudes de vacaciones, nóminas y documentación de empleados.
+- **Digitalización de atención al cliente**: un sistema multicanal (web, WhatsApp, teléfono) que resuelve el 80% de las consultas sin intervención humana.
+- **Integración de sistemas**: conexión de CRM, ERP y plataformas de ecommerce mediante MCP para una visión unificada del negocio.
 
 </div>
-
-
-<!-- features -->
-<div id="features"></div>
-
-## Áreas clave de digitalización
-
-<div class="service-detail__list">
-
-- **Digitalización documental:** Escaneo inteligente con OCR, clasificación automática por IA, extracción de datos clave, almacenamiento indexado y búsqueda semántica.
-- **Flujos de trabajo digitales:** Aprobaciones, revisiones, autorizaciones. Sin emails, sin papeles. Con trazabilidad completa y tiempos medidos.
-- **ERP/CRM moderno:** Implantación o migración a sistemas cloud con IA integrada: Odoo, HubSpot, Salesforce, o desarrollo a medida.
-- **Dashboard y reporting:** Cuadros de mando en tiempo real con datos consolidados de toda la empresa. Sin hojas de cálculo.
-- **Firma electrónica:** Integración con proveedores de firma digital (DocuSign, Signaturit, Firmafy) para contratos y autorizaciones.
-- **Portal del empleado:** Autoservicio para vacaciones, nóminas, formación, documentos. Sin emails a RRHH.
-
-</div>
-
-
-<!-- usecases -->
-<div id="usecases"></div>
-
-## Casos de uso
-
-### 🏭 PYME industrial
-Pasó de gestionar pedidos con papel y Excel a un sistema digital completo: pedido online → producción → facturación → cobro. **Ahorró 20 horas/semana** en administración.
-
-### 🏢 Despacho profesional (abogados/arquitectos)
-Digitalización de expedientes, gestión de clientes, contabilidad por proyecto, facturación recurrente. **Reducción del 60%** en tiempo administrativo.
-
-### 🏬 Cadena de tiendas
-Sistema centralizado de compras, inventario, ventas y personal. Dashboard en tiempo real con alertas de stock, ventas por tienda y rentabilidad.
-
-### 🏛️ Asociación/ONG
-Gestión de socios, cuotas, donaciones, eventos y comunicación. Sistema accesible para todo el equipo sin conocimientos técnicos.
-
-
-<!-- faq -->
-<div id="faq"></div>
-
-## Preguntas frecuentes
-
-**¿Cuánto tiempo lleva digitalizar una empresa?**
-Depende del punto de partida. Una empresa con procesos mayormente manuales puede tener los primeros procesos digitalizados en **4-6 semanas**.
-
-**¿Perderé mis datos actuales?**
-No. Migramos todos tus datos históricos al nuevo sistema. Si trabajas con Excel, Access o software antiguo, lo volcamos todo.
-
-**¿Mis empleados sabrán usar los nuevos sistemas?**
-Sí. Formamos a tu equipo y acompañamos durante las primeras semanas. Además, los sistemas modernos son mucho más intuitivos que los antiguos.
-
-**¿Y si ya tengo un ERP pero no funciona bien?**
-Lo evaluamos. A veces merece la pena migrar, a veces optimizar lo que tienes. Te damos una recomendación honesta.
-
-**¿Trabajáis con empresas de todos los tamaños?**
-Sí. Desde autónomos hasta empresas con 200+ empleados. Adaptamos la solución a tu presupuesto y necesidades reales.

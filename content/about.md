@@ -1,23 +1,40 @@
 ---
 title: "Sobre Nosotros"
-description: "Conoce al equipo de Nexus AI. Ingenieros e investigadores de IA con más de 150 proyectos entregados."
-hero_title: "Orquestamos el <span>futuro</span> de la inteligencia artificial"
-hero_text: "Fundada en 2023, Nexus AI nació con una misión clara: hacer que la inteligencia artificial sea accesible, práctica y transformadora para empresas de todos los tamaños."
-type: "about"
+description: "Conoce al equipo de Nexus AI. Ingenieros e investigadores en inteligencia artificial, automatización empresarial y desarrollo de agentes IA."
+hero_title: "Transformamos empresas con <span>inteligencia artificial</span>"
+hero_text: "Nexus AI nace de la convicción de que la inteligencia artificial debe ser accesible, práctica y profundamente transformadora para cualquier empresa, sin importar su tamaño o sector."
+values_title: "Nuestra filosofía"
+values:
+  - icon: 🎯
+    title: "Enfoque en resultados"
+    text: "Cada proyecto tiene objetivos medibles. No implementamos tecnología por implementar."
+  - icon: 🤝
+    title: "Colaboración real"
+    text: "Trabajamos codo a codo con tu equipo para asegurar que la IA se integre sin fricciones."
+  - icon: 🔬
+    title: "Innovación responsable"
+    text: "Aplicamos los últimos avances en IA con un enfoque ético y transparente."
+  - icon: 📈
+    title: "Escalabilidad"
+    text: "Diseñamos soluciones que crecen contigo, desde startups hasta grandes corporaciones."
+timeline:
+  - year: "2023"
+    text: "Nexus AI es fundada por un equipo de ingenieros e investigadores en IA."
+  - year: "2024"
+    text: "Lanzamos nuestra plataforma de agentes IA autónomos y las primeras integraciones MCP."
+  - year: "2025"
+    text: "Superamos los 150 proyectos implementados en 8 países."
+  - year: "2026"
+    text: "Nos consolidamos como agencia de referencia en IA empresarial en España y LATAM."
+cta_title: "¿Hablamos?"
+cta_subtitle: "Cuéntanos tu proyecto y te propondremos la mejor solución."
 ---
+<div class="about-content">
 
-<div class="grid grid--2" style="gap:4rem;">
-<div><h2 style="font-size:2rem;font-weight:800;margin-bottom:1rem;">Nuestra misión</h2><p style="color:var(--text-secondary);line-height:1.8;font-size:1.1rem;">Orquestar inteligencia artificial que transforme la manera en que las empresas operan, compiten y crecen. Creemos en soluciones prácticas, no en promesas vacías.</p></div>
-<div><h2 style="font-size:2rem;font-weight:800;margin-bottom:1rem;">Nuestra visión</h2><p style="color:var(--text-secondary);line-height:1.8;font-size:1.1rem;">Un mundo donde cada empresa, sin importar su tamaño, pueda aprovechar el poder de la IA para alcanzar su máximo potencial.</p></div>
+## Nuestra Historia
+
+Nexus AI nace en 2023 con una misión clara: democratizar el acceso a la inteligencia artificial para empresas de todos los tamaños. Desde entonces, hemos crecido hasta convertirnos en un referente en IA empresarial en España y LATAM, con más de 150 proyectos implementados y un equipo de ingenieros, investigadores y consultores apasionados por la tecnología.
+
+Creemos que la IA no es el futuro, es el presente. Y nuestro compromiso es hacer que funcione para ti.
+
 </div>
-
-<div class="section--alt text-center" style="padding:4rem 0;">
-<div class="container">
-<div class="grid grid--4" style="max-width:900px;margin:0 auto;">
-<div><div class="hero__stat-number" data-count="2023" style="font-size:4rem;">0</div><div style="font-weight:600;">Año de fundación</div></div>
-<div><div class="hero__stat-number" data-count="150" style="font-size:4rem;">0</div><div style="font-weight:600;">Proyectos</div></div>
-<div><div class="hero__stat-number" data-count="40" style="font-size:4rem;">0</div><div style="font-weight:600;">Expertos</div></div>
-<div><div class="hero__stat-number" data-count="8" style="font-size:4rem;">0</div><div style="font-weight:600;">Países</div></div>
-</div></div></div>
-
-<div class="cta-banner"><div class="container"><h2>¿Quieres conocer al equipo?</h2><a href="/contact/" class="btn btn--lg">Agendar consultoría →</a></div></div>

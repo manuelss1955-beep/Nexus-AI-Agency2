@@ -1,6 +1,4 @@
-{{- $page := . -}}
-{{- $root := partial "rootpath.html" . -}}
-{{- $currentURL := $page.RelPermalink -}}
+{{- $page := . -}}{{- $root := partial "rootpath.html" . -}}{{- $currentURL := $page.RelPermalink -}}
 <header class="nav"><div class="nav__inner">
   <a href="{{ $root }}" class="nav__logo"><span class="nav__logo-icon">◆</span> Nexus AI</a>
   <nav class="nav__links">
@@ -11,7 +9,6 @@
         <span class="nav__link nav__dropdown-toggle{{ if $servicesActive }} nav__link--active{{ end }}">Servicios y Soluciones <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"/></svg></span>
         <div class="nav__dropdown-menu">
           <div class="nav__dropdown-grid">
-            {{- /* Columna 1: Servicios */}}
             <div class="nav__dropdown-column">
               <div class="nav__dropdown-column-header">🚀 Servicios</div>
             {{- range $page.Site.Params.services }}
@@ -23,108 +20,27 @@
               </a>
             {{- end }}
             </div>
-          {{- /* Columna 2: Soluciones */}}
             <div class="nav__dropdown-column">
               <div class="nav__dropdown-column-header">💡 Soluciones</div>
             </div>
-          {{- /* Columna 2: Sectores */}}
             <div class="nav__dropdown-column">
               <div class="nav__dropdown-column-header">🏢 Sectores</div>
-              <a href="{{ $root }}sectores/retail" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🛍️</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Retail</span>
-                  <span class="nav__dropdown-item__desc">Tiendas, ecommerce, retail físico</span>
-                </span>
-              </a>
-              <a href="{{ $root }}sectores/salud" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏥</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Salud</span>
-                  <span class="nav__dropdown-item__desc">Clínicas, hospitales, salud digital</span>
-                </span>
-              </a>
-              <a href="{{ $root }}sectores/banca" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏦</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Banca y Fintech</span>
-                  <span class="nav__dropdown-item__desc">Finanzas, seguros, fintech</span>
-                </span>
-              </a>
-              <a href="{{ $root }}sectores/logistica" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📦</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Logística</span>
-                  <span class="nav__dropdown-item__desc">Transporte, cadena de suministro</span>
-                </span>
-              </a>
-              <a href="{{ $root }}sectores/industria" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏭</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Industria</span>
-                  <span class="nav__dropdown-item__desc">Manufactura, producción</span>
-                </span>
-              </a>
-              <a href="{{ $root }}sectores/hosteleria" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🍽️</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Hostelería</span>
-                  <span class="nav__dropdown-item__desc">Hoteles, restaurantes, turismo</span>
-                </span>
-              </a>
+              <a href="{{ $root }}sectores/retail" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🛍️</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Retail</span><span class="nav__dropdown-item__desc">Tiendas, ecommerce, retail físico</span></span></a>
+              <a href="{{ $root }}sectores/salud" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏥</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Salud</span><span class="nav__dropdown-item__desc">Clínicas, hospitales, salud digital</span></span></a>
+              <a href="{{ $root }}sectores/banca" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏦</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Banca y Fintech</span><span class="nav__dropdown-item__desc">Finanzas, seguros, fintech</span></span></a>
+              <a href="{{ $root }}sectores/logistica" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📦</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Logística</span><span class="nav__dropdown-item__desc">Transporte, cadena de suministro</span></span></a>
+              <a href="{{ $root }}sectores/industria" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🏭</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Industria</span><span class="nav__dropdown-item__desc">Manufactura, producción</span></span></a>
+              <a href="{{ $root }}sectores/hosteleria" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🍽️</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Hostelería</span><span class="nav__dropdown-item__desc">Hoteles, restaurantes, turismo</span></span></a>
             </div>
-            {{- /* Columna 4: Formación */}}
             <div class="nav__dropdown-column">
               <div class="nav__dropdown-column-header">📚 Formación</div>
-              <a href="{{ $root }}formacion/curso-ia-empresas" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🎓</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Curso de IA para Empresas</span>
-                  <span class="nav__dropdown-item__desc">Fundamentos y aplicación práctica</span>
-                </span>
-              </a>
-              <a href="{{ $root }}formacion/introduccion-ia" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🧠</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Curso de Introducción a la IA</span>
-                  <span class="nav__dropdown-item__desc">Conceptos fundamentales</span>
-                </span>
-              </a>
-              <a href="{{ $root }}formacion/ia-agentica" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🤖</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Curso de IA Agéntica</span>
-                  <span class="nav__dropdown-item__desc">Agentes autónomos avanzados</span>
-                </span>
-              </a>
-              <a href="{{ $root }}formacion/automatizacion-ia" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">⚡</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Curso de Automatización con IA</span>
-                  <span class="nav__dropdown-item__desc">n8n, MCP, workflows</span>
-                </span>
-              </a>
-              <a href="{{ $root }}formacion/desarrollo-ia" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">💻</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Curso de Desarrollo con IA</span>
-                  <span class="nav__dropdown-item__desc">Apps potenciadas por IA</span>
-                </span>
-              </a>
-              <a href="{{ $root }}formacion/formacion-incompany" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">👥</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Formación In‑Company</span>
-                  <span class="nav__dropdown-item__desc">A medida para tu equipo</span>
-                </span>
-              </a>
-              <a href="{{ $root }}formacion/webinars-workshops" class="nav__dropdown-item">
-                <span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📹</span>
-                <span class="nav__dropdown-item__text">
-                  <span class="nav__dropdown-item__title">Webinars y Workshops</span>
-                  <span class="nav__dropdown-item__desc">Eventos en vivo y grabados</span>
-                </span>
-              </a>
+              <a href="{{ $root }}formacion/curso-ia-empresas" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🎓</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de IA para Empresas</span><span class="nav__dropdown-item__desc">Fundamentos y aplicación práctica</span></span></a>
+              <a href="{{ $root }}formacion/introduccion-ia" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🧠</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de Introducción a la IA</span><span class="nav__dropdown-item__desc">Conceptos fundamentales</span></span></a>
+              <a href="{{ $root }}formacion/ia-agentica" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">🤖</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de IA Agéntica</span><span class="nav__dropdown-item__desc">Agentes autónomos avanzados</span></span></a>
+              <a href="{{ $root }}formacion/automatizacion-ia" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">⚡</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de Automatización con IA</span><span class="nav__dropdown-item__desc">n8n, MCP, workflows</span></span></a>
+              <a href="{{ $root }}formacion/desarrollo-ia" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">💻</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Curso de Desarrollo con IA</span><span class="nav__dropdown-item__desc">Apps potenciadas por IA</span></span></a>
+              <a href="{{ $root }}formacion/formacion-incompany" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">👥</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Formación In‑Company</span><span class="nav__dropdown-item__desc">A medida para tu equipo</span></span></a>
+              <a href="{{ $root }}formacion/webinars-workshops" class="nav__dropdown-item"><span class="nav__dropdown-item__icon nav__dropdown-item__icon--blue">📹</span><span class="nav__dropdown-item__text"><span class="nav__dropdown-item__title">Webinars y Workshops</span><span class="nav__dropdown-item__desc">Eventos en vivo y grabados</span></span></a>
             </div>
           </div>
         </div>

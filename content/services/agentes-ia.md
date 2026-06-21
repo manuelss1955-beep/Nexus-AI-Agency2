@@ -1,137 +1,52 @@
 ---
 title: "Agentes IA Autónomos"
-description: "Agentes inteligentes que ejecutan flujos de trabajo 24/7."
-slug: "agentes-ia"
-icon: "🤖"
-hero_title: "Agentes de IA que trabajan <span>24/7</span> sin intervención humana"
-hero_text: "Diseñamos agentes inteligentes que ejecutan flujos de trabajo completos: desde atención al cliente multicanal hasta análisis predictivo de datos. Resultados medibles desde la semana 1."
-cta_text: "Solicitar consultoría →"
-features_title: "Características"
-cta_title: "¿Listo para empezar?"
-cta_subtitle: "Agenda una consultoría gratuita y descubre cómo un agente IA puede transformar tu operación."
+description: "Agentes de IA que ejecutan tareas complejas de forma autónoma. Automatización inteligente, toma de decisiones y ejecución sin supervisión humana."
+hero_title: "Agentes IA que trabajan por ti de forma <span>autónoma</span>"
+hero_text: "Imagina tener un equipo de asistentes digitales que trabajan 24/7, toman decisiones y ejecutan tareas complejas sin supervisión humana. Así funcionan nuestros agentes IA autónomos."
 sidebar:
-  - {id: overview, label: "Visión general"}
-  - {id: benefits, label: "Beneficios"}
-  - {id: features, label: "Características"}
-  - {id: usecases, label: "Casos de uso"}
-  - {id: faq, label: "FAQ"}
+  - {id: overview, label: Visión General}
+  - {id: benefits, label: Beneficios}
+  - {id: solutions, label: Soluciones IA}
+  - {id: usecases, label: Casos de Uso}
   - {id: cta, label: Contacto}
+cta_title: "¿Listo para automatizar tu negocio con agentes IA?"
+cta_subtitle: "Agenda una consultoría gratuita."
 ---
+<div class="service-content">
 
+## Visión General {#overview}
 
-<!-- overview -->
-<div id="overview"></div>
+Los agentes IA autónomos representan el siguiente nivel de la automatización empresarial. A diferencia de los chatbots tradicionales que responden preguntas, los agentes autónomos pueden planificar, ejecutar y verificar tareas complejas de principio a fin: gestionar inventarios, coordinar equipos, optimizar procesos y tomar decisiones en tiempo real basadas en datos.
 
-## Visión general
+Nexus AI diseña e implementa **Agentes IA Autónomos**, **Integraciones MCP** y **Automatización Empresarial** para que las empresas deleguen tareas complejas en asistentes digitales inteligentes.
 
- Tus empleados dedican horas a tareas repetitivas que una máquina haría mejor, más rápido y sin errores. Mientras, los proyectos estratégicos se acumulan.
+## Beneficios {#benefits}
 
-Un agente IA autónomo es un sistema inteligente que **planifica, ejecuta y aprende** de forma continua. No es un chatbot pasivo: es un trabajador digital que opera 24/7, se integra con tus herramientas y escala contigo.
+- **Autonomía real**: los agentes toman decisiones y ejecutan tareas sin intervención humana, siguiendo reglas de negocio y aprendiendo de cada interacción.
+- **Disponibilidad 24/7/365**: tus procesos críticos nunca se detienen. Los agentes trabajan mientras tu equipo descansa.
+- **Ejecución multicapa**: los agentes pueden dividir tareas complejas en subtareas, coordinarse entre sí y verificar resultados.
+- **Integración con tu ecosistema**: conexión con ERP, CRM, bases de datos y APIs mediante MCP para actuar sobre tus sistemas.
+- **Escalabilidad sin límites**: desde 1 agente hasta cientos, escalando según la demanda sin costes fijos.
 
-<div class="feature" style="margin-top:1.5rem;padding:1.5rem;background:var(--accent-light);border-radius:var(--radius-md)">
-<div class="feature__content">
-<strong>Dato real:</strong> Nuestros clientes reducen una media del <strong>40%</strong> sus costes operativos en los primeros 6 meses con agentes autónomos. Proyecto piloto en 2 semanas.
-</div>
-</div>
+## Soluciones IA {#solutions}
 
+Nuestros agentes autónomos se adaptan a cualquier necesidad empresarial:
 
-<!-- benefits -->
-<div id="benefits"></div>
+- **Agentes de monitorización**: supervisan sistemas, detectan anomalías y ejecutan acciones correctivas automáticamente.
+- **Agentes de coordinación**: gestionan flujos de trabajo complejos coordinando equipos, sistemas y recursos.
+- **Agentes de análisis**: procesan grandes volúmenes de datos, generan informes y recomiendan decisiones estratégicas.
+- **Agentes de operaciones**: automatizan procesos de back-office como facturación, conciliación y gestión documental.
+- **Chatbots avanzados** con capacidad de derivar tareas complejas a agentes autónomos especializados.
+- **Agentes IA Telefónicos** que gestionan llamadas entrantes y salientes con capacidad de negociación y resolución.
+- **Integraciones MCP** para conectar tus agentes con cualquier sistema o servicio externo.
+- **Consultoría IA** para diseñar la arquitectura de agentes autónomos de tu empresa.
 
-## Beneficios
+## Casos de Uso {#usecases}
 
-<div class="grid grid--2">
-
-<div class="feature">
-<div class="feature__icon">⏰</div>
-<div class="feature__content">
-<h3>Operación 24/7 sin supervisión</h3>
-<p>El agente trabaja mientras duermes. Sin turnos, sin bajas, sin descansos. Respuesta instantánea a cualquier hora.</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">📉</div>
-<div class="feature__content">
-<h3>Hasta un 70% menos de costes operativos</h3>
-<p>Un agente IA cuesta una fracción de un empleado a tiempo completo. Y escala sin coste marginal.</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">🎯</div>
-<div class="feature__content">
-<h3>Precisión del 98% en tareas rutinarias</h3>
-<p>Los agentes no se equivocan por cansancio, distracción o falta de datos. Cada acción está documentada.</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">📈</div>
-<div class="feature__content">
-<h3>Escala sin contratar</h3>
-<p>Multiplica tu capacidad operativa sin aumentar plantilla. Un agente gestiona 10x el volumen de un humano.</p>
-</div>
-</div>
+- **Gestión de inventario**: un agente que monitoriza el stock, predice roturas y genera pedidos de reposición automáticamente.
+- **Coordinación de flotas**: un agente que asigna rutas, gestiona incidencias y optimiza el consumo de combustible en tiempo real.
+- **Atención al cliente multicapa**: un chatbot que resuelve consultas simples y deriva las complejas a un agente autónomo especializado.
+- **Automatización de informes**: un agente que recopila datos de múltiples fuentes, genera informes ejecutivos y los distribuye automáticamente.
+- **Gestión de incidencias TI**: un agente que detecta, diagnostica y resuelve incidencias técnicas sin intervención humana.
 
 </div>
-
-
-<!-- features -->
-<div id="features"></div>
-
-## Características
-
-<div class="service-detail__list">
-
-- **Memoria persistente:** El agente recuerda cada interacción, decisión y contexto. No empieza de cero nunca.
-- **Canal multicanal:** Se comunica por chat, email, voz, web y APIs simultáneamente con coherencia total.
-- **Razonamiento autónomo:** Analiza, decide y actúa sin intervención humana. Solo escala cuando no sabe.
-- **Integración con tus sistemas:** Conexión directa a CRM, ERP, base de datos, n8n y cualquier API REST o MCP.
-- **Dashboard en tiempo real:** Monitoriza cada acción del agente: decisiones, tiempos, volúmenes, errores.
-- **Entrenamiento continuo:** El agente mejora con cada interacción. Nosotros lo supervisamos y ajustamos.
-- **Cumplimiento GDPR:** Todos los datos se procesan bajo normativa europea. Tú eres el dueño de tus datos.
-
-</div>
-
-
-<!-- usecases -->
-<div id="usecases"></div>
-
-## Casos de uso
-
-### 🏭 Logística y cadena de suministro
-Seguimiento autónomo de pedidos, actualización de inventario en tiempo real, coordinación con transportistas y notificación proactiva a clientes. Una empresa logística redujo sus incidencias de entrega un **60%**.
-
-### 🏦 Banca y finanzas
-Agente que analiza transacciones, detecta anomalías, genera informes regulatorios y responde consultas de clientes sobre productos financieros. Un banco automatizó el **45%** de su soporte nivel 1.
-
-### 🛒 Ecommerce y retail
-Gestión integral de tienda online: atención al cliente multicanal, moderación de reseñas, actualización de catálogo, seguimiento de envíos y marketing automatizado. Un ecommerce **escaló 3x** sin aumentar plantilla.
-
-### 🏥 Salud
-Agente que gestiona citas, envía recordatorios, resuelve dudas frecuentes sobre tratamientos y tria pacientes antes de derivar al personal sanitario.
-
-### ⚖️ Legal y compliance
-Revisión autónoma de contratos, extracción de cláusulas, alertas de cumplimiento normativo y generación de informes legales preliminares.
-
-
-<!-- faq -->
-<div id="faq"></div>
-
-## Preguntas frecuentes
-
-**¿Qué diferencia hay entre un chatbot y un agente autónomo?**
-Un chatbot responde preguntas. Un agente autónomo **actúa**: crea tickets, actualiza bases de datos, envía emails, ejecuta flujos completos. Es un trabajador digital, no un contestador.
-
-**¿Cuánto tiempo lleva implementarlo?**
-Un piloto funcional se despliega en **2-3 semanas**. La integración completa con tus sistemas depende de su complejidad, pero en 4-6 semanas el agente está en producción.
-
-**¿Qué sistemas puede integrar?**
-Cualquier sistema con API: CRMs (HubSpot, Salesforce), ERPs (SAP, Odoo), bases de datos (SQL, MongoDB), herramientas de comunicación (Slack, Teams, WhatsApp), y cualquier servicio vía MCP.
-
-**¿Necesito un equipo técnico interno?**
-No. Nosotros nos encargamos de todo: diseño, implementación, integración y mantenimiento. Tu equipo solo necesita definir qué quiere automatizar.
-
-**¿Qué pasa si el agente se equivoca?**
-Cada acción del agente queda registrada. Definimos reglas de seguridad y límites de actuación. Ante incertidumbre, el agente escala a un humano. Además, hacemos auditorías periódicas.

@@ -1,131 +1,51 @@
 ---
 title: "Agentes IA Telefónicos"
-description: "Automatiza llamadas con agentes de voz IA hiperrealistas."
-slug: "agentes-telefonicos"
-icon: "📞"
-hero_title: "Agentes de voz IA que llaman y atienden por ti <span>24/7</span>"
-hero_text: "Automatiza llamadas entrantes y salientes con agentes de voz hiperrealistas. Atención al cliente, reservas, ventas y soporte sin esperas ni costes de call center."
-cta_text: "Solicitar demo de voz →"
+description: "Agentes telefónicos con IA que atienden llamadas 24/7. Automatización de centralita, atención al cliente y gestión de incidencias por voz."
+hero_title: "Agentes telefónicos con IA que suenan a <span>personas reales</span>"
+hero_text: "Olvida los menús interminables y las respuestas robóticas. Nuestros agentes telefónicos con IA mantienen conversaciones naturales, entienden el contexto y resuelven incidencias sin frustrar al cliente."
 sidebar:
-  - {id: overview, label: "Visión general"}
-  - {id: benefits, label: "Beneficios"}
-  - {id: features, label: "Características"}
-  - {id: usecases, label: "Casos de uso"}
-  - {id: faq, label: "FAQ"}
+  - {id: overview, label: Visión General}
+  - {id: benefits, label: Beneficios}
+  - {id: solutions, label: Soluciones IA}
+  - {id: usecases, label: Casos de Uso}
   - {id: cta, label: Contacto}
+cta_title: "¿Listo para transformar tu atención telefónica?"
+cta_subtitle: "Agenda una consultoría gratuita."
 ---
+<div class="service-content">
 
+## Visión General {#overview}
 
-<!-- overview -->
-<div id="overview"></div>
+La atención telefónica sigue siendo el canal preferido por los clientes para resolver incidencias complejas. Sin embargo, las centralitas tradicionales generan frustración con menús interminables y largas esperas. Los agentes telefónicos con inteligencia artificial mantienen conversaciones naturales en tiempo real, entienden el contexto, acceden a tus sistemas y resuelven incidencias sin transferir al cliente.
 
-## Visión general
+Nexus AI ofrece **Agentes IA Telefónicos**, **Chatbots**, **Agentes IA Autónomos** y **Automatización Empresarial** para transformar tu atención telefónica en un canal eficiente y satisfactorio.
 
- ¿Sigues pagando un call center que solo cubre 8 horas al día? ¿Tus clientes se quejan de las esperas? ¿Tienes que hacer cientos de llamadas de seguimiento y no llegas?
+## Beneficios {#benefits}
 
-Los agentes de voz IA de Nexus AI suenan a humanos reales. Entienden contexto, manejan objeciones, transfieren si es necesario y **cuestan una fracción de un equipo telefónico tradicional**. Llamadas entrantes y salientes, 24/7, sin esperas, con calidad hiperrealista.
+- **Voz humana natural**: síntesis de voz avanzada con emociones, pausas y entonación natural que suena a persona real.
+- **Comprensión contextual**: el agente entiende el contexto de la conversación, el historial del cliente y el estado de sus gestiones.
+- **Resolución en primera llamada**: acceso a sistemas (CRM, ERP, bases de datos) para resolver incidencias sin transferencias.
+- **Disponibilidad 24/7**: atención telefónica ininterrumpida sin necesidad de turnos de personal.
+- **Escalabilidad instantánea**: desde 1 llamada hasta miles simultáneas sin costes adicionales de infraestructura.
 
-<div class="feature" style="margin-top:1.5rem;padding:1.5rem;background:var(--accent-light);border-radius:var(--radius-md)">
-<div class="feature__content">
-<strong>Dato real:</strong> Un agente telefónico IA gestiona <strong>500+ llamadas al día</strong> con un coste 80% menor que un call center tradicional. Tasa de satisfacción superior al 90%.
-</div>
-</div>
+## Soluciones IA {#solutions}
 
+Nuestros agentes telefónicos se adaptan a cualquier sector y necesidad:
 
-<!-- benefits -->
-<div id="benefits"></div>
+- **Centralita IA inteligente**: atiende todas las llamadas entrantes, identifica al cliente y deriva al departamento adecuado.
+- **Agente de atención al cliente**: resuelve incidencias, gestiona pedidos, modificaciones y devoluciones por teléfono.
+- **Agente de ventas salientes**: realiza llamadas comerciales con capacidad de argumentación y cierre de ventas.
+- **Agente de soporte técnico**: diagnostica problemas técnicos y guía al cliente en la resolución paso a paso.
+- **Chatbots** integrados que recogen información antes de transferir al agente telefónico.
+- **Agentes IA Autónomos** que ejecutan tareas complejas detectadas durante la llamada.
+- **Integraciones MCP** para conectar el agente telefónico con tus sistemas empresariales.
 
-## Beneficios
+## Casos de Uso {#usecases}
 
-<div class="grid grid--2">
-
-<div class="feature">
-<div class="feature__icon">📞</div>
-<div class="feature__content">
-<h3>Atención 24/7 sin esperas</h3>
-<p>El agente descuelga al primer tono. Siempre. Sin IVR interminables, sin "su llamada nos importa".</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">💰</div>
-<div class="feature__content">
-<h3>80% menos que un call center</h3>
-<p>Sin costes de personal, formación, turnos ni bajas. Pagas por uso, no por hora sentada.</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">🗣️</div>
-<div class="feature__content">
-<h3>Voz hiperrealista e idiomas</h3>
-<p>El interlocutor no distingue si habla con una IA o con un humano. Soporta español, inglés, catalán, portugués y más.</p>
-</div>
-</div>
-
-<div class="feature">
-<div class="feature__icon">📊</div>
-<div class="feature__content">
-<h3>Métricas de cada llamada</h3>
-<p>Duración, sentimiento, resolución, palabras clave, grabación y transcripción. Mejora tu servicio con datos reales.</p>
-</div>
-</div>
+- **Atención al cliente de logística**: un agente telefónico que informa del estado de envíos, gestiona incidencias y coordina entregas.
+- **Centralita de clínica**: un agente que agenda citas, confirma pacientes y gestiona cancelaciones automáticamente.
+- **Soporte técnico de telecomunicaciones**: un agente que diagnostica incidencias de red y reinicia equipos remotamente.
+- **Cobro amistoso**: un agente que realiza llamadas de recordatorio de pago con capacidad de negociación.
+- **Encuestas de satisfacción**: un agente que realiza llamadas de postventa y recoge feedback estructurado.
 
 </div>
-
-
-<!-- features -->
-<div id="features"></div>
-
-## Características
-
-<div class="service-detail__list">
-
-- **Voz neuronal ultrarealista:** Inflexiones, pausas, entonación natural. No es un robot.
-- **Comprensión contextual:** El agente entiende matices, interrupciones, cambios de tema. No se "atasca".
-- **Integración con CRM:** Antes de cada llamada, consulta el historial del cliente. Personaliza cada interacción.
-- **Detección de emociones:** Identifica frustración, urgencia o satisfacción y adapta el tono automáticamente.
-- **Transferencia inteligente:** Si no sabe resolver, transfiere al humano adecuado con todo el contexto de la llamada.
-- **Campañas salientes automáticas:** Recordatorios, encuestas, seguimiento de ventas, cobros. Con reglas de horario y repetitividad.
-- **Cumplimiento GDPR:** Grabación con consentimiento, datos cifrados, eliminación programada.
-
-</div>
-
-
-<!-- usecases -->
-<div id="usecases"></div>
-
-## Casos de uso
-
-### 🏨 Hoteles y hostelería
-Gestión de reservas entrantes, confirmación automática, cambios y cancelaciones. Atención a huéspedes 24/7. Un hotel redujo un **70%** las llamadas perdidas en horario nocturno.
-
-### 🏥 Clínicas y consultas médicas
-Confirmación de citas salientes, recordatorios, anulación y reasignación. Una clínica eliminó el **95%** de las ausencias en citas con recordatorio automático.
-
-### 🛒 Ecommerce y logística
-Seguimiento de pedidos, incidencias de entrega, cambios de dirección. Sin esperas para el cliente. Una empresa logística atendía **300 llamadas/día** con 2 agentes humanos + 1 IA.
-
-### 🏦 Recobros y finanzas
-Campañas de cobro con tono profesional y respetuoso. Negociación de plazos, acuse de pago, derivación a legal cuando aplica.
-
-### 🏠 Comunidades de propietarios
-Atención a vecinos, aviso de averías, coordinación de reparaciones, comunicación de incidencias. Sin necesidad de administrador 24/7.
-
-
-<!-- faq -->
-<div id="faq"></div>
-
-## Preguntas frecuentes
-
-**¿El cliente nota que habla con una IA?**
-En la mayoría de los casos no. La tecnología de voz neuronal genera un tono natural con pausas y matices humanos. Además, el agente se presenta como asistente virtual, con transparencia total.
-
-**¿Qué pasa si la llamada se complica?**
-El agente detecta cuándo necesita intervención humana y transfiere la llamada con todo el contexto: historial, motivo, datos del cliente. El humano no empieza de cero.
-
-**¿Se integra con mi centralita actual?**
-Sí. Trabajamos con cualquier proveedor de telefonía IP (Asterisk, 3CX, Cisco, VoIP convencional). También podemos aportar numeración propia.
-
-**¿Cuánto cuesta por llamada?**
-Depende del volumen y la complejidad. Trabajamos con modelos de suscripción o pago por uso. En cualquiera de los dos casos, el coste por llamada es muy inferior al de un agente humano.
