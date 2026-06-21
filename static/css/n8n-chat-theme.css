@@ -163,3 +163,43 @@
 .n8n-chat-body::-webkit-scrollbar-thumb:hover {
   background: #9CA3AF;
 }
+
+/* ─── Responsive: móviles ─── */
+
+/* Ajuste general para móviles: subir toggle y ventana */
+@media (max-width: 768px) {
+  .n8n-chat {
+    --chat--window--bottom: 70px;
+    --chat--toggle--bottom: 16px;
+  }
+  .n8n-chat-window {
+    bottom: 70px !important;
+  }
+  .n8n-chat-toggle {
+    bottom: 16px !important;
+  }
+}
+
+/* Dispositivos con notch (iPhone X+, Android edge-to-edge) */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  @media (max-width: 768px) {
+    .n8n-chat {
+      --chat--window--bottom: calc(70px + env(safe-area-inset-bottom));
+      --chat--toggle--bottom: calc(16px + env(safe-area-inset-bottom));
+    }
+    .n8n-chat-window {
+      bottom: calc(70px + env(safe-area-inset-bottom)) !important;
+    }
+    .n8n-chat-toggle {
+      bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+    }
+  }
+}
+
+/* Pantallas muy pequeñas (<400px): ventana más angosta */
+@media (max-width: 400px) {
+  .n8n-chat {
+    --chat--window--width: calc(100vw - 20px);
+    --chat--window--right: 10px;
+  }
+}
