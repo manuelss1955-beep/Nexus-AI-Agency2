@@ -11,7 +11,7 @@
 <div class="grid grid--2" style="max-width:1000px;margin:0 auto">
 {{- $page := . }}
 {{- range .Site.Params.services }}
-<a href="{{ $root }}services/{{ .slug }}" class="card"><div class="card__icon">{{ .icon }}</div><h3 class="card__title">{{ .title }}</h3><p class="card__text">{{ index hugo.Data.servicios .slug "excerpt" }}</p><span class="card__link">Descubrir más →</span></a>
+<a href="{{ $root }}services/{{ .slug }}" class="card"><div class="card__icon">{{ .icon }}</div><h3 class="card__title">{{ .title }}</h3><p class="card__text">{{ index .Site.Data.servicios .slug "excerpt" }}</p><span class="card__link">Descubrir más →</span></a>
 {{- end }}
 </div></div></section>
 
