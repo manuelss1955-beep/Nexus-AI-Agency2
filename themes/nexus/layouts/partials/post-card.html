@@ -1,0 +1,26 @@
+{{- $root := partial "rootpath.html" .page -}}
+{{- $page := .page -}}
+{{- $showFooter := .showFooter | default true -}}
+{{- $compact := .compact | default false -}}
+<article class="post-card">
+  <div class="post-card__body">
+    <span class="post-card__date">{{ $page.Date.Format "2 Jan 2006" }}</span>
+    {{- if not $compact }}
+    <span class="post-card__reading">⏱️ {{ $page.ReadingTime }} min</span>
+    {{- end }}
+    <h3 class="post-card__title"><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3>
+    <p class="post-card__text">{{ $page.Summary | plainify | truncate (cond $compact 100 120) }}</p>
+    {{- if $showFooter }}
+    <div class="post-card__footer">
+      <span class="post-card__author">👤 {{ $page.Params.author | default $.page.Site.Params.author }}</span>
+      {{- with $page.Params.tags }}
+      <div class="post-card__tags">
+        {{- range . }}
+        <a href="{{ $root }}blog/tags/{{ . | urlize }}" class="post-card__tag">#{{ . }}</a>
+        {{- end }}
+      </div>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</article>

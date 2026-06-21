@@ -1,0 +1,27 @@
+{{- $root := partial "rootpath.html" .page -}}
+{{- $ctaTitle := .ctaTitle | default "¿Listo para empezar?" -}}
+{{- $ctaSubtitle := .ctaSubtitle | default "Agenda una consultoría gratuita." -}}
+{{- $sidebar := .sidebar | default slice -}}
+<section class="section"><div class="container"><div class="service-detail__grid">
+  <div class="service-detail__content">
+    {{ .content }}
+    <div class="service-detail__cta">
+      <div>
+        <h3 class="section__title" style="font-size:1.4rem">{{ $ctaTitle }}</h3>
+        <p>{{ $ctaSubtitle }}</p>
+      </div>
+      <a href="{{ $root }}contact" class="btn btn--primary">Hablar con un experto →</a>
+    </div>
+  </div>
+  {{- if $sidebar }}
+  <aside class="service-detail__sidebar"><nav>
+    {{- range $i, $item := $sidebar }}
+    {{- if eq $item.id "cta" }}
+    <a href="{{ $root }}contact" class="service-detail__nav-item{{ if eq $i 0 }} service-detail__nav-item--active{{ end }}"><span class="service-detail__nav-item__num">{{ add $i 1 }}</span>{{ $item.label }}</a>
+    {{- else }}
+    <a href="#{{ $item.id }}" class="service-detail__nav-item{{ if eq $i 0 }} service-detail__nav-item--active{{ end }}"><span class="service-detail__nav-item__num">{{ add $i 1 }}</span>{{ $item.label }}</a>
+    {{- end }}
+    {{- end }}
+  </nav></aside>
+  {{- end }}
+</div></div></section>

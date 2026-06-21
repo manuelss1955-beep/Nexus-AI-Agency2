@@ -1,0 +1,47 @@
+- media: "🏭"
+  tag: "Automatización"
+  title: "Planta reduce errores un 94%"
+  text: "Agentes de visión artificial para control de calidad en tiempo real en línea de producción."
+  metrics:
+    - {value: "-94%", label: "Errores"}
+    - {value: "+40%", label: "Velocidad"}
+
+- media: "🏦"
+  tag: "Chatbots"
+  title: "Banco reduce tickets un 67%"
+  text: "Chatbot con RAG integrado al core bancario para atención al cliente multicanal."
+  metrics:
+    - {value: "-67%", label: "Soporte"}
+    - {value: "92%", label: "Resolución"}
+
+- media: "📦"
+  tag: "Agentes IA"
+  title: "Ecommerce escala 3x"
+  text: "Agentes autónomos para atención al cliente, gestión de inventario y marketing automatizado."
+  metrics:
+    - {value: "3x", label: "Escalado"}
+    - {value: "-45%", label: "Costes"}
+
+- media: "📋"
+  tag: "Digitalización"
+  title: "Logística automatiza facturación"
+  text: "Automatización de facturación y conciliación bancaria con agentes IA para cadena de retail."
+  metrics:
+    - {value: "90%", label: "Facturas auto"}
+    - {value: "-60%", label: "Tiempo cierre"}
+
+- media: "🏥"
+  tag: "Chatbots"
+  title: "Clínica gestiona citas 24/7"
+  text: "Chatbot + agente telefónico para gestión de citas y atención al paciente."
+  metrics:
+    - {value: "80%", label: "Citas auto"}
+    - {value: "-50%", label: "No-shows"}
+
+- media: "💬"
+  tag: "Atención al Cliente"
+  title: "Logística resuelve 75% sin humanos"
+  text: "Agentes IA telefónicos y chatbot multicanal para atención al cliente logística."
+  metrics:
+    - {value: "75%", label: "Resolución"}
+    - {value: "-40%", label: "Costes"}

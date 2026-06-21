@@ -23,11 +23,17 @@
 
 {{ define "main" }}
 {{- $root := partial "rootpath.html" . -}}
-<section class="page-hero post-hero"><div class="container">
-<div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
-<h1 class="page-hero__title">{{ .Title }}</h1><div class="post-meta"><span>📅 {{ .Date.Format "2 January 2006" }}</span><span>👤 {{ .Params.author | default .Site.Params.author }}</span><span>⏱️ {{ .ReadingTime }} min lectura</span></div></div></section>
 
-<section class="section"><div class="container"><div class="post-grid"><article class="post-content">{{ .Content }}</article>
+{{ partial "page-hero.html" (dict
+  "page" .
+  "showBreadcrumbs" true
+  "title" .Title
+  "text" ""
+  "extraClass" "post-hero"
+) }}
+
+<section class="section"><div class="container"><div class="post-grid">
+<article class="post-content">{{ .Content }}</article>
 
 {{ partial "newsletter-form.html" . }}
 
@@ -50,7 +56,7 @@
 {{- if $related }}
 <div class="post-related"><h3>Artículos relacionados</h3><div class="grid grid--3">
 {{- range $related }}
-<article class="post-card"><div class="post-card__body"><span class="post-card__date">{{ .Date.Format "2 Jan 2006" }}</span><h3 class="post-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p class="post-card__text">{{ .Summary | plainify | truncate 100 }}</p></div></article>
+{{ partial "post-card.html" (dict "page" . "showFooter" false "compact" true) }}
 {{- end }}</div></div>
 {{- end }}
 

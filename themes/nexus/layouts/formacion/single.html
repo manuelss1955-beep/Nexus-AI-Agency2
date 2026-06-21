@@ -1,11 +1,14 @@
 {{ define "main" }}
 {{- $root := partial "rootpath.html" . -}}
-<section class="page-hero"><div class="container">
-<div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
-<h1 class="page-hero__title">{{ .Params.hero_title | default .Title | safeHTML }}</h1>
-<p class="page-hero__text">{{ .Params.hero_text | default .Description }}</p>
-<a href="{{ $root }}contact" class="btn btn--primary btn--lg">Solicitar información →</a>
-</div></section>
+
+{{ partial "page-hero.html" (dict
+  "page" .
+  "showBreadcrumbs" true
+  "showCta" true
+  "title" (.Params.hero_title | default .Title)
+  "text" (.Params.hero_text | default .Description)
+  "ctaText" "Solicitar información →"
+) }}
 
 {{ with .Params.key_data }}
 <section class="section" style="padding:var(--space-lg) 0"><div class="container">
@@ -23,57 +26,59 @@
 
 <section class="section"><div class="container"><div class="service-detail__grid">
   <div class="service-detail__content">
-{{ .Content }}
+    {{ .Content }}
 
-{{ with .Params.audience }}
-<section class="service-detail__audience" style="margin-top:var(--space-xl);padding:var(--space-lg);background:var(--bg-secondary);border-radius:var(--radius-lg)">
-  <h3 style="font-size:1.2rem;margin-bottom:var(--space-md)">🎯 ¿Esto es para ti?</h3>
-  <div class="grid grid--2" style="gap:var(--space-md)">
-    <div>
-      <h4 style="font-size:1rem;color:var(--accent);margin-bottom:var(--space-sm)">✅ Sí, si...</h4>
-      <ul style="margin:0;padding-left:var(--space-md)">
-        {{ range .si }}
-        <li style="margin-bottom:var(--space-xs)">{{ . | markdownify }}</li>
-        {{ end }}
-      </ul>
-    </div>
-    <div>
-      <h4 style="font-size:1rem;color:var(--text-muted);margin-bottom:var(--space-sm)">❌ No, si...</h4>
-      <ul style="margin:0;padding-left:var(--space-md)">
-        {{ range .excluye }}
-        <li style="margin-bottom:var(--space-xs)">{{ . | markdownify }}</li>
-        {{ end }}
-      </ul>
-    </div>
-  </div>
-</section>
-{{ end }}
-
-{{ with .Params.testimonials }}
-<section style="margin-top:var(--space-xl)">
-  <h3 style="font-size:1.2rem;margin-bottom:var(--space-md)">💬 Lo que dicen nuestros alumnos</h3>
-  <div class="grid grid--2">
-    {{ range . }}
-    <blockquote style="background:var(--bg-secondary);padding:var(--space-md);border-radius:var(--radius-md);border-left:4px solid var(--accent);margin:0">
-      <p style="font-style:italic;margin-bottom:var(--space-sm);font-size:0.95rem">"{{ .quote }}"</p>
-      <footer style="font-size:var(--fs-xs);color:var(--text-secondary)">— <strong>{{ .author }}</strong>, {{ .role }}</footer>
-    </blockquote>
+    {{ with .Params.audience }}
+    <section class="service-detail__audience" style="margin-top:var(--space-xl);padding:var(--space-lg);background:var(--bg-secondary);border-radius:var(--radius-lg)">
+      <h3 style="font-size:1.2rem;margin-bottom:var(--space-md)">🎯 ¿Esto es para ti?</h3>
+      <div class="grid grid--2" style="gap:var(--space-md)">
+        <div>
+          <h4 style="font-size:1rem;color:var(--accent);margin-bottom:var(--space-sm)">✅ Sí, si...</h4>
+          <ul style="margin:0;padding-left:var(--space-md)">
+            {{ range .si }}
+            <li style="margin-bottom:var(--space-xs)">{{ . | markdownify }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-size:1rem;color:var(--text-muted);margin-bottom:var(--space-sm)">❌ No, si...</h4>
+          <ul style="margin:0;padding-left:var(--space-md)">
+            {{ range .excluye }}
+            <li style="margin-bottom:var(--space-xs)">{{ . | markdownify }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </section>
     {{ end }}
-  </div>
-</section>
-{{ end }}
 
-<div class="service-detail__cta"><div><h3 class="section__title" style="font-size:1.4rem">{{ .Params.cta_title | default "¿Listo para empezar?" }}</h3><p>{{ .Params.cta_subtitle | default "Agenda una consultoría gratuita." }}</p></div><a href="{{ $root }}contact" class="btn btn--primary">Hablar con un experto →</a></div>
-</div>
-<aside class="service-detail__sidebar"><nav>
-{{- range $i, $item := .Params.sidebar }}
-{{- if eq $item.id "cta" }}
-<a href="{{ $root }}contact" class="service-detail__nav-item{{ if eq $i 0 }} service-detail__nav-item--active{{ end }}"><span class="service-detail__nav-item__num">{{ add $i 1 }}</span>{{ $item.label }}</a>
-{{- else }}
-<a href="#{{ $item.id }}" class="service-detail__nav-item{{ if eq $i 0 }} service-detail__nav-item--active{{ end }}"><span class="service-detail__nav-item__num">{{ add $i 1 }}</span>{{ $item.label }}</a>
-{{- end }}
-{{- end }}
-</nav></aside>
+    {{ with .Params.testimonials }}
+    <section style="margin-top:var(--space-xl)">
+      <h3 style="font-size:1.2rem;margin-bottom:var(--space-md)">💬 Lo que dicen nuestros alumnos</h3>
+      <div class="grid grid--2">
+        {{ range . }}
+        <blockquote style="background:var(--bg-secondary);padding:var(--space-md);border-radius:var(--radius-md);border-left:4px solid var(--accent);margin:0">
+          <p style="font-style:italic;margin-bottom:var(--space-sm);font-size:0.95rem">"{{ .quote }}"</p>
+          <footer style="font-size:var(--fs-xs);color:var(--text-secondary)">— <strong>{{ .author }}</strong>, {{ .role }}</footer>
+        </blockquote>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    <div class="service-detail__cta"><div><h3 class="section__title" style="font-size:1.4rem">{{ .Params.cta_title | default "¿Listo para empezar?" }}</h3><p>{{ .Params.cta_subtitle | default "Agenda una consultoría gratuita." }}</p></div><a href="{{ $root }}contact" class="btn btn--primary">Hablar con un experto →</a></div>
+  </div>
+  {{- with .Params.sidebar }}
+  <aside class="service-detail__sidebar"><nav>
+    {{- range $i, $item := . }}
+    {{- if eq $item.id "cta" }}
+    <a href="{{ $root }}contact" class="service-detail__nav-item{{ if eq $i 0 }} service-detail__nav-item--active{{ end }}"><span class="service-detail__nav-item__num">{{ add $i 1 }}</span>{{ $item.label }}</a>
+    {{- else }}
+    <a href="#{{ $item.id }}" class="service-detail__nav-item{{ if eq $i 0 }} service-detail__nav-item--active{{ end }}"><span class="service-detail__nav-item__num">{{ add $i 1 }}</span>{{ $item.label }}</a>
+    {{- end }}
+    {{- end }}
+  </nav></aside>
+  {{- end }}
 </div></div></section>
 
 {{ with .Params.faq }}

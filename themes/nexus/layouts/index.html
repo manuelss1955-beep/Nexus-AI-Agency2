@@ -19,9 +19,16 @@
 
 <section class="section"><div class="container"><div class="section__header"><h2 class="section__title">Casos de éxito</h2><p class="section__subtitle">Resultados reales de empresas que confiaron en nosotros</p></div>
 <div class="grid grid--3">
-<article class="case-card animate"><div class="case-card__media">🏭</div><div class="case-card__body"><span class="case-card__tag">Automatización</span><h3 class="case-card__title">Planta reduce errores un 94%</h3><p class="case-card__text">Agentes de visión artificial para control de calidad en tiempo real.</p><div class="case-card__metrics"><div><div class="case-metric__value">-94%</div><div class="case-metric__label">Errores</div></div><div><div class="case-metric__value">+40%</div><div class="case-metric__label">Velocidad</div></div></div></div></article>
-<article class="case-card animate animate--delay-1"><div class="case-card__media">🏦</div><div class="case-card__body"><span class="case-card__tag">Chatbots</span><h3 class="case-card__title">Banco reduce tickets un 67%</h3><p class="case-card__text">Chatbot con RAG integrado al core bancario.</p><div class="case-card__metrics"><div><div class="case-metric__value">-67%</div><div class="case-metric__label">Soporte</div></div><div><div class="case-metric__value">92%</div><div class="case-metric__label">Resolución</div></div></div></div></article>
-<article class="case-card animate animate--delay-2"><div class="case-card__media">📦</div><div class="case-card__body"><span class="case-card__tag">Agentes IA</span><h3 class="case-card__title">Ecommerce escala 3x</h3><p class="case-card__text">Agentes autónomos para atención, inventario y marketing.</p><div class="case-card__metrics"><div><div class="case-metric__value">3x</div><div class="case-metric__label">Escalado</div></div><div><div class="case-metric__value">-45%</div><div class="case-metric__label">Costes</div></div></div></div></article>
+{{- range $i, $c := first 3 .Site.Data.casos }}
+{{ partial "case-card.html" (dict
+  "media" $c.media
+  "tag" $c.tag
+  "title" $c.title
+  "text" $c.text
+  "metrics" $c.metrics
+  "delay" $i
+) }}
+{{- end }}
 </div>
 <div class="text-center mt-3"><a href="{{ $root }}portfolio" class="btn btn--secondary btn--lg">Ver todos los casos →</a></div></div></section>
 

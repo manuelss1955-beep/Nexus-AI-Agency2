@@ -1,10 +1,11 @@
 {{ define "main" }}
 {{- $root := partial "rootpath.html" . -}}
-<section class="page-hero"><div class="container">
-  <div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
-  <h1 class="page-hero__title">Tags</h1>
-  <p class="page-hero__text">{{ len .Data.Terms }} etiquetas en total</p>
-</div></section>
+{{ partial "page-hero.html" (dict
+  "page" .
+  "showBreadcrumbs" true
+  "title" "Tags"
+  "text" (printf "%d etiquetas en total" (len .Data.Terms))
+) }}
 <section class="section"><div class="container">
   <div class="grid grid--3">
     {{- range .Data.Terms.Alphabetical }}

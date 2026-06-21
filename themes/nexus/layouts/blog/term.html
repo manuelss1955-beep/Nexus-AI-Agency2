@@ -5,21 +5,19 @@
 
 {{ define "main" }}
 {{- $root := partial "rootpath.html" . -}}
-<section class="page-hero"><div class="container">
-<h1 class="page-hero__title">Artículos etiquetados: <span class="accent">#{{ .Title }}</span></h1>
-<p class="page-hero__text">{{ len .Pages }} artículo{{ if ne (len .Pages) 1 }}s{{ end }} con esta etiqueta</p>
-</div></section>
+
+{{ partial "page-hero.html" (dict
+  "page" .
+  "showBreadcrumbs" false
+  "title" (printf "Artículos etiquetados: <span class=\"accent\">#%s</span>" .Title)
+  "text" (printf "%d artículo%s con esta etiqueta" (len .Pages) (cond (eq (len .Pages) 1) "" "s"))
+) }}
 
 <section class="section"><div class="container">
 <div class="grid grid--3">
 {{- range .Pages }}
-<article class="post-card"><div class="post-card__body"><span class="post-card__date">{{ .Date.Format "2 Jan 2006" }}</span><span class="post-card__reading">⏱️ {{ .ReadingTime }} min</span><h3 class="post-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p class="post-card__text">{{ .Summary | plainify | truncate 120 }}</p></div></article>
+{{ partial "post-card.html" (dict "page" . "showFooter" true "compact" false) }}
 {{- end }}
-</div>
-
-<div class="text-center" style="margin-top:3rem">
-<a href="{{ $root }}blog" class="btn btn--secondary">← Volver al Blog</a>
-<a href="{{ $root }}blog/tags" class="btn btn--secondary">🏷️ Todos los Tags</a>
 </div>
 </div></section>
 {{ end }}

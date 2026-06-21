@@ -1,0 +1,19 @@
+{{- $root := partial "rootpath.html" .page -}}
+{{- $showBreadcrumbs := .showBreadcrumbs | default true -}}
+{{- $showCta := .showCta | default false -}}
+{{- $title := .title | default .page.Title -}}
+{{- $text := .text | default "" -}}
+{{- $ctaText := .ctaText | default "Solicitar información →" -}}
+{{- $extraClass := .extraClass | default "" -}}
+<section class="page-hero{{ with $extraClass }} {{ . }}{{ end }}">
+  <div class="container">
+    {{- if $showBreadcrumbs }}
+    <div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" .page }}</div>
+    {{- end }}
+    <h1 class="page-hero__title">{{ $title | safeHTML }}</h1>
+    {{- with $text }}<p class="page-hero__text">{{ . }}</p>{{ end }}
+    {{- if $showCta }}
+    <a href="{{ $root }}contact" class="btn btn--primary btn--lg">{{ $ctaText }}</a>
+    {{- end }}
+  </div>
+</section>

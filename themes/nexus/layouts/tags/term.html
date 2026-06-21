@@ -1,7 +1,10 @@
 {{ define "main" }}
-<section class="page-hero"><div class="container">
-  <h1 class="page-hero__title">{{ .Title }}</h1>
-</div></section>
+{{ partial "page-hero.html" (dict
+  "page" .
+  "showBreadcrumbs" false
+  "title" .Title
+  "text" ""
+) }}
 <section class="section"><div class="container">
   {{ .Content }}
 </div></section>

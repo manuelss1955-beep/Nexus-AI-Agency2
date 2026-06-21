@@ -1,0 +1,24 @@
+{{- $media := .media | default "" -}}
+{{- $tag := .tag | default "" -}}
+{{- $title := .title | default "" -}}
+{{- $text := .text | default "" -}}
+{{- $metrics := .metrics | default slice -}}
+{{- $delay := .delay | default 0 -}}
+<article class="case-card animate{{ if gt $delay 0 }} animate--delay-{{ $delay }}{{ end }}">
+  <div class="case-card__media">{{ $media }}</div>
+  <div class="case-card__body">
+    <span class="case-card__tag">{{ $tag }}</span>
+    <h3 class="case-card__title">{{ $title }}</h3>
+    <p class="case-card__text">{{ $text }}</p>
+    {{- if $metrics }}
+    <div class="case-card__metrics">
+      {{- range $metrics }}
+      <div>
+        <div class="case-metric__value">{{ .value }}</div>
+        <div class="case-metric__label">{{ .label }}</div>
+      </div>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</article>

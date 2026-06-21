@@ -1,9 +1,10 @@
 {{ define "main" }}
-<section class="page-hero"><div class="container">
-  <div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
-  <h1 class="page-hero__title">{{ .Title }}</h1>
-  {{ with .Params.hero_text }}<p class="page-hero__text">{{ . }}</p>{{ end }}
-</div></section>
+{{ partial "page-hero.html" (dict
+  "page" .
+  "showBreadcrumbs" true
+  "title" .Title
+  "text" (.Params.hero_text | default "")
+) }}
 <section class="section"><div class="container">
   {{ .Content }}
 </div></section>

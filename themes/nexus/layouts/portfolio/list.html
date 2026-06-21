@@ -1,84 +1,23 @@
 {{ define "main" }}
-<section class="page-hero"><div class="container">
-  <div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
-  <h1 class="page-hero__title">{{ .Params.hero_title | safeHTML }}</h1>
-  <p class="page-hero__text">{{ .Params.hero_text }}</p>
-</div></section>
+{{ partial "page-hero.html" (dict
+  "page" .
+  "showBreadcrumbs" true
+  "title" (.Params.hero_title | safeHTML)
+  "text" .Params.hero_text
+) }}
 
 <section class="section"><div class="container">
   <div class="grid grid--3">
-    <article class="case-card animate">
-      <div class="case-card__media">🏭</div>
-      <div class="case-card__body">
-        <span class="case-card__tag">Automatización</span>
-        <h3 class="case-card__title">Planta reduce errores un 94%</h3>
-        <p class="case-card__text">Agentes de visión artificial para control de calidad en tiempo real en línea de producción.</p>
-        <div class="case-card__metrics">
-          <div><div class="case-metric__value">-94%</div><div class="case-metric__label">Errores</div></div>
-          <div><div class="case-metric__value">+40%</div><div class="case-metric__label">Velocidad</div></div>
-        </div>
-      </div>
-    </article>
-    <article class="case-card animate animate--delay-1">
-      <div class="case-card__media">🏦</div>
-      <div class="case-card__body">
-        <span class="case-card__tag">Chatbots</span>
-        <h3 class="case-card__title">Banco reduce tickets un 67%</h3>
-        <p class="case-card__text">Chatbot con RAG integrado al core bancario para atención al cliente multicanal.</p>
-        <div class="case-card__metrics">
-          <div><div class="case-metric__value">-67%</div><div class="case-metric__label">Soporte</div></div>
-          <div><div class="case-metric__value">92%</div><div class="case-metric__label">Resolución</div></div>
-        </div>
-      </div>
-    </article>
-    <article class="case-card animate animate--delay-2">
-      <div class="case-card__media">📦</div>
-      <div class="case-card__body">
-        <span class="case-card__tag">Agentes IA</span>
-        <h3 class="case-card__title">Ecommerce escala 3x</h3>
-        <p class="case-card__text">Agentes autónomos para atención al cliente, gestión de inventario y marketing automatizado.</p>
-        <div class="case-card__metrics">
-          <div><div class="case-metric__value">3x</div><div class="case-metric__label">Escalado</div></div>
-          <div><div class="case-metric__value">-45%</div><div class="case-metric__label">Costes</div></div>
-        </div>
-      </div>
-    </article>
-    <article class="case-card animate">
-      <div class="case-card__media">📋</div>
-      <div class="case-card__body">
-        <span class="case-card__tag">Digitalización</span>
-        <h3 class="case-card__title">Logística automatiza facturación</h3>
-        <p class="case-card__text">Automatización de facturación y conciliación bancaria con agentes IA para cadena de retail.</p>
-        <div class="case-card__metrics">
-          <div><div class="case-metric__value">90%</div><div class="case-metric__label">Facturas auto</div></div>
-          <div><div class="case-metric__value">-60%</div><div class="case-metric__label">Tiempo cierre</div></div>
-        </div>
-      </div>
-    </article>
-    <article class="case-card animate animate--delay-1">
-      <div class="case-card__media">🏥</div>
-      <div class="case-card__body">
-        <span class="case-card__tag">Chatbots</span>
-        <h3 class="case-card__title">Clínica gestiona citas 24/7</h3>
-        <p class="case-card__text">Chatbot + agente telefónico para gestión de citas y atención al paciente.</p>
-        <div class="case-card__metrics">
-          <div><div class="case-metric__value">80%</div><div class="case-metric__label">Citas auto</div></div>
-          <div><div class="case-metric__value">-50%</div><div class="case-metric__label">No-shows</div></div>
-        </div>
-      </div>
-    </article>
-    <article class="case-card animate animate--delay-2">
-      <div class="case-card__media">💬</div>
-      <div class="case-card__body">
-        <span class="case-card__tag">Atención al Cliente</span>
-        <h3 class="case-card__title">Logística resuelve 75% sin humanos</h3>
-        <p class="case-card__text">Agentes IA telefónicos y chatbot multicanal para atención al cliente logística.</p>
-        <div class="case-card__metrics">
-          <div><div class="case-metric__value">75%</div><div class="case-metric__label">Resolución</div></div>
-          <div><div class="case-metric__value">-40%</div><div class="case-metric__label">Costes</div></div>
-        </div>
-      </div>
-    </article>
+    {{- range $i, $c := .Site.Data.casos }}
+    {{ partial "case-card.html" (dict
+      "media" $c.media
+      "tag" $c.tag
+      "title" $c.title
+      "text" $c.text
+      "metrics" $c.metrics
+      "delay" (mod $i 3)
+    ) }}
+    {{- end }}
   </div>
 </div></section>
 

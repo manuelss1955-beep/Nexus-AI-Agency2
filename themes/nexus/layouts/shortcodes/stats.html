@@ -1,0 +1,9 @@
+{{- $items := .Params -}}
+<div class="service-stats"><div class="service-stats__grid">
+{{- range $items }}
+<div class="service-stats__item">
+  <span class="service-stats__number">{{ .number }}</span>
+  <span class="service-stats__label">{{ .label }}</span>
+</div>
+{{- end }}
+</div></div>
