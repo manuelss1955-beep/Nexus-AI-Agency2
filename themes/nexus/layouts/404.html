@@ -1,0 +1,21 @@
+{{ define "main" }}
+{{- $root := partial "rootpath.html" . -}}
+<section class="page-hero"><div class="container">
+  <div class="page-hero__breadcrumb"><a href="{{ $root }}">Inicio</a>/ <span>Error 404</span></div>
+</div></section>
+
+<section class="section"><div class="container text-center" style="padding:4rem 0">
+  <div style="font-size:6rem;font-weight:900;line-height:1;color:var(--accent,#2563eb);margin-bottom:1rem">404</div>
+  <h1 class="section__title" style="font-size:2rem;margin-bottom:1rem">Página no encontrada</h1>
+  <p style="color:var(--text-secondary,#6B7280);font-size:1.125rem;max-width:500px;margin:0 auto var(--space-xl)">
+    La página que buscas no existe, fue movida o dejó de estar disponible.
+  </p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+    <a href="{{ $root }}" class="btn btn--primary btn--lg">Ir al Inicio</a>
+    <a href="{{ $root }}contact" class="btn btn--secondary btn--lg">Contactar</a>
+  </div>
+  <div style="margin-top:3rem;font-size:0.875rem;color:var(--text-muted,#9CA3AF)">
+    ◆ Nexus AI — Soluciones de Inteligencia Artificial
+  </div>
+</div></section>
+{{ end }}
