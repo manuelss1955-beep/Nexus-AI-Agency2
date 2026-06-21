@@ -1,10 +1,55 @@
 {{ define "main" }}
+{{- $root := partial "rootpath.html" . -}}
 <section class="page-hero"><div class="container">
   <div class="page-hero__breadcrumb">{{ partial "breadcrumbs.html" . }}</div>
-  <h1 class="page-hero__title">{{ .Title }}</h1>
-  {{ with .Description }}<p class="page-hero__text">{{ . }}</p>{{ end }}
+  <h1 class="page-hero__title">{{ .Params.hero_title | default .Title | safeHTML }}</h1>
+  {{ with .Params.hero_text }}<p class="page-hero__text">{{ . }}</p>{{ end }}
 </div></section>
+
+{{ with .Params.values }}
+<section class="section"><div class="container">
+  <div class="section__header">
+    <h2 class="section__title">{{ $.Params.values_title | default "Nuestra filosofía" }}</h2>
+  </div>
+  <div class="grid grid--2">
+    {{- range . }}
+    <div class="feature">
+      <div class="feature__icon">{{ .icon }}</div>
+      <div class="feature__content">
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </div>
+    </div>
+    {{- end }}
+  </div>
+</div></section>
+{{- end }}
+
+{{ with .Params.timeline }}
+<section class="section section--alt"><div class="container">
+  <div class="section__header">
+    <h2 class="section__title">Nuestra trayectoria</h2>
+  </div>
+  <div class="grid grid--2">
+    {{- range . }}
+    <div class="feature">
+      <div class="feature__icon" style="font-size:1.5rem;font-weight:800;color:var(--accent)">{{ .year }}</div>
+      <div class="feature__content">
+        <p>{{ .text }}</p>
+      </div>
+    </div>
+    {{- end }}
+  </div>
+</div></section>
+{{- end }}
+
 <section class="section"><div class="container">
   {{ .Content }}
+</div></section>
+
+<section class="section section--alt"><div class="container text-center">
+  <h2 class="section__title" style="font-size:1.6rem">{{ .Params.cta_title | default "¿Hablamos?" }}</h2>
+  <p style="color:var(--text-secondary);margin-bottom:var(--space-xl)">{{ .Params.cta_subtitle | default "Cuéntanos tu proyecto y te propondremos la mejor solución." }}</p>
+  <a href="{{ $root }}contact" class="btn btn--primary btn--lg">Contactar →</a>
 </div></section>
 {{ end }}
