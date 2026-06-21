@@ -1,12 +1,55 @@
 /**
  * n8n-chat.js — N8N Chat Widget para Nexus AI Agency
  * Widget de chat embebido para ejecutar Workflows de IA vía n8n
+ * 
+ * v2.0 — Persistencia de sesión entre páginas (7 días)
+ *        El sessionId se guarda en localStorage y se pasa como
+ *        query param a n8n para mantener la misma conversación.
  */
 (function() {
   'use strict';
 
-  // ⚠️ IMPORTANTE: Reemplaza con tu webhook real de n8n
-  const WEBHOOK_URL = 'https://n8n-production-adf2.up.railway.app/webhook/59acd426-5115-4d1b-9757-80ef5c21deb5/chat';
+  // ⚠️ Reemplaza con tu webhook real de n8n
+  const WEBHOOK_BASE = 'https://n8n-production-adf2.up.railway.app/webhook/59acd426-5115-4d1b-9757-80ef5c21deb5/chat';
+
+  const STORAGE_KEY = 'nexus-chat-session-id';
+  const EXPIRY_MS = 7 * 24 * 60 * 60 * 1000; // 7 días
+
+  // ─── Gestión de sesión (localStorage con expiración) ─────────
+  function getOrCreateSessionId() {
+    var stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      try {
+        var data = JSON.parse(stored);
+        var age = Date.now() - data.created;
+        if (age < EXPIRY_MS) {
+          return data.id;
+        }
+        // Sesión expirada → se borra
+        localStorage.removeItem(STORAGE_KEY);
+      } catch(e) {
+        localStorage.removeItem(STORAGE_KEY);
+      }
+    }
+
+    // Crear nueva sesión
+    var sessionId = crypto.randomUUID();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({
+      id: sessionId,
+      created: Date.now()
+    }));
+    return sessionId;
+  }
+
+  // Expone función global para "Nueva Conversación"
+  window.resetNexusChatSession = function() {
+    localStorage.removeItem(STORAGE_KEY);
+    window.location.reload();
+  };
+
+  // ─── Construir URL con sessionId ─────────────────────────────
+  var sessionId = getOrCreateSessionId();
+  var WEBHOOK_URL = WEBHOOK_BASE + '?sessionId=' + encodeURIComponent(sessionId);
 
   // ─── Carga CSS ──────────────────────────────────────────────
   function loadCSS() {
