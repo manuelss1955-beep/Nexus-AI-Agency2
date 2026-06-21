@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["nodejs", "go", "hugo"]
+
+[phases.build]
+cmds = ["hugo", "npm install"]
+
+[start]
+cmd = "node server.js"

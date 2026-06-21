@@ -1,4 +1,4 @@
-baseURL = "https://nexus-ai.agency"
+baseURL = "https://nexus-ai-agency2-production.up.railway.app"
 locale = "es-ES"
 title = "Nexus AI — Soluciones de Inteligencia Artificial"
 theme = "nexus"
