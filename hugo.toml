@@ -118,7 +118,7 @@ ignoreLogs = ['warning-goldmark-raw-html']
   [[params.services]]
     slug = "programacion-apps"
     icon = "💻"
-    title = "Programación de Apps"
+    title = "Desarrollo de software"
   [[params.services]]
     slug = "automatizacion"
     icon = "⚡"

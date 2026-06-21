@@ -37,7 +37,7 @@ Nuestras soluciones para atención presencial cubren todos los puntos de contact
 - **Chatbots para atención en mostrador**: asistentes que complementan al personal presencial resolviendo consultas rápidas.
 - **Agentes IA Autónomos** para gestión de colas, asignación de turnos y optimización del flujo de clientes.
 - **Agentes IA Telefónicos** para atención telefónica integrada con la experiencia presencial.
-- **Programación de Apps** para crear aplicaciones que mejoren la experiencia en tienda.
+- **Desarrollo de software** para crear aplicaciones que mejoren la experiencia en tienda.
 - **Integraciones MCP** para conectar los sistemas de atención presencial con tu CRM y ERP.
 
 ## Casos de Uso {#usecases}

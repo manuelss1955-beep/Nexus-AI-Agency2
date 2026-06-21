@@ -1,5 +1,5 @@
 ---
-title: "Programación de Apps"
+title: "Desarrollo de software"
 description: "Desarrollo de aplicaciones web y móviles con IA integrada. Apps inteligentes con chatbots, agentes autónomos y automatización."
 hero_title: "Apps inteligentes con IA <span>integrada</span>"
 hero_text: "Creamos aplicaciones web y móviles con inteligencia artificial integrada desde el diseño. Apps que aprenden, se adaptan y automatizan procesos."

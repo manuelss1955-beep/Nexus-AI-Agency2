@@ -39,7 +39,7 @@ Nuestros chatbots se adaptan a cualquier necesidad empresarial:
 - **Agentes IA Autónomos** que ejecutan tareas complejas detectadas durante la conversación.
 - **Agentes IA Telefónicos** para atención por voz integrada con el chatbot.
 - **Integraciones MCP** para conectar el chatbot con cualquier sistema o servicio externo.
-- **Programación de Apps** para integrar el chatbot en aplicaciones móviles.
+- **Desarrollo de software** para integrar el chatbot en aplicaciones móviles.
 
 ## Casos de Uso {#usecases}
 

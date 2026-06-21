@@ -34,7 +34,7 @@ Nexus AI ofrece soluciones de **Chatbots**, **Agentes IA Telefónicos**, **Agent
 - **Agentes IA Telefónicos** para atención telefónica y gestión de pedidos.
 - **Agentes IA Autónomos** para monitorización de inventario y predicción de demanda.
 - **Automatización Empresarial** para procesos de facturación y logística.
-- **Programación de Apps** para crear apps de fidelización con IA.
+- **Desarrollo de software** para crear apps de fidelización con IA.
 - **Integraciones MCP** para conectar tu ecommerce con sistemas internos.
 
 ## Casos de Uso {#usecases}

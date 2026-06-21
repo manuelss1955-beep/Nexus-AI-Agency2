@@ -36,7 +36,7 @@ Nuestras soluciones de digitalización cubren todos los aspectos de tu negocio:
 - **Chatbots** para atención al cliente multicanal con capacidad de gestionar pedidos, consultas y reservas.
 - **Agentes IA Telefónicos** para centralita digital con atención automatizada 24/7.
 - **Automatización Empresarial** para digitalización de facturación, contabilidad, RRHH y documentación.
-- **Programación de Apps** para crear aplicaciones web y móvil que digitalicen la relación con tus clientes.
+- **Desarrollo de software** para crear aplicaciones web y móvil que digitalicen la relación con tus clientes.
 - **Integraciones MCP** para conectar ERP, CRM, plataformas de ecommerce y herramientas de gestión en un ecosistema unificado.
 - **Consultoría IA** para diseñar la hoja de ruta de transformación digital de tu empresa.
 

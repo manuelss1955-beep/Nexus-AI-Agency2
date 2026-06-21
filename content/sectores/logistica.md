@@ -34,7 +34,7 @@ Nexus AI ofrece soluciones de **Agentes IA Autónomos**, **Agentes IA Telefónic
 - **Chatbots** para consulta de estado de envío y gestión de incidencias.
 - **Agentes IA Telefónicos** para coordinación con transportistas.
 - **Automatización Empresarial** para facturación y documentación aduanera.
-- **Digitalización de Empresas**, **Programación de Apps**, **Integraciones MCP**.
+- **Digitalización de Empresas**, **Desarrollo de software**, **Integraciones MCP**.
 
 ## Casos de Uso {#usecases}
 
