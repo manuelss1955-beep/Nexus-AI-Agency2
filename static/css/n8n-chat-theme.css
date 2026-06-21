@@ -35,7 +35,7 @@
   --chat--window--height: 520px;
   --chat--window--bottom: 20px;
   --chat--window--right: 20px;
-  --chat--window--border: 1px solid var(--chat--color-light-shade-50);
+  --chat--window--border: 1px solid #9CA3AF;
   --chat--window--border-radius: 16px;
 
   /* ─── Header ─── */
