@@ -90,8 +90,6 @@
 
   // ─── Detectar apertura del chat y mostrar formulario ────
   function setupToggleListener() {
-    if (hasUserData()) return;
-
     // Esperar a que el botón toggle aparezca en el DOM
     var checkInterval = setInterval(function() {
       var target = document.getElementById('n8n-chat');
