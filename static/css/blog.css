@@ -17,4 +17,3 @@
 .post-sidebar__cta .btn{background:#fff;color:var(--accent);font-size:var(--fs-sm);padding:8px 16px;width:100%;justify-content:center}
 @media(max-width:1024px){.post-grid{grid-template-columns:1fr}.post-sidebar{display:none}}
 
-.post-grid__after{max-width:800px}
