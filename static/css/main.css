@@ -40,6 +40,17 @@
 .post-content li {margin-bottom:var(--space-sm);font-size:1rem;color:var(--text-secondary);line-height:1.7}
 .service-detail__content hr,
 .post-content hr {margin:var(--space-3xl) 0;border:none;border-top:1px solid var(--border)}
+
+/* Portfolio page content */
+.portfolio-page{max-width:800px;margin:0 auto}
+.portfolio-page h2{font-size:1.6rem;font-weight:800;margin-bottom:var(--space-lg);letter-spacing:-.3px}
+.portfolio-page h3{font-size:1.2rem;font-weight:700;margin-top:var(--space-2xl);margin-bottom:var(--space-md);color:var(--accent);padding-bottom:var(--space-sm);border-bottom:2px solid var(--accent-light)}
+.portfolio-page h3+*{margin-top:var(--space-md)}
+.portfolio-page p{margin-bottom:var(--space-lg);font-size:1rem;color:var(--text-secondary);line-height:1.8}
+.portfolio-page strong{color:var(--text-primary)}
+.portfolio-page ul{margin:var(--space-md) 0 var(--space-xl) var(--space-xl)}
+.portfolio-page li{margin-bottom:var(--space-sm);font-size:1rem;color:var(--text-secondary);line-height:1.7}
+.portfolio-page li::marker{color:var(--accent)}
 .service-detail__content .service-detail__list {margin:var(--space-lg) 0 var(--space-2xl) 0}
 .service-detail__content .service-detail__list li {list-style:disc}
 .service-detail__content > :last-child {margin-bottom:0}
