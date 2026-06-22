@@ -112,6 +112,18 @@
   scrollbar-color: #60A5FA #1E293B;
 }
 
+/* ─── Hamburger / Mobile Nav ─────────────────────────────── */
+.dark .nav__hamburger span {
+  background: #F8FAFC;
+}
+.dark .nav__hamburger.active {
+  background: rgba(96,165,250,0.12);
+  border-color: var(--accent-border);
+}
+.dark .nav__hamburger.active span {
+  background: var(--accent);
+}
+
 /* ─── Toggle Button ───────────────────────────────────────── */
 .dark-mode-toggle {
   display: flex;
